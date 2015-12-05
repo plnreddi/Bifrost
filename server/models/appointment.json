@@ -1,0 +1,24 @@
+{
+  "name": "Appointment",
+  "base": "PersistedModel",
+  "properties": {
+    "appointmentDate": {
+      "type": "date"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "doctor": {
+      "type": "belongsTo",
+      "model": "Doctor",
+      "foreignKey": "doctorId"
+    },
+    "patient": {
+      "type": "belongsTo",
+      "model": "Patient",
+      "foreignKey": "patientId"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

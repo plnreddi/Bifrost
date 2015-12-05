@@ -1,0 +1,15 @@
+<form>
+  <div class="form-group">
+    <label class="control-label">Appointment Time</label>
+    <input maxlength="100" type="text" required="required" class="form-control" value="{{::appointment.start.toString()}}-{{::appointment.end.toString()}}" />
+  </div>
+  <div class="form-group">
+    <label class="control-label">Patient Name</label>
+    <input ng-model="appointment.patientName" maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Patient Name" />
+  </div>
+  <div class="form-actions">
+    <button type="button" class="btn btn-danger" ng-click="calendarUnselect();$hide()">Close</button>
+    <button type="button" class="btn btn-primary" ng-click="createAppointment(appointment.patientName);$hide()">Save changes</button>
+  </div>
+</form>
+

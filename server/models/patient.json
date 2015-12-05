@@ -1,0 +1,20 @@
+{  
+  "name": "Patient",
+  "base": "PersistedModel",
+  "properties": {
+    "name": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "physicans": {
+      "type": "hasMany",
+      "model": "Doctor",
+      "foreignKey": "patientId",
+      "through": "Appointment"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

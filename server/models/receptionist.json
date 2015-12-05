@@ -1,0 +1,18 @@
+{
+  "name": "Receptionist",
+  "plural": "Receptionists",
+  "base": "User",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "phoneVerified": {
+      "type": "boolean",
+      "default": "false"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

@@ -1,0 +1,53 @@
+{
+  "name": "customer",
+  "plural": "customers",
+  "base": "User",
+  "properties": {
+    "phoneVerified": {
+      "type": "boolean",
+      "default": "false"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "roles": {
+      "type": "hasMany",
+      "model": "Role",
+      "through": "RoleMapping",
+      "foreignKey": "principalId"
+    },
+    "baggedProducts": {
+      "type": "hasMany",
+      "model": "product",
+      "through": "baggedProduct",
+      "foreignKey": "customerId"
+    },
+    "orders": {
+      "type": "hasMany",
+      "model": "order",
+      "foreignKey": "customerId"
+    }
+  },
+  "acls": [{
+    "accessType": "*",
+    "principalType": "ROLE",
+    "principalId": "admin",
+    "permission": "ALLOW"
+  }, {
+    "accessType": "READ",
+    "principalType": "ROLE",
+    "principalId": "$unauthenticated",
+    "permission": "DENY"
+  }, {
+    "accessType": "READ",
+    "principalType": "ROLE",
+    "principalId": "$authenticated",
+    "permission": "ALLOW"
+  }, {
+    "accessType": "*",
+    "principalType": "ROLE",
+    "principalId": "$owner",
+    "permission": "ALLOW"
+  }],
+  "methods": []
+}
