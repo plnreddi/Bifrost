@@ -44,6 +44,16 @@ button.close {
 .am-fade.modal-backdrop {
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+.list-group-item:first-child {
+  border-top-right-radius: 0; 
+  border-top-left-radius: 0; 
+}
+.list-group-item:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
 // Component styles are injected through grunt
 // injector
 @import 'main/login/login.scss';

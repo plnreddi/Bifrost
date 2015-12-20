@@ -42,5 +42,9 @@
   "Appointment": {
     "dataSource": "db",
     "public": true
+  },
+  "Clinic": {
+    "dataSource": "db",
+    "public": true
   }
 }

@@ -1,51 +1,90 @@
 'use strict';
 
 angular.module('bifrostApp')
-  .controller('MainCtrl', function($http, uiCalendarConfig, $popover, $modal) {
+  .controller('MainCtrl', function($scope, $http, uiCalendarConfig, $popover, $modal, Appointment, $rootScope) {
 
     this.eventSources = [];
+    this.eventSourcesAll = {};
     var myPopover;
+
+    function hashCode(str) { // java String#hashCode
+      var hash = 0;
+      for (var i = 0; i < str.length; i++) {
+        hash = str.charCodeAt(i) + ((hash << 5) - hash);
+      }
+      return hash;
+    }
+
+    function intToRGB(i) {
+      var c = (i & 0x00FFFFFF)
+        .toString(16)
+        .toUpperCase();
+
+      return '00000'.substring(0, 6 - c.length) + c;
+    }
+
+    this.userFields = [{
+      key: 'selectedDoctorIds',
+      type: 'multiCheckbox',
+      templateOptions: {
+        label: 'Doctors',
+        options: [],
+        valueProp: 'id',
+        labelProp: 'username'
+      },
+      controller: function($scope, $rootScope) {
+        $scope.to.options = $rootScope.currentClinic.doctors;
+      },
+      expressionProperties: {
+        'eventSources': angular.bind(this, function(selectedDoctorIds) {
+          if (selectedDoctorIds) {
+            var eventSources = [];
+            for (var i = 0; i < selectedDoctorIds.length; i++) {
+              eventSources.push(this.eventSourcesAll[selectedDoctorIds[i]].appointments);
+              eventSources.push(this.eventSourcesAll[selectedDoctorIds[i]].blocks);
+            }
+            this.eventSources.splice(0, this.eventSources.length);
+            this.eventSources.push.apply(this.eventSources, eventSources);
+            return eventSources;
+          } else {
+            return [[]];
+          }
+        })
+      }
+    }];
 
     /* config object */
     this.uiConfig = {
       calendar: {
-        height: 600,
+        height: $(window).height() - 60,
         defaultView: 'agendaWeek',
         selectable: true,
         unselectCancel: '.aside-dialog',
         unselectAuto: true,
         select: function(start, end, jsEvent, view) {
           var calendar = uiCalendarConfig.calendars.myCalendar;
-          var myAside = $modal({
+          $modal({
             title: 'New Appointment',
-            templateUrl: 'app/main/modal.tpl.html',
-            contentTemplate: 'app/main/modal-content.tpl.html',
-            show: true
+            templateUrl: 'app/main/appointment.modal.tpl.html',
+            controller: 'AppointmentModalCtrl as AppointmentModalCtrl',
+            resolve: {
+              start: function() {
+                return start;
+              },
+              end: function() {
+                return end;
+              },
+              calendar: function() {
+                return calendar;
+              },
+            },
+            show: true,
           });
-          myAside.$scope.appointment = {
-            start: start,
-            end: end
-          };
-          myAside.$scope.calendarUnselect = function() {
-            calendar.fullCalendar('unselect');
-          }
-          myAside.$scope.createAppointment = function(patientName) {
-            if (patientName) {
-              calendar.fullCalendar('renderEvent', {
-                  title: patientName,
-                  start: start,
-                  end: end
-                },
-                true // make the event "stick"
-              );
-            }
-            calendar.fullCalendar('unselect');
-          }
         },
         slotDuration: '00:15:00',
         editable: true,
         header: {
-          left: 'month basicWeek basicDay agendaWeek agendaDay',
+          left: 'month agendaWeek agendaDay',
           center: 'title',
           right: 'today prev,next'
         },
@@ -68,18 +107,52 @@ angular.module('bifrostApp')
         },
         eventDrop: this.alertOnDrop,
         eventResize: this.alertOnResize,
-        events: [{
-          title: 'event1',
-          start: '2016-01-01'
-        }, {
-          title: 'event2',
-          start: '2016-01-05',
-          end: '2016-01-07'
-        }, {
-          title: 'event3',
-          start: '2016-01-09T12:30:00',
-          allDay: false // will make the time show
-        }]
+        eventRender: function(event, element) {
+          element.find('.fc-title').append('<br/>' + event.title); 
+        }
       }
     };
+
+    Appointment.find({
+        where: {
+          doctorId: {
+            inq: $rootScope.clinicDoctorIds
+          }
+        }
+      },
+      angular.bind(this, function(appointments) {
+        for (var j = 0; j < $rootScope.clinicDoctorIds.length; j++) {
+          var appointmentEvents = [];
+          var blockEvents = [];
+          for (var i = 0; i < appointments.length; i++) {
+            if (appointments[i].doctorId == $rootScope.clinicDoctorIds[j]) {
+              var event = {
+                title: appointments[i].patientName || appointments[i].title,
+                start: appointments[i].start,
+                end: appointments[i].end,
+                allDay: appointments[i].allDay
+              };
+              if (appointments[i].type == 'normal') {
+                appointmentEvents.push(event);
+              } else if (appointments[i].type == 'block') {
+                blockEvents.push(event);
+              }
+            }
+          }
+          this.eventSourcesAll[$rootScope.clinicDoctorIds[j]] = {
+            appointments: {
+              color: '#' + intToRGB(hashCode($rootScope.currentClinic.doctors[j].username)),
+              textColor: 'white',
+              events: appointmentEvents
+            },
+            blocks: {
+              color: '#ccc',
+              textColor: 'white',
+              events: blockEvents
+            }
+          };
+        }
+      })
+    );
+
   });

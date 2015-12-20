@@ -10,5 +10,13 @@ angular.module('bifrostApp')
         data: {
           requireLogin: true
         }
+      }).state('patients.detail', {
+        url: '^/:id',
+        views: {
+          'detail': {
+            templateUrl: 'app/patients/patient.detail.html',
+            controller: 'PatientDetailCtrl as PatientDetailCtrl'
+          }
+        },
       });
   });

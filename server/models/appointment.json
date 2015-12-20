@@ -2,8 +2,25 @@
   "name": "Appointment",
   "base": "PersistedModel",
   "properties": {
-    "appointmentDate": {
+    "start": {
+      "type": "date",
+      "required": true
+    },
+    "end": {
       "type": "date"
+    },
+    "patientName": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "required": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "allDay": {
+      "type": "boolean"
     }
   },
   "validations": [],

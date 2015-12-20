@@ -7,14 +7,25 @@ angular.module('bifrostApp', [
   'ui.router',
   'mgcrea.ngStrap',
   'ui.calendar',
-  'lbServices'
+  'lbServices',
+  'formly',
+  'formlyBootstrap',
+  'ui.select',
+  'ui.checkbox'
 ])
   .config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider
       .otherwise('/');
 
     //$locationProvider.html5Mode(true);
-  }).run(function($rootScope, $state) {
+  }).run(function($rootScope, $state, formlyConfig) {
+
+    formlyConfig.extras.removeChromeAutoComplete = true;
+    formlyConfig.setType({
+      name: 'async-ui-select',
+      extends: 'select',
+      templateUrl: 'app/main/async-ui-select.tpl.html'
+    });
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
       var requireLogin = toState.data.requireLogin;
@@ -26,4 +37,4 @@ angular.module('bifrostApp', [
       }
     });
 
-  });;
+  });

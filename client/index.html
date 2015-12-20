@@ -16,6 +16,7 @@
       <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css" />
       <link rel="stylesheet" href="bower_components/bootstrap-additions/dist/bootstrap-additions.css" />
       <!-- endbower -->
+      <link rel="stylesheet" href="bower_components/ui-select/dist/select.css" />
     <!-- endbuild -->
     <!-- build:css({.tmp,client}) app/app.css -->
     <link rel="stylesheet" href="app/app.css">
@@ -62,7 +63,12 @@
       <script src="bower_components/angular-ui-calendar/src/calendar.js"></script>
       <script src="bower_components/angular-strap/dist/angular-strap.js"></script>
       <script src="bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
+      <script src="bower_components/api-check/dist/api-check.js"></script>
+      <script src="bower_components/angular-formly/dist/formly.js"></script>
+      <script src="bower_components/angular-bootstrap-checkbox/angular-bootstrap-checkbox.js"></script>
       <!-- endbower -->
+      <script src="bower_components/angular-formly-templates-bootstrap/dist/angular-formly-templates-bootstrap.min.js"></script>
+      <script src="bower_components/ui-select/dist/select.js"></script>
     <!-- endbuild -->
 
         
@@ -71,10 +77,12 @@
         <script src="app/app.js"></script>
           <!-- injector:js -->
           <script src="app/lb-services.js"></script>
+          <script src="app/main/appointment.modal.controller.js"></script>
           <script src="app/main/login/login.controller.js"></script>
           <script src="app/main/login/login.js"></script>
           <script src="app/main/main.controller.js"></script>
           <script src="app/main/main.js"></script>
+          <script src="app/patients/patient.detail.controller.js"></script>
           <script src="app/patients/patients.controller.js"></script>
           <script src="app/patients/patients.js"></script>
           <script src="components/modal/modal.service.js"></script>

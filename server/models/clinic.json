@@ -1,0 +1,25 @@
+{
+  "name": "Clinic",
+  "plural": "Clinics",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "doctors": {
+      "type": "hasMany",
+      "model": "Doctor",
+      "foreignKey": "clinicId"
+    }
+  },
+  "acls": [],
+  "methods": []
+}

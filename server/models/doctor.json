@@ -16,13 +16,18 @@
     "patientAppointments": {
       "type": "hasMany",
       "model": "Patient",
-      "through": "appointment",
-      "foreignKey": "doctorId"
+      "foreignKey": "doctorId",
+      "through": "Appointment"
     },
     "patients": {
       "type": "hasMany",
       "model": "Patient",
       "foreignKey": "doctorId"
+    },
+    "clinics": {
+      "type": "belongsTo",
+      "model": "Clinic",
+      "foreignKey": "clinicId"
     }
   },
   "acls": [{

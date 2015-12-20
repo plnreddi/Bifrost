@@ -182,6 +182,66 @@ module.factory(
           method: "PUT"
         },
 
+        // INTERNAL. Use Doctor.patientAppointments.findById() instead.
+        "prototype$__findById__patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.destroyById() instead.
+        "prototype$__destroyById__patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.updateById() instead.
+        "prototype$__updateById__patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.link() instead.
+        "prototype$__link__patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/rel/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.unlink() instead.
+        "prototype$__unlink__patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/rel/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.exists() instead.
+        "prototype$__exists__patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/rel/:fk",
+          method: "HEAD"
+        },
+
+        // INTERNAL. Use Doctor.clinics() instead.
+        "prototype$__get__clinics": {
+          url: urlBase + "/Doctors/:id/clinics",
+          method: "GET"
+        },
+
         /**
          * @ngdoc method
          * @name lbServices.Doctor#prototype$__get__accessTokens
@@ -341,6 +401,31 @@ module.factory(
         // INTERNAL. Use Doctor.patients.count() instead.
         "prototype$__count__patients": {
           url: urlBase + "/Doctors/:id/patients/count",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments() instead.
+        "prototype$__get__patientAppointments": {
+          isArray: true,
+          url: urlBase + "/Doctors/:id/patientAppointments",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.create() instead.
+        "prototype$__create__patientAppointments": {
+          url: urlBase + "/Doctors/:id/patientAppointments",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.destroyAll() instead.
+        "prototype$__delete__patientAppointments": {
+          url: urlBase + "/Doctors/:id/patientAppointments",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.count() instead.
+        "prototype$__count__patientAppointments": {
+          url: urlBase + "/Doctors/:id/patientAppointments/count",
           method: "GET"
         },
 
@@ -933,95 +1018,213 @@ module.factory(
           method: "POST"
         },
 
-        // INTERNAL. Use Patient.physicans.findById() instead.
-        "::findById::Patient::physicans": {
+        // INTERNAL. Use Patient.doctors.findById() instead.
+        "::findById::Patient::doctors": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Patients/:id/physicans/:fk",
+          url: urlBase + "/Patients/:id/doctors/:fk",
           method: "GET"
         },
 
-        // INTERNAL. Use Patient.physicans.destroyById() instead.
-        "::destroyById::Patient::physicans": {
+        // INTERNAL. Use Patient.doctors.destroyById() instead.
+        "::destroyById::Patient::doctors": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Patients/:id/physicans/:fk",
+          url: urlBase + "/Patients/:id/doctors/:fk",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Patient.physicans.updateById() instead.
-        "::updateById::Patient::physicans": {
+        // INTERNAL. Use Patient.doctors.updateById() instead.
+        "::updateById::Patient::doctors": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Patients/:id/physicans/:fk",
+          url: urlBase + "/Patients/:id/doctors/:fk",
           method: "PUT"
         },
 
-        // INTERNAL. Use Patient.physicans.link() instead.
-        "::link::Patient::physicans": {
+        // INTERNAL. Use Patient.doctorsAppointment.findById() instead.
+        "::findById::Patient::doctorsAppointment": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Patients/:id/physicans/rel/:fk",
-          method: "PUT"
+          url: urlBase + "/Patients/:id/doctorsAppointment/:fk",
+          method: "GET"
         },
 
-        // INTERNAL. Use Patient.physicans.unlink() instead.
-        "::unlink::Patient::physicans": {
+        // INTERNAL. Use Patient.doctorsAppointment.destroyById() instead.
+        "::destroyById::Patient::doctorsAppointment": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Patients/:id/physicans/rel/:fk",
+          url: urlBase + "/Patients/:id/doctorsAppointment/:fk",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Patient.physicans.exists() instead.
-        "::exists::Patient::physicans": {
+        // INTERNAL. Use Patient.doctorsAppointment.updateById() instead.
+        "::updateById::Patient::doctorsAppointment": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Patients/:id/physicans/rel/:fk",
+          url: urlBase + "/Patients/:id/doctorsAppointment/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.link() instead.
+        "::link::Patient::doctorsAppointment": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/doctorsAppointment/rel/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.unlink() instead.
+        "::unlink::Patient::doctorsAppointment": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/doctorsAppointment/rel/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.exists() instead.
+        "::exists::Patient::doctorsAppointment": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/doctorsAppointment/rel/:fk",
           method: "HEAD"
         },
 
-        // INTERNAL. Use Patient.physicans() instead.
-        "::get::Patient::physicans": {
+        // INTERNAL. Use Patient.doctors() instead.
+        "::get::Patient::doctors": {
           isArray: true,
-          url: urlBase + "/Patients/:id/physicans",
+          url: urlBase + "/Patients/:id/doctors",
           method: "GET"
         },
 
-        // INTERNAL. Use Patient.physicans.create() instead.
-        "::create::Patient::physicans": {
-          url: urlBase + "/Patients/:id/physicans",
+        // INTERNAL. Use Patient.doctors.create() instead.
+        "::create::Patient::doctors": {
+          url: urlBase + "/Patients/:id/doctors",
           method: "POST"
         },
 
-        // INTERNAL. Use Patient.physicans.createMany() instead.
-        "::createMany::Patient::physicans": {
+        // INTERNAL. Use Patient.doctors.createMany() instead.
+        "::createMany::Patient::doctors": {
           isArray: true,
-          url: urlBase + "/Patients/:id/physicans",
+          url: urlBase + "/Patients/:id/doctors",
           method: "POST"
         },
 
-        // INTERNAL. Use Patient.physicans.destroyAll() instead.
-        "::delete::Patient::physicans": {
-          url: urlBase + "/Patients/:id/physicans",
+        // INTERNAL. Use Patient.doctors.destroyAll() instead.
+        "::delete::Patient::doctors": {
+          url: urlBase + "/Patients/:id/doctors",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Patient.physicans.count() instead.
-        "::count::Patient::physicans": {
-          url: urlBase + "/Patients/:id/physicans/count",
+        // INTERNAL. Use Patient.doctors.count() instead.
+        "::count::Patient::doctors": {
+          url: urlBase + "/Patients/:id/doctors/count",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment() instead.
+        "::get::Patient::doctorsAppointment": {
+          isArray: true,
+          url: urlBase + "/Patients/:id/doctorsAppointment",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.create() instead.
+        "::create::Patient::doctorsAppointment": {
+          url: urlBase + "/Patients/:id/doctorsAppointment",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.createMany() instead.
+        "::createMany::Patient::doctorsAppointment": {
+          isArray: true,
+          url: urlBase + "/Patients/:id/doctorsAppointment",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.destroyAll() instead.
+        "::delete::Patient::doctorsAppointment": {
+          url: urlBase + "/Patients/:id/doctorsAppointment",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.count() instead.
+        "::count::Patient::doctorsAppointment": {
+          url: urlBase + "/Patients/:id/doctorsAppointment/count",
           method: "GET"
         },
 
         // INTERNAL. Use Appointment.doctor() instead.
         "::get::Appointment::doctor": {
           url: urlBase + "/Appointments/:id/doctor",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Clinic.doctors.findById() instead.
+        "::findById::Clinic::doctors": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Clinics/:id/doctors/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Clinic.doctors.destroyById() instead.
+        "::destroyById::Clinic::doctors": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Clinics/:id/doctors/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Clinic.doctors.updateById() instead.
+        "::updateById::Clinic::doctors": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Clinics/:id/doctors/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Clinic.doctors() instead.
+        "::get::Clinic::doctors": {
+          isArray: true,
+          url: urlBase + "/Clinics/:id/doctors",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Clinic.doctors.create() instead.
+        "::create::Clinic::doctors": {
+          url: urlBase + "/Clinics/:id/doctors",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Clinic.doctors.createMany() instead.
+        "::createMany::Clinic::doctors": {
+          isArray: true,
+          url: urlBase + "/Clinics/:id/doctors",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Clinic.doctors.destroyAll() instead.
+        "::delete::Clinic::doctors": {
+          url: urlBase + "/Clinics/:id/doctors",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Clinic.doctors.count() instead.
+        "::count::Clinic::doctors": {
+          url: urlBase + "/Clinics/:id/doctors/count",
           method: "GET"
         },
 
@@ -1547,6 +1750,452 @@ module.factory(
           var action = TargetResource["::updateById::Doctor::patients"];
           return action.apply(R, arguments);
         };
+    /**
+     * @ngdoc object
+     * @name lbServices.Doctor.patientAppointments
+     * @header lbServices.Doctor.patientAppointments
+     * @object
+     * @description
+     *
+     * The object `Doctor.patientAppointments` groups methods
+     * manipulating `Patient` instances related to `Doctor`.
+     *
+     * Call {@link lbServices.Doctor#patientAppointments Doctor.patientAppointments()}
+     * to query all related instances.
+     */
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Doctor#patientAppointments
+         * @methodOf lbServices.Doctor
+         *
+         * @description
+         *
+         * Queries patientAppointments of Doctor.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `filter` – `{object=}` - 
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Patient` object.)
+         * </em>
+         */
+        R.patientAppointments = function() {
+          var TargetResource = $injector.get("Patient");
+          var action = TargetResource["::get::Doctor::patientAppointments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Doctor.patientAppointments#count
+         * @methodOf lbServices.Doctor.patientAppointments
+         *
+         * @description
+         *
+         * Counts patientAppointments of Doctor.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        R.patientAppointments.count = function() {
+          var TargetResource = $injector.get("Patient");
+          var action = TargetResource["::count::Doctor::patientAppointments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Doctor.patientAppointments#create
+         * @methodOf lbServices.Doctor.patientAppointments
+         *
+         * @description
+         *
+         * Creates a new instance in patientAppointments of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Patient` object.)
+         * </em>
+         */
+        R.patientAppointments.create = function() {
+          var TargetResource = $injector.get("Patient");
+          var action = TargetResource["::create::Doctor::patientAppointments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Doctor.patientAppointments#createMany
+         * @methodOf lbServices.Doctor.patientAppointments
+         *
+         * @description
+         *
+         * Creates a new instance in patientAppointments of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Patient` object.)
+         * </em>
+         */
+        R.patientAppointments.createMany = function() {
+          var TargetResource = $injector.get("Patient");
+          var action = TargetResource["::createMany::Doctor::patientAppointments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Doctor.patientAppointments#destroyAll
+         * @methodOf lbServices.Doctor.patientAppointments
+         *
+         * @description
+         *
+         * Deletes all patientAppointments of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.patientAppointments.destroyAll = function() {
+          var TargetResource = $injector.get("Patient");
+          var action = TargetResource["::delete::Doctor::patientAppointments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Doctor.patientAppointments#destroyById
+         * @methodOf lbServices.Doctor.patientAppointments
+         *
+         * @description
+         *
+         * Delete a related item by id for patientAppointments.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `fk` – `{*}` - Foreign key for patientAppointments
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.patientAppointments.destroyById = function() {
+          var TargetResource = $injector.get("Patient");
+          var action = TargetResource["::destroyById::Doctor::patientAppointments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Doctor.patientAppointments#exists
+         * @methodOf lbServices.Doctor.patientAppointments
+         *
+         * @description
+         *
+         * Check the existence of patientAppointments relation to an item by id.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `fk` – `{*}` - Foreign key for patientAppointments
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Patient` object.)
+         * </em>
+         */
+        R.patientAppointments.exists = function() {
+          var TargetResource = $injector.get("Patient");
+          var action = TargetResource["::exists::Doctor::patientAppointments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Doctor.patientAppointments#findById
+         * @methodOf lbServices.Doctor.patientAppointments
+         *
+         * @description
+         *
+         * Find a related item by id for patientAppointments.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `fk` – `{*}` - Foreign key for patientAppointments
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Patient` object.)
+         * </em>
+         */
+        R.patientAppointments.findById = function() {
+          var TargetResource = $injector.get("Patient");
+          var action = TargetResource["::findById::Doctor::patientAppointments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Doctor.patientAppointments#link
+         * @methodOf lbServices.Doctor.patientAppointments
+         *
+         * @description
+         *
+         * Add a related item by id for patientAppointments.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `fk` – `{*}` - Foreign key for patientAppointments
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Patient` object.)
+         * </em>
+         */
+        R.patientAppointments.link = function() {
+          var TargetResource = $injector.get("Patient");
+          var action = TargetResource["::link::Doctor::patientAppointments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Doctor.patientAppointments#unlink
+         * @methodOf lbServices.Doctor.patientAppointments
+         *
+         * @description
+         *
+         * Remove the patientAppointments relation to an item by id.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `fk` – `{*}` - Foreign key for patientAppointments
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.patientAppointments.unlink = function() {
+          var TargetResource = $injector.get("Patient");
+          var action = TargetResource["::unlink::Doctor::patientAppointments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Doctor.patientAppointments#updateById
+         * @methodOf lbServices.Doctor.patientAppointments
+         *
+         * @description
+         *
+         * Update a related item by id for patientAppointments.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `fk` – `{*}` - Foreign key for patientAppointments
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Patient` object.)
+         * </em>
+         */
+        R.patientAppointments.updateById = function() {
+          var TargetResource = $injector.get("Patient");
+          var action = TargetResource["::updateById::Doctor::patientAppointments"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Doctor#clinics
+         * @methodOf lbServices.Doctor
+         *
+         * @description
+         *
+         * Fetches belongsTo relation clinics.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `refresh` – `{boolean=}` - 
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Clinic` object.)
+         * </em>
+         */
+        R.clinics = function() {
+          var TargetResource = $injector.get("Clinic");
+          var action = TargetResource["::get::Doctor::clinics"];
+          return action.apply(R, arguments);
+        };
 
     return R;
   }]);
@@ -1576,82 +2225,134 @@ module.factory(
       { 'id': '@id' },
       {
 
-        // INTERNAL. Use Patient.physicans.findById() instead.
-        "prototype$__findById__physicans": {
+        // INTERNAL. Use Patient.doctors.findById() instead.
+        "prototype$__findById__doctors": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Patients/:id/physicans/:fk",
+          url: urlBase + "/Patients/:id/doctors/:fk",
           method: "GET"
         },
 
-        // INTERNAL. Use Patient.physicans.destroyById() instead.
-        "prototype$__destroyById__physicans": {
+        // INTERNAL. Use Patient.doctors.destroyById() instead.
+        "prototype$__destroyById__doctors": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Patients/:id/physicans/:fk",
+          url: urlBase + "/Patients/:id/doctors/:fk",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Patient.physicans.updateById() instead.
-        "prototype$__updateById__physicans": {
+        // INTERNAL. Use Patient.doctors.updateById() instead.
+        "prototype$__updateById__doctors": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Patients/:id/physicans/:fk",
+          url: urlBase + "/Patients/:id/doctors/:fk",
           method: "PUT"
         },
 
-        // INTERNAL. Use Patient.physicans.link() instead.
-        "prototype$__link__physicans": {
+        // INTERNAL. Use Patient.doctorsAppointment.findById() instead.
+        "prototype$__findById__doctorsAppointment": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Patients/:id/physicans/rel/:fk",
-          method: "PUT"
+          url: urlBase + "/Patients/:id/doctorsAppointment/:fk",
+          method: "GET"
         },
 
-        // INTERNAL. Use Patient.physicans.unlink() instead.
-        "prototype$__unlink__physicans": {
+        // INTERNAL. Use Patient.doctorsAppointment.destroyById() instead.
+        "prototype$__destroyById__doctorsAppointment": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Patients/:id/physicans/rel/:fk",
+          url: urlBase + "/Patients/:id/doctorsAppointment/:fk",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Patient.physicans.exists() instead.
-        "prototype$__exists__physicans": {
+        // INTERNAL. Use Patient.doctorsAppointment.updateById() instead.
+        "prototype$__updateById__doctorsAppointment": {
           params: {
           'fk': '@fk'
           },
-          url: urlBase + "/Patients/:id/physicans/rel/:fk",
+          url: urlBase + "/Patients/:id/doctorsAppointment/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.link() instead.
+        "prototype$__link__doctorsAppointment": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/doctorsAppointment/rel/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.unlink() instead.
+        "prototype$__unlink__doctorsAppointment": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/doctorsAppointment/rel/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.exists() instead.
+        "prototype$__exists__doctorsAppointment": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/doctorsAppointment/rel/:fk",
           method: "HEAD"
         },
 
-        // INTERNAL. Use Patient.physicans() instead.
-        "prototype$__get__physicans": {
+        // INTERNAL. Use Patient.doctors() instead.
+        "prototype$__get__doctors": {
           isArray: true,
-          url: urlBase + "/Patients/:id/physicans",
+          url: urlBase + "/Patients/:id/doctors",
           method: "GET"
         },
 
-        // INTERNAL. Use Patient.physicans.create() instead.
-        "prototype$__create__physicans": {
-          url: urlBase + "/Patients/:id/physicans",
+        // INTERNAL. Use Patient.doctors.create() instead.
+        "prototype$__create__doctors": {
+          url: urlBase + "/Patients/:id/doctors",
           method: "POST"
         },
 
-        // INTERNAL. Use Patient.physicans.destroyAll() instead.
-        "prototype$__delete__physicans": {
-          url: urlBase + "/Patients/:id/physicans",
+        // INTERNAL. Use Patient.doctors.destroyAll() instead.
+        "prototype$__delete__doctors": {
+          url: urlBase + "/Patients/:id/doctors",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Patient.physicans.count() instead.
-        "prototype$__count__physicans": {
-          url: urlBase + "/Patients/:id/physicans/count",
+        // INTERNAL. Use Patient.doctors.count() instead.
+        "prototype$__count__doctors": {
+          url: urlBase + "/Patients/:id/doctors/count",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment() instead.
+        "prototype$__get__doctorsAppointment": {
+          isArray: true,
+          url: urlBase + "/Patients/:id/doctorsAppointment",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.create() instead.
+        "prototype$__create__doctorsAppointment": {
+          url: urlBase + "/Patients/:id/doctorsAppointment",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.destroyAll() instead.
+        "prototype$__delete__doctorsAppointment": {
+          url: urlBase + "/Patients/:id/doctorsAppointment",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.count() instead.
+        "prototype$__count__doctorsAppointment": {
+          url: urlBase + "/Patients/:id/doctorsAppointment/count",
           method: "GET"
         },
 
@@ -2104,6 +2805,60 @@ module.factory(
           method: "PUT"
         },
 
+        // INTERNAL. Use Doctor.patientAppointments.findById() instead.
+        "::findById::Doctor::patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.destroyById() instead.
+        "::destroyById::Doctor::patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.updateById() instead.
+        "::updateById::Doctor::patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.link() instead.
+        "::link::Doctor::patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/rel/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.unlink() instead.
+        "::unlink::Doctor::patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/rel/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.exists() instead.
+        "::exists::Doctor::patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/rel/:fk",
+          method: "HEAD"
+        },
+
         // INTERNAL. Use Doctor.patients() instead.
         "::get::Doctor::patients": {
           isArray: true,
@@ -2133,6 +2888,38 @@ module.factory(
         // INTERNAL. Use Doctor.patients.count() instead.
         "::count::Doctor::patients": {
           url: urlBase + "/Doctors/:id/patients/count",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments() instead.
+        "::get::Doctor::patientAppointments": {
+          isArray: true,
+          url: urlBase + "/Doctors/:id/patientAppointments",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.create() instead.
+        "::create::Doctor::patientAppointments": {
+          url: urlBase + "/Doctors/:id/patientAppointments",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.createMany() instead.
+        "::createMany::Doctor::patientAppointments": {
+          isArray: true,
+          url: urlBase + "/Doctors/:id/patientAppointments",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.destroyAll() instead.
+        "::delete::Doctor::patientAppointments": {
+          url: urlBase + "/Doctors/:id/patientAppointments",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.count() instead.
+        "::count::Doctor::patientAppointments": {
+          url: urlBase + "/Doctors/:id/patientAppointments/count",
           method: "GET"
         },
 
@@ -2285,27 +3072,27 @@ module.factory(
 
     /**
      * @ngdoc object
-     * @name lbServices.Patient.physicans
-     * @header lbServices.Patient.physicans
+     * @name lbServices.Patient.doctors
+     * @header lbServices.Patient.doctors
      * @object
      * @description
      *
-     * The object `Patient.physicans` groups methods
+     * The object `Patient.doctors` groups methods
      * manipulating `Doctor` instances related to `Patient`.
      *
-     * Call {@link lbServices.Patient#physicans Patient.physicans()}
+     * Call {@link lbServices.Patient#doctors Patient.doctors()}
      * to query all related instances.
      */
 
 
         /**
          * @ngdoc method
-         * @name lbServices.Patient#physicans
+         * @name lbServices.Patient#doctors
          * @methodOf lbServices.Patient
          *
          * @description
          *
-         * Queries physicans of Patient.
+         * Queries doctors of Patient.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -2328,20 +3115,20 @@ module.factory(
          * This usually means the response is a `Doctor` object.)
          * </em>
          */
-        R.physicans = function() {
+        R.doctors = function() {
           var TargetResource = $injector.get("Doctor");
-          var action = TargetResource["::get::Patient::physicans"];
+          var action = TargetResource["::get::Patient::doctors"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Patient.physicans#count
-         * @methodOf lbServices.Patient.physicans
+         * @name lbServices.Patient.doctors#count
+         * @methodOf lbServices.Patient.doctors
          *
          * @description
          *
-         * Counts physicans of Patient.
+         * Counts doctors of Patient.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -2363,20 +3150,20 @@ module.factory(
          *
          *  - `count` – `{number=}` - 
          */
-        R.physicans.count = function() {
+        R.doctors.count = function() {
           var TargetResource = $injector.get("Doctor");
-          var action = TargetResource["::count::Patient::physicans"];
+          var action = TargetResource["::count::Patient::doctors"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Patient.physicans#create
-         * @methodOf lbServices.Patient.physicans
+         * @name lbServices.Patient.doctors#create
+         * @methodOf lbServices.Patient.doctors
          *
          * @description
          *
-         * Creates a new instance in physicans of this model.
+         * Creates a new instance in doctors of this model.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -2401,20 +3188,20 @@ module.factory(
          * This usually means the response is a `Doctor` object.)
          * </em>
          */
-        R.physicans.create = function() {
+        R.doctors.create = function() {
           var TargetResource = $injector.get("Doctor");
-          var action = TargetResource["::create::Patient::physicans"];
+          var action = TargetResource["::create::Patient::doctors"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Patient.physicans#createMany
-         * @methodOf lbServices.Patient.physicans
+         * @name lbServices.Patient.doctors#createMany
+         * @methodOf lbServices.Patient.doctors
          *
          * @description
          *
-         * Creates a new instance in physicans of this model.
+         * Creates a new instance in doctors of this model.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -2439,20 +3226,20 @@ module.factory(
          * This usually means the response is a `Doctor` object.)
          * </em>
          */
-        R.physicans.createMany = function() {
+        R.doctors.createMany = function() {
           var TargetResource = $injector.get("Doctor");
-          var action = TargetResource["::createMany::Patient::physicans"];
+          var action = TargetResource["::createMany::Patient::doctors"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Patient.physicans#destroyAll
-         * @methodOf lbServices.Patient.physicans
+         * @name lbServices.Patient.doctors#destroyAll
+         * @methodOf lbServices.Patient.doctors
          *
          * @description
          *
-         * Deletes all physicans of this model.
+         * Deletes all doctors of this model.
          *
          * @param {Object=} parameters Request parameters.
          *
@@ -2470,26 +3257,26 @@ module.factory(
          *
          * This method returns no data.
          */
-        R.physicans.destroyAll = function() {
+        R.doctors.destroyAll = function() {
           var TargetResource = $injector.get("Doctor");
-          var action = TargetResource["::delete::Patient::physicans"];
+          var action = TargetResource["::delete::Patient::doctors"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Patient.physicans#destroyById
-         * @methodOf lbServices.Patient.physicans
+         * @name lbServices.Patient.doctors#destroyById
+         * @methodOf lbServices.Patient.doctors
          *
          * @description
          *
-         * Delete a related item by id for physicans.
+         * Delete a related item by id for doctors.
          *
          * @param {Object=} parameters Request parameters.
          *
          *  - `id` – `{*}` - PersistedModel id
          *
-         *  - `fk` – `{*}` - Foreign key for physicans
+         *  - `fk` – `{*}` - Foreign key for doctors
          *
          * @param {function(Object,Object)=} successCb
          *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -2503,26 +3290,26 @@ module.factory(
          *
          * This method returns no data.
          */
-        R.physicans.destroyById = function() {
+        R.doctors.destroyById = function() {
           var TargetResource = $injector.get("Doctor");
-          var action = TargetResource["::destroyById::Patient::physicans"];
+          var action = TargetResource["::destroyById::Patient::doctors"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Patient.physicans#exists
-         * @methodOf lbServices.Patient.physicans
+         * @name lbServices.Patient.doctors#findById
+         * @methodOf lbServices.Patient.doctors
          *
          * @description
          *
-         * Check the existence of physicans relation to an item by id.
+         * Find a related item by id for doctors.
          *
          * @param {Object=} parameters Request parameters.
          *
          *  - `id` – `{*}` - PersistedModel id
          *
-         *  - `fk` – `{*}` - Foreign key for physicans
+         *  - `fk` – `{*}` - Foreign key for doctors
          *
          * @param {function(Object,Object)=} successCb
          *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -2539,62 +3326,26 @@ module.factory(
          * This usually means the response is a `Doctor` object.)
          * </em>
          */
-        R.physicans.exists = function() {
+        R.doctors.findById = function() {
           var TargetResource = $injector.get("Doctor");
-          var action = TargetResource["::exists::Patient::physicans"];
+          var action = TargetResource["::findById::Patient::doctors"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Patient.physicans#findById
-         * @methodOf lbServices.Patient.physicans
+         * @name lbServices.Patient.doctors#updateById
+         * @methodOf lbServices.Patient.doctors
          *
          * @description
          *
-         * Find a related item by id for physicans.
+         * Update a related item by id for doctors.
          *
          * @param {Object=} parameters Request parameters.
          *
          *  - `id` – `{*}` - PersistedModel id
          *
-         *  - `fk` – `{*}` - Foreign key for physicans
-         *
-         * @param {function(Object,Object)=} successCb
-         *   Success callback with two arguments: `value`, `responseHeaders`.
-         *
-         * @param {function(Object)=} errorCb Error callback with one argument:
-         *   `httpResponse`.
-         *
-         * @returns {Object} An empty reference that will be
-         *   populated with the actual data once the response is returned
-         *   from the server.
-         *
-         * <em>
-         * (The remote method definition does not provide any description.
-         * This usually means the response is a `Doctor` object.)
-         * </em>
-         */
-        R.physicans.findById = function() {
-          var TargetResource = $injector.get("Doctor");
-          var action = TargetResource["::findById::Patient::physicans"];
-          return action.apply(R, arguments);
-        };
-
-        /**
-         * @ngdoc method
-         * @name lbServices.Patient.physicans#link
-         * @methodOf lbServices.Patient.physicans
-         *
-         * @description
-         *
-         * Add a related item by id for physicans.
-         *
-         * @param {Object=} parameters Request parameters.
-         *
-         *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `fk` – `{*}` - Foreign key for physicans
+         *  - `fk` – `{*}` - Foreign key for doctors
          *
          * @param {Object} postData Request data.
          *
@@ -2615,26 +3366,76 @@ module.factory(
          * This usually means the response is a `Doctor` object.)
          * </em>
          */
-        R.physicans.link = function() {
+        R.doctors.updateById = function() {
           var TargetResource = $injector.get("Doctor");
-          var action = TargetResource["::link::Patient::physicans"];
+          var action = TargetResource["::updateById::Patient::doctors"];
           return action.apply(R, arguments);
         };
+    /**
+     * @ngdoc object
+     * @name lbServices.Patient.doctorsAppointment
+     * @header lbServices.Patient.doctorsAppointment
+     * @object
+     * @description
+     *
+     * The object `Patient.doctorsAppointment` groups methods
+     * manipulating `Doctor` instances related to `Patient`.
+     *
+     * Call {@link lbServices.Patient#doctorsAppointment Patient.doctorsAppointment()}
+     * to query all related instances.
+     */
+
 
         /**
          * @ngdoc method
-         * @name lbServices.Patient.physicans#unlink
-         * @methodOf lbServices.Patient.physicans
+         * @name lbServices.Patient#doctorsAppointment
+         * @methodOf lbServices.Patient
          *
          * @description
          *
-         * Remove the physicans relation to an item by id.
+         * Queries doctorsAppointment of Patient.
          *
          * @param {Object=} parameters Request parameters.
          *
          *  - `id` – `{*}` - PersistedModel id
          *
-         *  - `fk` – `{*}` - Foreign key for physicans
+         *  - `filter` – `{object=}` - 
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Doctor` object.)
+         * </em>
+         */
+        R.doctorsAppointment = function() {
+          var TargetResource = $injector.get("Doctor");
+          var action = TargetResource["::get::Patient::doctorsAppointment"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Patient.doctorsAppointment#count
+         * @methodOf lbServices.Patient.doctorsAppointment
+         *
+         * @description
+         *
+         * Counts doctorsAppointment of Patient.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
          *
          * @param {function(Object,Object)=} successCb
          *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -2646,28 +3447,28 @@ module.factory(
          *   populated with the actual data once the response is returned
          *   from the server.
          *
-         * This method returns no data.
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
          */
-        R.physicans.unlink = function() {
+        R.doctorsAppointment.count = function() {
           var TargetResource = $injector.get("Doctor");
-          var action = TargetResource["::unlink::Patient::physicans"];
+          var action = TargetResource["::count::Patient::doctorsAppointment"];
           return action.apply(R, arguments);
         };
 
         /**
          * @ngdoc method
-         * @name lbServices.Patient.physicans#updateById
-         * @methodOf lbServices.Patient.physicans
+         * @name lbServices.Patient.doctorsAppointment#create
+         * @methodOf lbServices.Patient.doctorsAppointment
          *
          * @description
          *
-         * Update a related item by id for physicans.
+         * Creates a new instance in doctorsAppointment of this model.
          *
          * @param {Object=} parameters Request parameters.
          *
          *  - `id` – `{*}` - PersistedModel id
-         *
-         *  - `fk` – `{*}` - Foreign key for physicans
          *
          * @param {Object} postData Request data.
          *
@@ -2688,9 +3489,296 @@ module.factory(
          * This usually means the response is a `Doctor` object.)
          * </em>
          */
-        R.physicans.updateById = function() {
+        R.doctorsAppointment.create = function() {
           var TargetResource = $injector.get("Doctor");
-          var action = TargetResource["::updateById::Patient::physicans"];
+          var action = TargetResource["::create::Patient::doctorsAppointment"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Patient.doctorsAppointment#createMany
+         * @methodOf lbServices.Patient.doctorsAppointment
+         *
+         * @description
+         *
+         * Creates a new instance in doctorsAppointment of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Doctor` object.)
+         * </em>
+         */
+        R.doctorsAppointment.createMany = function() {
+          var TargetResource = $injector.get("Doctor");
+          var action = TargetResource["::createMany::Patient::doctorsAppointment"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Patient.doctorsAppointment#destroyAll
+         * @methodOf lbServices.Patient.doctorsAppointment
+         *
+         * @description
+         *
+         * Deletes all doctorsAppointment of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.doctorsAppointment.destroyAll = function() {
+          var TargetResource = $injector.get("Doctor");
+          var action = TargetResource["::delete::Patient::doctorsAppointment"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Patient.doctorsAppointment#destroyById
+         * @methodOf lbServices.Patient.doctorsAppointment
+         *
+         * @description
+         *
+         * Delete a related item by id for doctorsAppointment.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for doctorsAppointment
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.doctorsAppointment.destroyById = function() {
+          var TargetResource = $injector.get("Doctor");
+          var action = TargetResource["::destroyById::Patient::doctorsAppointment"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Patient.doctorsAppointment#exists
+         * @methodOf lbServices.Patient.doctorsAppointment
+         *
+         * @description
+         *
+         * Check the existence of doctorsAppointment relation to an item by id.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for doctorsAppointment
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Doctor` object.)
+         * </em>
+         */
+        R.doctorsAppointment.exists = function() {
+          var TargetResource = $injector.get("Doctor");
+          var action = TargetResource["::exists::Patient::doctorsAppointment"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Patient.doctorsAppointment#findById
+         * @methodOf lbServices.Patient.doctorsAppointment
+         *
+         * @description
+         *
+         * Find a related item by id for doctorsAppointment.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for doctorsAppointment
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Doctor` object.)
+         * </em>
+         */
+        R.doctorsAppointment.findById = function() {
+          var TargetResource = $injector.get("Doctor");
+          var action = TargetResource["::findById::Patient::doctorsAppointment"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Patient.doctorsAppointment#link
+         * @methodOf lbServices.Patient.doctorsAppointment
+         *
+         * @description
+         *
+         * Add a related item by id for doctorsAppointment.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for doctorsAppointment
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Doctor` object.)
+         * </em>
+         */
+        R.doctorsAppointment.link = function() {
+          var TargetResource = $injector.get("Doctor");
+          var action = TargetResource["::link::Patient::doctorsAppointment"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Patient.doctorsAppointment#unlink
+         * @methodOf lbServices.Patient.doctorsAppointment
+         *
+         * @description
+         *
+         * Remove the doctorsAppointment relation to an item by id.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for doctorsAppointment
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.doctorsAppointment.unlink = function() {
+          var TargetResource = $injector.get("Doctor");
+          var action = TargetResource["::unlink::Patient::doctorsAppointment"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Patient.doctorsAppointment#updateById
+         * @methodOf lbServices.Patient.doctorsAppointment
+         *
+         * @description
+         *
+         * Update a related item by id for doctorsAppointment.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for doctorsAppointment
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Doctor` object.)
+         * </em>
+         */
+        R.doctorsAppointment.updateById = function() {
+          var TargetResource = $injector.get("Doctor");
+          var action = TargetResource["::updateById::Patient::doctorsAppointment"];
           return action.apply(R, arguments);
         };
 
@@ -4458,6 +5546,957 @@ module.factory(
         R.patient = function() {
           var TargetResource = $injector.get("Patient");
           var action = TargetResource["::get::Appointment::patient"];
+          return action.apply(R, arguments);
+        };
+
+    return R;
+  }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.Clinic
+ * @header lbServices.Clinic
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `Clinic` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+module.factory(
+  "Clinic",
+  ['LoopBackResource', 'LoopBackAuth', '$injector', function(Resource, LoopBackAuth, $injector) {
+    var R = Resource(
+      urlBase + "/Clinics/:id",
+      { 'id': '@id' },
+      {
+
+        // INTERNAL. Use Clinic.doctors.findById() instead.
+        "prototype$__findById__doctors": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Clinics/:id/doctors/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Clinic.doctors.destroyById() instead.
+        "prototype$__destroyById__doctors": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Clinics/:id/doctors/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Clinic.doctors.updateById() instead.
+        "prototype$__updateById__doctors": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Clinics/:id/doctors/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Clinic.doctors() instead.
+        "prototype$__get__doctors": {
+          isArray: true,
+          url: urlBase + "/Clinics/:id/doctors",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Clinic.doctors.create() instead.
+        "prototype$__create__doctors": {
+          url: urlBase + "/Clinics/:id/doctors",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Clinic.doctors.destroyAll() instead.
+        "prototype$__delete__doctors": {
+          url: urlBase + "/Clinics/:id/doctors",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Clinic.doctors.count() instead.
+        "prototype$__count__doctors": {
+          url: urlBase + "/Clinics/:id/doctors/count",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic#create
+         * @methodOf lbServices.Clinic
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Clinic` object.)
+         * </em>
+         */
+        "create": {
+          url: urlBase + "/Clinics",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic#createMany
+         * @methodOf lbServices.Clinic
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Clinic` object.)
+         * </em>
+         */
+        "createMany": {
+          isArray: true,
+          url: urlBase + "/Clinics",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic#upsert
+         * @methodOf lbServices.Clinic
+         *
+         * @description
+         *
+         * Update an existing model instance or insert a new one into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Clinic` object.)
+         * </em>
+         */
+        "upsert": {
+          url: urlBase + "/Clinics",
+          method: "PUT"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic#exists
+         * @methodOf lbServices.Clinic
+         *
+         * @description
+         *
+         * Check whether a model instance exists in the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `exists` – `{boolean=}` - 
+         */
+        "exists": {
+          url: urlBase + "/Clinics/:id/exists",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic#findById
+         * @methodOf lbServices.Clinic
+         *
+         * @description
+         *
+         * Find a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         *  - `filter` – `{object=}` - Filter defining fields and include
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Clinic` object.)
+         * </em>
+         */
+        "findById": {
+          url: urlBase + "/Clinics/:id",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic#find
+         * @methodOf lbServices.Clinic
+         *
+         * @description
+         *
+         * Find all instances of the model matched by filter from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Clinic` object.)
+         * </em>
+         */
+        "find": {
+          isArray: true,
+          url: urlBase + "/Clinics",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic#findOne
+         * @methodOf lbServices.Clinic
+         *
+         * @description
+         *
+         * Find first instance of the model matched by filter from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Clinic` object.)
+         * </em>
+         */
+        "findOne": {
+          url: urlBase + "/Clinics/findOne",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic#updateAll
+         * @methodOf lbServices.Clinic
+         *
+         * @description
+         *
+         * Update instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * The number of instances updated
+         */
+        "updateAll": {
+          url: urlBase + "/Clinics/update",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic#deleteById
+         * @methodOf lbServices.Clinic
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Clinic` object.)
+         * </em>
+         */
+        "deleteById": {
+          url: urlBase + "/Clinics/:id",
+          method: "DELETE"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic#count
+         * @methodOf lbServices.Clinic
+         *
+         * @description
+         *
+         * Count instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        "count": {
+          url: urlBase + "/Clinics/count",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic#prototype$updateAttributes
+         * @methodOf lbServices.Clinic
+         *
+         * @description
+         *
+         * Update attributes for a model instance and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Clinic` object.)
+         * </em>
+         */
+        "prototype$updateAttributes": {
+          url: urlBase + "/Clinics/:id",
+          method: "PUT"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic#createChangeStream
+         * @methodOf lbServices.Clinic
+         *
+         * @description
+         *
+         * Create a change stream.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         *  - `options` – `{object=}` - 
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `changes` – `{ReadableStream=}` - 
+         */
+        "createChangeStream": {
+          url: urlBase + "/Clinics/change-stream",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Doctor.clinics() instead.
+        "::get::Doctor::clinics": {
+          url: urlBase + "/Doctors/:id/clinics",
+          method: "GET"
+        },
+      }
+    );
+
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic#updateOrCreate
+         * @methodOf lbServices.Clinic
+         *
+         * @description
+         *
+         * Update an existing model instance or insert a new one into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Clinic` object.)
+         * </em>
+         */
+        R["updateOrCreate"] = R["upsert"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic#update
+         * @methodOf lbServices.Clinic
+         *
+         * @description
+         *
+         * Update instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * The number of instances updated
+         */
+        R["update"] = R["updateAll"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic#destroyById
+         * @methodOf lbServices.Clinic
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Clinic` object.)
+         * </em>
+         */
+        R["destroyById"] = R["deleteById"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic#removeById
+         * @methodOf lbServices.Clinic
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Clinic` object.)
+         * </em>
+         */
+        R["removeById"] = R["deleteById"];
+
+
+    /**
+    * @ngdoc property
+    * @name lbServices.Clinic#modelName
+    * @propertyOf lbServices.Clinic
+    * @description
+    * The name of the model represented by this $resource,
+    * i.e. `Clinic`.
+    */
+    R.modelName = "Clinic";
+
+    /**
+     * @ngdoc object
+     * @name lbServices.Clinic.doctors
+     * @header lbServices.Clinic.doctors
+     * @object
+     * @description
+     *
+     * The object `Clinic.doctors` groups methods
+     * manipulating `Doctor` instances related to `Clinic`.
+     *
+     * Call {@link lbServices.Clinic#doctors Clinic.doctors()}
+     * to query all related instances.
+     */
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic#doctors
+         * @methodOf lbServices.Clinic
+         *
+         * @description
+         *
+         * Queries doctors of Clinic.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `filter` – `{object=}` - 
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Doctor` object.)
+         * </em>
+         */
+        R.doctors = function() {
+          var TargetResource = $injector.get("Doctor");
+          var action = TargetResource["::get::Clinic::doctors"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic.doctors#count
+         * @methodOf lbServices.Clinic.doctors
+         *
+         * @description
+         *
+         * Counts doctors of Clinic.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        R.doctors.count = function() {
+          var TargetResource = $injector.get("Doctor");
+          var action = TargetResource["::count::Clinic::doctors"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic.doctors#create
+         * @methodOf lbServices.Clinic.doctors
+         *
+         * @description
+         *
+         * Creates a new instance in doctors of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Doctor` object.)
+         * </em>
+         */
+        R.doctors.create = function() {
+          var TargetResource = $injector.get("Doctor");
+          var action = TargetResource["::create::Clinic::doctors"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic.doctors#createMany
+         * @methodOf lbServices.Clinic.doctors
+         *
+         * @description
+         *
+         * Creates a new instance in doctors of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Doctor` object.)
+         * </em>
+         */
+        R.doctors.createMany = function() {
+          var TargetResource = $injector.get("Doctor");
+          var action = TargetResource["::createMany::Clinic::doctors"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic.doctors#destroyAll
+         * @methodOf lbServices.Clinic.doctors
+         *
+         * @description
+         *
+         * Deletes all doctors of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.doctors.destroyAll = function() {
+          var TargetResource = $injector.get("Doctor");
+          var action = TargetResource["::delete::Clinic::doctors"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic.doctors#destroyById
+         * @methodOf lbServices.Clinic.doctors
+         *
+         * @description
+         *
+         * Delete a related item by id for doctors.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for doctors
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.doctors.destroyById = function() {
+          var TargetResource = $injector.get("Doctor");
+          var action = TargetResource["::destroyById::Clinic::doctors"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic.doctors#findById
+         * @methodOf lbServices.Clinic.doctors
+         *
+         * @description
+         *
+         * Find a related item by id for doctors.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for doctors
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Doctor` object.)
+         * </em>
+         */
+        R.doctors.findById = function() {
+          var TargetResource = $injector.get("Doctor");
+          var action = TargetResource["::findById::Clinic::doctors"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Clinic.doctors#updateById
+         * @methodOf lbServices.Clinic.doctors
+         *
+         * @description
+         *
+         * Update a related item by id for doctors.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `fk` – `{*}` - Foreign key for doctors
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Doctor` object.)
+         * </em>
+         */
+        R.doctors.updateById = function() {
+          var TargetResource = $injector.get("Doctor");
+          var action = TargetResource["::updateById::Clinic::doctors"];
           return action.apply(R, arguments);
         };
 

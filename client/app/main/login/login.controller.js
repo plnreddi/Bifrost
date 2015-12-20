@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('bifrostApp')
-  .controller('LoginCtrl', function(Doctor, $rootScope, $state) {
+  .controller('LoginCtrl', function(Doctor, $rootScope, $state, Clinic) {
     this.login = function() {
       if (!$rootScope.currentUser) {
         this.loginResult = Doctor.login({
@@ -9,10 +9,23 @@ angular.module('bifrostApp')
             rememberMe: false
           }, this.credentials,
           function(user) {
-            console.log(user);
             $rootScope.currentUser = user.user;
-            $state.go('main');
+            Doctor.clinics({
+              id: $rootScope.currentUser.id
+            }, function(clinic) {
+              $rootScope.currentClinic = clinic;
+              Clinic.doctors({
+                id: clinic.id
+              }, function(doctors) {
+                $rootScope.currentClinic.doctors = doctors;
+                $rootScope.clinicDoctorIds = [];
+                for (var i = 0; i < $rootScope.currentClinic.doctors.length; i++) {
+                  $rootScope.clinicDoctorIds.push($rootScope.currentClinic.doctors[i].id);
+                }
+                $state.go('main');
+              });
+            });
           });
       }
-    }
+    };
   });

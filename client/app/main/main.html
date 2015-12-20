@@ -1,3 +1,15 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
+<div class="row-fluid">
+  <div class="col-md-1">
 
-<div ui-calendar="MainCtrl.uiConfig.calendar" ng-model="MainCtrl.eventSources" calendar="myCalendar">
+    <formly-form model="MainCtrl.users" fields="MainCtrl.userFields" form="MainCtrl.forms.usersEventsForm">
+    </formly-form>
+
+  </div>
+  <div class="col-md-10">
+    <div ui-calendar="MainCtrl.uiConfig.calendar" ng-model="MainCtrl.eventSources" calendar="myCalendar">
+    </div>
+  </div>
+  <div class="col-md-1">
+  </div>
+</div>

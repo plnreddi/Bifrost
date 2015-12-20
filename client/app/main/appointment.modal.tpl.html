@@ -1,0 +1,36 @@
+<div class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" ng-show="title">
+        <button type="button" class="close" aria-label="Close" ng-click="$hide()"><span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" ng-bind="title"></h4>
+      </div>
+        <br>
+      <div bs-tabs bs-active-pane="0" ng-model="AppointmentModalCtrl.activeTab">
+        <div title="Appointment" bs-pane>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label class="control-label">Appointment Time</label>
+                <input maxlength="100" type="text" required="required" class="form-control" value="{{::AppointmentModalCtrl.appointment.start.toString()}}-{{::AppointmentModalCtrl.appointment.end.toString()}}" />
+              </div>
+            </form>
+            <formly-form model="AppointmentModalCtrl.appointment" fields="AppointmentModalCtrl.appointmentFields" form="AppointmentModalCtrl.forms.appointmentForm">
+            </formly-form>
+          </div>
+        </div>
+        <div title="Block Time" bs-pane>
+          <div class="modal-body">
+            <formly-form model="AppointmentModalCtrl.appointment" fields="AppointmentModalCtrl.timeBlockFields" form="AppointmentModalCtrl.forms.blockForm">
+            </formly-form>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" ng-click="AppointmentModalCtrl.calendarUnselect();$hide()">Close</button>
+        <button type="button" ng-disabled="AppointmentModalCtrl.submitDisabled()" class="btn btn-primary" ng-click="AppointmentModalCtrl.createEvent(AppointmentModalCtrl.appointment);$hide()">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
