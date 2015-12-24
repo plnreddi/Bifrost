@@ -1,6 +1,12 @@
 {
-  "db": {
+  "db1": {
     "name": "db",
     "connector": "memory"
+  },
+  "db": {
+    "name": "db",
+    "connector": "crateio",
+    "host": "localhost",
+    "port": 4200
   }
 }
