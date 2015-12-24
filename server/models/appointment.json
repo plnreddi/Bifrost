@@ -2,7 +2,7 @@
   "name": "Appointment",
   "base": "PersistedModel",
   "properties": {
-    "endTime": {
+    "startTime": {
       "type": "date",
       "required": true
     },
