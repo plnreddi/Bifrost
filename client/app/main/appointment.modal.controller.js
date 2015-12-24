@@ -242,13 +242,14 @@ angular.module('bifrostApp')
       if (this.activeTab == 0) {
         if (event.patientName) {
           Appointment.create({
-            'type': 'normal',
-            'start': start,
-            'end': end,
+            'appointmentType': 'normal',
+            'startTime': start,
+            'endTime': end,
             'patientName': event.patientName,
             'doctorId': event.doctor,
             'patientId': 0,
-            'allDay': event.isAllDay
+            'allDay': event.isAllDay,
+            'status': 'NS'
           });
           calendar.fullCalendar('renderEvent', {
               title: event.patientName,
@@ -261,9 +262,9 @@ angular.module('bifrostApp')
       } else {
         if (event.blockReason) {
           Appointment.create({
-            'type': 'block',
-            'start': start,
-            'end': end,
+            'appointmentType': 'block',
+            'startTime': start,
+            'endTime': end,
             'title': event.blockReason,
             'doctorId': event.doctor,
             'allDay': event.isAllDay

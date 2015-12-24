@@ -2,17 +2,17 @@
   "name": "Appointment",
   "base": "PersistedModel",
   "properties": {
-    "start": {
+    "endTime": {
       "type": "date",
       "required": true
     },
-    "end": {
+    "endTime": {
       "type": "date"
     },
     "patientName": {
       "type": "string"
     },
-    "type": {
+    "appointmentType": {
       "type": "string",
       "required": true
     },
@@ -21,6 +21,10 @@
     },
     "allDay": {
       "type": "boolean"
+    },
+    "status": {
+      "type": "string",
+      "default": "NS"
     }
   },
   "validations": [],

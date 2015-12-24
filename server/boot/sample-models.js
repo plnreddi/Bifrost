@@ -3,44 +3,44 @@ module.exports = function(app) {
   var Appointment = app.models.Appointment;
 
   Appointment.create([{
-    "start": "December 17, 2015 03:25:00",
-    "end": "December 17, 2015 03:40:00",
+    "startTime": "December 17, 2015 03:25:00",
+    "endTime": "December 17, 2015 03:40:00",
     "patientName": "test",
-    "type": "normal",
+    "appointmentType": "normal",
     "doctorId": 1,
     "patientId": 3
   }, {
-    "start": "December 16, 2015 03:15:00",
-    "end": "December 16, 2015 03:30:00",
+    "startTime": "December 16, 2015 03:15:00",
+    "endTime": "December 16, 2015 03:30:00",
     "patientName": "rest",
-    "type": "normal",
+    "appointmentType": "normal",
     "doctorId": 1,
     "patientId": 1
   }, {
-    "start": "December 12, 2015 13:15:00",
-    "end": "December 12, 2015 13:30:00",
+    "startTime": "December 12, 2015 13:15:00",
+    "endTime": "December 12, 2015 13:30:00",
     "patientName": "rest",
-    "type": "normal",
+    "appointmentType": "normal",
     "doctorId": 1,
     "patientId": 1
   },{
-    "start": "December 14, 2015 03:15:00",
-    "end": "December 14, 2015 03:30:00",
+    "startTime": "December 14, 2015 03:15:00",
+    "endTime": "December 14, 2015 03:30:00",
     "title": "knmnj",
-    "type": "block",
+    "appointmentType": "block",
     "doctorId": 1
   }, {
-    "start": "December 19, 2015 03:25:00",
-    "end": "December 17, 2015 03:40:00",
+    "startTime": "December 19, 2015 03:25:00",
+    "endTime": "December 17, 2015 03:40:00",
     "patientName": "wvqecwt",
-    "type": "normal",
+    "appointmentType": "normal",
     "doctorId": 2,
     "patientId": 2
   }, {
-    "start": "December 16, 2015 02:15:00",
-    "end": "December 16, 2015 02:30:00",
+    "startTime": "December 16, 2015 02:15:00",
+    "endTime": "December 16, 2015 02:30:00",
     "patientName": "vgvwrv",
-    "type": "normal",
+    "appointmentType": "normal",
     "doctorId": 2,
     "patientId": 1
   }], function(err, appointments) {

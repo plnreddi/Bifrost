@@ -7316,6 +7316,19 @@ button.close {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 
+.timeline {
+  position: absolute;
+  left: 59px;
+  border: none;
+  border-top: 1px solid red;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 999; }
+
+.past-event {
+  opacity: 0.5; }
+
 .white {
   color: #000;
   background-color: #fff; }
