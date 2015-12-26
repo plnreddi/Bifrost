@@ -6,7 +6,7 @@
   "db": {
     "name": "db",
     "connector": "crateio",
-    "host": "localhost",
+    "host": "crate.marathon.corp",
     "port": 4200
   }
 }
