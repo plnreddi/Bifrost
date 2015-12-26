@@ -9,6 +9,7 @@ RUN npm install kerberos
 RUN npm install -g bower grunt
 RUN npm install
 RUN bower install --config.interactive=false --allow-root
+RUN grunt build
 
 EXPOSE 3000
-CMD [ "npm", "start" ]
+CMD [ "node", "dist/server/server.js" ]
