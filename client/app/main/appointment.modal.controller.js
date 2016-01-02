@@ -120,7 +120,6 @@ angular.module('bifrostApp')
         'className': 'col-xs-3',
         key: 'duration',
         type: 'select',
-        defaultValue: 15,
         templateOptions: {
           label: 'Duration',
           options: [{
@@ -204,7 +203,6 @@ angular.module('bifrostApp')
     }, {
       key: 'duration',
       type: 'select',
-      defaultValue: 15,
       templateOptions: {
         label: 'Duration',
         options: [{
@@ -244,7 +242,7 @@ angular.module('bifrostApp')
           Appointment.create({
             'appointmentType': 'normal',
             'startTime': start,
-            'endTime': end,
+            'endTime':  end,
             'patientName': event.patientName,
             'doctorId': event.doctor,
             'patientId': 0,

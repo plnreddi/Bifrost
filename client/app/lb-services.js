@@ -40,6 +40,93 @@ module.factory(
       { 'id': '@id' },
       {
 
+        // INTERNAL. Use Doctor.patients.findById() instead.
+        "prototype$__findById__patients": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patients/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Doctor.patients.destroyById() instead.
+        "prototype$__destroyById__patients": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patients/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Doctor.patients.updateById() instead.
+        "prototype$__updateById__patients": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patients/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.findById() instead.
+        "prototype$__findById__patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.destroyById() instead.
+        "prototype$__destroyById__patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.updateById() instead.
+        "prototype$__updateById__patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.link() instead.
+        "prototype$__link__patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/rel/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.unlink() instead.
+        "prototype$__unlink__patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/rel/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.exists() instead.
+        "prototype$__exists__patientAppointments": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Doctors/:id/patientAppointments/rel/:fk",
+          method: "HEAD"
+        },
+
+        // INTERNAL. Use Doctor.clinics() instead.
+        "prototype$__get__clinics": {
+          url: urlBase + "/Doctors/:id/clinics",
+          method: "GET"
+        },
+
         /**
          * @ngdoc method
          * @name lbServices.Doctor#prototype$__findById__accessTokens
@@ -155,90 +242,53 @@ module.factory(
           method: "PUT"
         },
 
-        // INTERNAL. Use Doctor.patients.findById() instead.
-        "prototype$__findById__patients": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Doctors/:id/patients/:fk",
+        // INTERNAL. Use Doctor.patients() instead.
+        "prototype$__get__patients": {
+          isArray: true,
+          url: urlBase + "/Doctors/:id/patients",
           method: "GET"
         },
 
-        // INTERNAL. Use Doctor.patients.destroyById() instead.
-        "prototype$__destroyById__patients": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Doctors/:id/patients/:fk",
+        // INTERNAL. Use Doctor.patients.create() instead.
+        "prototype$__create__patients": {
+          url: urlBase + "/Doctors/:id/patients",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Doctor.patients.destroyAll() instead.
+        "prototype$__delete__patients": {
+          url: urlBase + "/Doctors/:id/patients",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Doctor.patients.updateById() instead.
-        "prototype$__updateById__patients": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Doctors/:id/patients/:fk",
-          method: "PUT"
-        },
-
-        // INTERNAL. Use Doctor.patientAppointments.findById() instead.
-        "prototype$__findById__patientAppointments": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Doctors/:id/patientAppointments/:fk",
+        // INTERNAL. Use Doctor.patients.count() instead.
+        "prototype$__count__patients": {
+          url: urlBase + "/Doctors/:id/patients/count",
           method: "GET"
         },
 
-        // INTERNAL. Use Doctor.patientAppointments.destroyById() instead.
-        "prototype$__destroyById__patientAppointments": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Doctors/:id/patientAppointments/:fk",
+        // INTERNAL. Use Doctor.patientAppointments() instead.
+        "prototype$__get__patientAppointments": {
+          isArray: true,
+          url: urlBase + "/Doctors/:id/patientAppointments",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.create() instead.
+        "prototype$__create__patientAppointments": {
+          url: urlBase + "/Doctors/:id/patientAppointments",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Doctor.patientAppointments.destroyAll() instead.
+        "prototype$__delete__patientAppointments": {
+          url: urlBase + "/Doctors/:id/patientAppointments",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Doctor.patientAppointments.updateById() instead.
-        "prototype$__updateById__patientAppointments": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Doctors/:id/patientAppointments/:fk",
-          method: "PUT"
-        },
-
-        // INTERNAL. Use Doctor.patientAppointments.link() instead.
-        "prototype$__link__patientAppointments": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Doctors/:id/patientAppointments/rel/:fk",
-          method: "PUT"
-        },
-
-        // INTERNAL. Use Doctor.patientAppointments.unlink() instead.
-        "prototype$__unlink__patientAppointments": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Doctors/:id/patientAppointments/rel/:fk",
-          method: "DELETE"
-        },
-
-        // INTERNAL. Use Doctor.patientAppointments.exists() instead.
-        "prototype$__exists__patientAppointments": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Doctors/:id/patientAppointments/rel/:fk",
-          method: "HEAD"
-        },
-
-        // INTERNAL. Use Doctor.clinics() instead.
-        "prototype$__get__clinics": {
-          url: urlBase + "/Doctors/:id/clinics",
+        // INTERNAL. Use Doctor.patientAppointments.count() instead.
+        "prototype$__count__patientAppointments": {
+          url: urlBase + "/Doctors/:id/patientAppointments/count",
           method: "GET"
         },
 
@@ -376,56 +426,6 @@ module.factory(
          */
         "prototype$__count__accessTokens": {
           url: urlBase + "/Doctors/:id/accessTokens/count",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Doctor.patients() instead.
-        "prototype$__get__patients": {
-          isArray: true,
-          url: urlBase + "/Doctors/:id/patients",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Doctor.patients.create() instead.
-        "prototype$__create__patients": {
-          url: urlBase + "/Doctors/:id/patients",
-          method: "POST"
-        },
-
-        // INTERNAL. Use Doctor.patients.destroyAll() instead.
-        "prototype$__delete__patients": {
-          url: urlBase + "/Doctors/:id/patients",
-          method: "DELETE"
-        },
-
-        // INTERNAL. Use Doctor.patients.count() instead.
-        "prototype$__count__patients": {
-          url: urlBase + "/Doctors/:id/patients/count",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Doctor.patientAppointments() instead.
-        "prototype$__get__patientAppointments": {
-          isArray: true,
-          url: urlBase + "/Doctors/:id/patientAppointments",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Doctor.patientAppointments.create() instead.
-        "prototype$__create__patientAppointments": {
-          url: urlBase + "/Doctors/:id/patientAppointments",
-          method: "POST"
-        },
-
-        // INTERNAL. Use Doctor.patientAppointments.destroyAll() instead.
-        "prototype$__delete__patientAppointments": {
-          url: urlBase + "/Doctors/:id/patientAppointments",
-          method: "DELETE"
-        },
-
-        // INTERNAL. Use Doctor.patientAppointments.count() instead.
-        "prototype$__count__patientAppointments": {
-          url: urlBase + "/Doctors/:id/patientAppointments/count",
           method: "GET"
         },
 
@@ -2225,6 +2225,87 @@ module.factory(
       { 'id': '@id' },
       {
 
+        // INTERNAL. Use Patient.doctors.findById() instead.
+        "prototype$__findById__doctors": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/doctors/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Patient.doctors.destroyById() instead.
+        "prototype$__destroyById__doctors": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/doctors/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Patient.doctors.updateById() instead.
+        "prototype$__updateById__doctors": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/doctors/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.findById() instead.
+        "prototype$__findById__doctorsAppointment": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/doctorsAppointment/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.destroyById() instead.
+        "prototype$__destroyById__doctorsAppointment": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/doctorsAppointment/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.updateById() instead.
+        "prototype$__updateById__doctorsAppointment": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/doctorsAppointment/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.link() instead.
+        "prototype$__link__doctorsAppointment": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/doctorsAppointment/rel/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.unlink() instead.
+        "prototype$__unlink__doctorsAppointment": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/doctorsAppointment/rel/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.exists() instead.
+        "prototype$__exists__doctorsAppointment": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/doctorsAppointment/rel/:fk",
+          method: "HEAD"
+        },
+
         /**
          * @ngdoc method
          * @name lbServices.Patient#prototype$__findById__accessTokens
@@ -2340,85 +2421,54 @@ module.factory(
           method: "PUT"
         },
 
-        // INTERNAL. Use Patient.doctors.findById() instead.
-        "prototype$__findById__doctors": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Patients/:id/doctors/:fk",
+        // INTERNAL. Use Patient.doctors() instead.
+        "prototype$__get__doctors": {
+          isArray: true,
+          url: urlBase + "/Patients/:id/doctors",
           method: "GET"
         },
 
-        // INTERNAL. Use Patient.doctors.destroyById() instead.
-        "prototype$__destroyById__doctors": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Patients/:id/doctors/:fk",
+        // INTERNAL. Use Patient.doctors.create() instead.
+        "prototype$__create__doctors": {
+          url: urlBase + "/Patients/:id/doctors",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Patient.doctors.destroyAll() instead.
+        "prototype$__delete__doctors": {
+          url: urlBase + "/Patients/:id/doctors",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Patient.doctors.updateById() instead.
-        "prototype$__updateById__doctors": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Patients/:id/doctors/:fk",
-          method: "PUT"
-        },
-
-        // INTERNAL. Use Patient.doctorsAppointment.findById() instead.
-        "prototype$__findById__doctorsAppointment": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Patients/:id/doctorsAppointment/:fk",
+        // INTERNAL. Use Patient.doctors.count() instead.
+        "prototype$__count__doctors": {
+          url: urlBase + "/Patients/:id/doctors/count",
           method: "GET"
         },
 
-        // INTERNAL. Use Patient.doctorsAppointment.destroyById() instead.
-        "prototype$__destroyById__doctorsAppointment": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Patients/:id/doctorsAppointment/:fk",
+        // INTERNAL. Use Patient.doctorsAppointment() instead.
+        "prototype$__get__doctorsAppointment": {
+          isArray: true,
+          url: urlBase + "/Patients/:id/doctorsAppointment",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.create() instead.
+        "prototype$__create__doctorsAppointment": {
+          url: urlBase + "/Patients/:id/doctorsAppointment",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Patient.doctorsAppointment.destroyAll() instead.
+        "prototype$__delete__doctorsAppointment": {
+          url: urlBase + "/Patients/:id/doctorsAppointment",
           method: "DELETE"
         },
 
-        // INTERNAL. Use Patient.doctorsAppointment.updateById() instead.
-        "prototype$__updateById__doctorsAppointment": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Patients/:id/doctorsAppointment/:fk",
-          method: "PUT"
-        },
-
-        // INTERNAL. Use Patient.doctorsAppointment.link() instead.
-        "prototype$__link__doctorsAppointment": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Patients/:id/doctorsAppointment/rel/:fk",
-          method: "PUT"
-        },
-
-        // INTERNAL. Use Patient.doctorsAppointment.unlink() instead.
-        "prototype$__unlink__doctorsAppointment": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Patients/:id/doctorsAppointment/rel/:fk",
-          method: "DELETE"
-        },
-
-        // INTERNAL. Use Patient.doctorsAppointment.exists() instead.
-        "prototype$__exists__doctorsAppointment": {
-          params: {
-          'fk': '@fk'
-          },
-          url: urlBase + "/Patients/:id/doctorsAppointment/rel/:fk",
-          method: "HEAD"
+        // INTERNAL. Use Patient.doctorsAppointment.count() instead.
+        "prototype$__count__doctorsAppointment": {
+          url: urlBase + "/Patients/:id/doctorsAppointment/count",
+          method: "GET"
         },
 
         /**
@@ -2555,56 +2605,6 @@ module.factory(
          */
         "prototype$__count__accessTokens": {
           url: urlBase + "/Patients/:id/accessTokens/count",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Patient.doctors() instead.
-        "prototype$__get__doctors": {
-          isArray: true,
-          url: urlBase + "/Patients/:id/doctors",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Patient.doctors.create() instead.
-        "prototype$__create__doctors": {
-          url: urlBase + "/Patients/:id/doctors",
-          method: "POST"
-        },
-
-        // INTERNAL. Use Patient.doctors.destroyAll() instead.
-        "prototype$__delete__doctors": {
-          url: urlBase + "/Patients/:id/doctors",
-          method: "DELETE"
-        },
-
-        // INTERNAL. Use Patient.doctors.count() instead.
-        "prototype$__count__doctors": {
-          url: urlBase + "/Patients/:id/doctors/count",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Patient.doctorsAppointment() instead.
-        "prototype$__get__doctorsAppointment": {
-          isArray: true,
-          url: urlBase + "/Patients/:id/doctorsAppointment",
-          method: "GET"
-        },
-
-        // INTERNAL. Use Patient.doctorsAppointment.create() instead.
-        "prototype$__create__doctorsAppointment": {
-          url: urlBase + "/Patients/:id/doctorsAppointment",
-          method: "POST"
-        },
-
-        // INTERNAL. Use Patient.doctorsAppointment.destroyAll() instead.
-        "prototype$__delete__doctorsAppointment": {
-          url: urlBase + "/Patients/:id/doctorsAppointment",
-          method: "DELETE"
-        },
-
-        // INTERNAL. Use Patient.doctorsAppointment.count() instead.
-        "prototype$__count__doctorsAppointment": {
-          url: urlBase + "/Patients/:id/doctorsAppointment/count",
           method: "GET"
         },
 
@@ -6998,6 +6998,598 @@ module.factory(
           var action = TargetResource["::updateById::Clinic::doctors"];
           return action.apply(R, arguments);
         };
+
+    return R;
+  }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.Setting
+ * @header lbServices.Setting
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `Setting` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+module.factory(
+  "Setting",
+  ['LoopBackResource', 'LoopBackAuth', '$injector', function(Resource, LoopBackAuth, $injector) {
+    var R = Resource(
+      urlBase + "/settings/:id",
+      { 'id': '@id' },
+      {
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Setting#create
+         * @methodOf lbServices.Setting
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Setting` object.)
+         * </em>
+         */
+        "create": {
+          url: urlBase + "/settings",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Setting#createMany
+         * @methodOf lbServices.Setting
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Setting` object.)
+         * </em>
+         */
+        "createMany": {
+          isArray: true,
+          url: urlBase + "/settings",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Setting#upsert
+         * @methodOf lbServices.Setting
+         *
+         * @description
+         *
+         * Update an existing model instance or insert a new one into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Setting` object.)
+         * </em>
+         */
+        "upsert": {
+          url: urlBase + "/settings",
+          method: "PUT"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Setting#exists
+         * @methodOf lbServices.Setting
+         *
+         * @description
+         *
+         * Check whether a model instance exists in the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `exists` – `{boolean=}` - 
+         */
+        "exists": {
+          url: urlBase + "/settings/:id/exists",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Setting#findById
+         * @methodOf lbServices.Setting
+         *
+         * @description
+         *
+         * Find a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         *  - `filter` – `{object=}` - Filter defining fields and include
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Setting` object.)
+         * </em>
+         */
+        "findById": {
+          url: urlBase + "/settings/:id",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Setting#find
+         * @methodOf lbServices.Setting
+         *
+         * @description
+         *
+         * Find all instances of the model matched by filter from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Setting` object.)
+         * </em>
+         */
+        "find": {
+          isArray: true,
+          url: urlBase + "/settings",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Setting#findOne
+         * @methodOf lbServices.Setting
+         *
+         * @description
+         *
+         * Find first instance of the model matched by filter from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Setting` object.)
+         * </em>
+         */
+        "findOne": {
+          url: urlBase + "/settings/findOne",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Setting#updateAll
+         * @methodOf lbServices.Setting
+         *
+         * @description
+         *
+         * Update instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * The number of instances updated
+         */
+        "updateAll": {
+          url: urlBase + "/settings/update",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Setting#deleteById
+         * @methodOf lbServices.Setting
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Setting` object.)
+         * </em>
+         */
+        "deleteById": {
+          url: urlBase + "/settings/:id",
+          method: "DELETE"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Setting#count
+         * @methodOf lbServices.Setting
+         *
+         * @description
+         *
+         * Count instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        "count": {
+          url: urlBase + "/settings/count",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Setting#prototype$updateAttributes
+         * @methodOf lbServices.Setting
+         *
+         * @description
+         *
+         * Update attributes for a model instance and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Setting` object.)
+         * </em>
+         */
+        "prototype$updateAttributes": {
+          url: urlBase + "/settings/:id",
+          method: "PUT"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Setting#createChangeStream
+         * @methodOf lbServices.Setting
+         *
+         * @description
+         *
+         * Create a change stream.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         *  - `options` – `{object=}` - 
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `changes` – `{ReadableStream=}` - 
+         */
+        "createChangeStream": {
+          url: urlBase + "/settings/change-stream",
+          method: "POST"
+        },
+      }
+    );
+
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Setting#updateOrCreate
+         * @methodOf lbServices.Setting
+         *
+         * @description
+         *
+         * Update an existing model instance or insert a new one into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Setting` object.)
+         * </em>
+         */
+        R["updateOrCreate"] = R["upsert"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Setting#update
+         * @methodOf lbServices.Setting
+         *
+         * @description
+         *
+         * Update instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * The number of instances updated
+         */
+        R["update"] = R["updateAll"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Setting#destroyById
+         * @methodOf lbServices.Setting
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Setting` object.)
+         * </em>
+         */
+        R["destroyById"] = R["deleteById"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Setting#removeById
+         * @methodOf lbServices.Setting
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Setting` object.)
+         * </em>
+         */
+        R["removeById"] = R["deleteById"];
+
+
+    /**
+    * @ngdoc property
+    * @name lbServices.Setting#modelName
+    * @propertyOf lbServices.Setting
+    * @description
+    * The name of the model represented by this $resource,
+    * i.e. `Setting`.
+    */
+    R.modelName = "Setting";
+
 
     return R;
   }]);

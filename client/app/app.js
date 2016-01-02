@@ -24,7 +24,12 @@ angular.module('bifrostApp', [
     formlyConfig.setType({
       name: 'async-ui-select',
       extends: 'select',
-      templateUrl: 'app/main/async-ui-select.tpl.html'
+      templateUrl: 'app/templates/async-ui-select.tpl.html'
+    });
+    formlyConfig.setType({
+      name: 'datepicker',
+              extends: 'input',
+      templateUrl: 'app/templates/datepicker.tpl.html'
     });
 
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {

@@ -3,10 +3,10 @@
 angular.module('bifrostApp')
   .config(function($stateProvider) {
     $stateProvider
-      .state('main', {
-        url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl as MainCtrl',
+      .state('settings', {
+        url: '/settings',
+        templateUrl: 'app/settings/settings.html',
+        controller: 'SettingsCtrl as SettingsCtrl',
         data: {
           requireLogin: true
         },

@@ -11,7 +11,7 @@ angular.module('bifrostApp')
           requireLogin: true
         }
       }).state('patients.detail', {
-        url: '^/:id',
+        url: '/patients/:id',
         views: {
           'detail': {
             templateUrl: 'app/patients/patient.detail.html',

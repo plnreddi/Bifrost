@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('bifrostApp')
-  .controller('MainCtrl', function($scope, $http, uiCalendarConfig, $popover, $modal, Appointment, $rootScope, $interval) {
+  .controller('MainCtrl', function($scope, $http, uiCalendarConfig, $popover, $modal, Appointment, $rootScope, $interval, settings, Modal) {
 
     this.eventSources = [];
     this.eventSourcesAll = {};
@@ -104,7 +104,7 @@ angular.module('bifrostApp')
         $interval.cancel(timelineIntervalPromise);
       }
       timelineIntervalPromise = $interval(function() {
-        var view = uiCalendarConfig.calendars.eventCalendar.fullCalendar('getView');
+        var view = uiCalendarConfig.calendars.myCalendar.fullCalendar('getView');
         renderCurrentTimeline(view, view.el, false);
       }, 300000);
     };
@@ -117,6 +117,7 @@ angular.module('bifrostApp')
         selectable: true,
         unselectCancel: '.aside-dialog',
         unselectAuto: true,
+        scrollTime: settings.getSetting('buisinessHoursStart') || '10:00',
         select: function(start, end, jsEvent, view) {
           var calendar = uiCalendarConfig.calendars.myCalendar;
           $modal({
@@ -159,10 +160,53 @@ angular.module('bifrostApp')
           myPopover.$promise.then(myPopover.toggle);
           myPopover.$scope.deleteEvent = function() {
             calendar.fullCalendar('removeEvents', calEvent._id);
+            Appointment.deleteById({
+              id: calEvent.id
+            })
+              .$promise
+              .then(function() {
+              });
           };
         },
-        eventDrop: this.alertOnDrop,
-        eventResize: this.alertOnResize,
+        businessHours: {
+          start: settings.getSetting('buisinessHoursStart') || '10:00', // a start time (10am in this example)
+          end: settings.getSetting('buisinessHoursEnd') || '18:00', // an end time (6pm in this example)
+          dow: settings.getSetting('buisinessHoursDOW').split(',') || [1, 2, 3, 4, 5]
+        },
+        eventDrop: function(event, delta, revertFunc) {
+
+          if (!confirm('Are you sure about this change?')) {
+            revertFunc();
+          } else {
+            Appointment.findById({
+                id: event.id
+              },
+              angular.bind(this, function(appointment) {
+                appointment.startTime = event.start;
+                appointment.endTime = event.end;
+                appointment.$save();
+
+              }));
+          }
+
+        },
+        eventResize: function(event, delta, revertFunc) {
+
+          if (!confirm('is this okay?')) {
+            revertFunc();
+          } else {
+            Appointment.findById({
+                id: event.id
+              },
+              angular.bind(this, function(appointment) {
+                appointment.startTime = event.start;
+                appointment.endTime = event.end;
+                appointment.$save();
+
+              }));
+          }
+
+        },
         eventRender: function(event, element) {
           if (event.type == 'normal') {
             element.find('.fc-content').prepend('<span class="label label-primary">' + event.status + '</span>');
@@ -200,6 +244,7 @@ angular.module('bifrostApp')
           for (var i = 0; i < appointments.length; i++) {
             if (appointments[i].doctorId == $rootScope.clinicDoctorIds[j]) {
               var event = {
+                id: appointments[i].id,
                 title: appointments[i].patientName || appointments[i].title,
                 start: appointments[i].startTime,
                 end: appointments[i].endTime,
@@ -207,9 +252,9 @@ angular.module('bifrostApp')
                 status: appointments[i].status,
                 type: appointments[i].appointmentType
               };
-              if (appointments[i].type == 'normal') {
+              if (event.type == 'normal') {
                 appointmentEvents.push(event);
-              } else if (appointments[i].type == 'block') {
+              } else if (event.type == 'block') {
                 blockEvents.push(event);
               }
             }
