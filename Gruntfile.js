@@ -101,9 +101,9 @@ module.exports = function (grunt) {
         files: [
           '{.tmp,<%= yeoman.client %>}/{app,components}/**/*.css',
           '{.tmp,<%= yeoman.client %>}/{app,components}/**/*.html',
-          
+
           '{.tmp,<%= yeoman.client %>}/{app,components}/**/*.js',
-          
+
           '!{.tmp,<%= yeoman.client %>}{app,components}/**/*.spec.js',
           '!{.tmp,<%= yeoman.client %>}/{app,components}/**/*.mock.js',
           '<%= yeoman.client %>/assets/images/{,*//*}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -453,6 +453,29 @@ module.exports = function (grunt) {
         }
       }
     },
+    loopback_sdk_fetch_factory: {
+       services: {
+         options: {
+           input: 'server/server.js',
+           output: '<%= yeoman.client %>/app/lb-fetch-methods.js',
+           apiUrl: 'api/'
+         }
+       },
+       development: {
+         options: {
+           input: 'server/server.js',
+           output: '<%= yeoman.client %>/app/lb-fetch-methods.js',
+           apiUrl: 'api/'
+         }
+       },
+       production: {
+         options: {
+           input: 'server/server.js',
+           output: '<%= yeoman.client %>/app/lb-fetch-methods.js',
+           apiUrl: 'api/'
+         }
+       }
+     },
     // Test settings
     karma: {
       unit: {
@@ -526,12 +549,12 @@ module.exports = function (grunt) {
         files: {
           '<%= yeoman.client %>/index.html': [
                [
-                 
+
                  '{.tmp,<%= yeoman.client %>}/{app,components}/**/*.js',
-                 
-                 '!{.tmp,<%= yeoman.client %>}/app/app.js',               
+
+                 '!{.tmp,<%= yeoman.client %>}/app/app.js',
                  '!{.tmp,<%= yeoman.client %>}/{app,components}/**/*.spec.js',
-                 '!{.tmp,<%= yeoman.client %>}/{app,components}/**/*.mock.js'               
+                 '!{.tmp,<%= yeoman.client %>}/{app,components}/**/*.mock.js'
                ]
             ]
         }
@@ -601,7 +624,7 @@ module.exports = function (grunt) {
       return grunt.task.run([
         'clean:server',
         'env:all',
-        'injector:sass', 
+        'injector:sass',
         'concurrent:server',
         'injector',
         'wiredep',
@@ -613,10 +636,10 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'env:all',
-      'injector:sass', 
+      'injector:sass',
       'concurrent:server',
       'injector',
-      'loopback_sdk_angular:development',    
+      'loopback_sdk_angular:development',
       'wiredep',
       'autoprefixer',
       'express:dev',
@@ -644,7 +667,7 @@ module.exports = function (grunt) {
       return grunt.task.run([
         'clean:server',
         'env:all',
-        'injector:sass', 
+        'injector:sass',
         'concurrent:test',
         'injector',
         'autoprefixer',
@@ -657,8 +680,8 @@ module.exports = function (grunt) {
         'clean:server',
         'env:all',
         'env:test',
-        'injector:sass', 
-        'loopback_sdk_angular:development',    
+        'injector:sass',
+        'loopback_sdk_angular:development',
         'concurrent:test',
         'injector',
         'wiredep',
@@ -676,8 +699,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'injector:sass', 
-    'loopback_sdk_angular:development',    
+    'injector:sass',
+    'loopback_sdk_angular:development',
     'concurrent:dist',
     'injector',
     'wiredep',
