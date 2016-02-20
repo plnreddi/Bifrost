@@ -13,23 +13,31 @@ angular.module('bifrostApp', [
   'ui.select',
   'ui.checkbox'
 ])
-  .config(function($stateProvider, $urlRouterProvider, $locationProvider, formlyConfigProvider) {
+
+.config(function($stateProvider, $urlRouterProvider, $locationProvider, formlyConfigProvider) {
     $urlRouterProvider
       .otherwise('/');
 
     //$locationProvider.html5Mode(true);
 
-    // adi check this
+    // adi check this, multiple check box
     formlyConfigProvider.setType({
         name: 'multi-checkbox',
         templateUrl: 'app/templates/multi-checkbox.tpl.html',
         wrapper: ['bootstrapLabel', 'bootstrapHasError']
     });
 
+    // adi check this, reduced height of input
+    formlyConfigProvider.setType({
+        name: 'inputsm',
+        template: '<input class="form-control input-sm" ng-model="model[options.key]">',
+        wrapper: ['bootstrapLabel', 'bootstrapHasError']
+    });
 
   })
 
-  .run(function($rootScope, $state, formlyConfig) {
+
+.run(function($rootScope, $state, formlyConfig) {
 
     formlyConfig.extras.removeChromeAutoComplete = true;
 
@@ -52,6 +60,8 @@ angular.module('bifrostApp', [
         templateUrl: 'app/templates/inline-radio.html'
     });
 
+
+   
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
         var requireLogin = toState.data.requireLogin;
 
@@ -64,7 +74,6 @@ angular.module('bifrostApp', [
 
 
   });
-
 
 
 /*
