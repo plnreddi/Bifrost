@@ -1,0 +1,36 @@
+
+.flex-con {
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-justify-content: center;
+    justify-content: center;
+
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+}
+
+.flex-1 {
+  /*  background-color: cornflowerblue; */
+    width: 270px;
+    height: auto;    /*  1400px; */
+    margin: 10px 15px;
+ /*  border: 1px solid red; */
+
+}
+.flex-2 {
+  /*  background-color: cornflowerblue; */
+    width: 270px;
+    height: 1400px;
+    margin: 10px 10px;
+    
+}
+.flex-3 {
+   /* background-color: cornflowerblue; */
+    width: 320px;
+    height: 245px;
+    margin: 10px 15px;
+    border: 1px solid red;
+
+}
