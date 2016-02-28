@@ -1,5 +1,6 @@
 'use strict';
 
+agGrid.initialiseAgGridWithAngular1(angular);
 angular.module('bifrostApp', [
   'ngCookies',
   'ngResource',
@@ -11,7 +12,8 @@ angular.module('bifrostApp', [
   'formly',
   'formlyBootstrap',
   'ui.select',
-  'ui.checkbox'
+  'ui.checkbox',
+  'agGrid'
 ])
 
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, formlyConfigProvider) {
@@ -61,7 +63,7 @@ angular.module('bifrostApp', [
     });
 
 
-   
+
     $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
         var requireLogin = toState.data.requireLogin;
 
@@ -74,4 +76,3 @@ angular.module('bifrostApp', [
 
 
   });
-
