@@ -77,8 +77,8 @@ button.close {
 
 // Component styles are injected through grunt
 // injector
+@import 'appointment/appointment.scss';
 @import 'main/login/login.scss';
-@import 'main/main.scss';
 @import 'patients/patients.scss';
 @import 'settings/settings.scss';
 @import 'modal/modal.scss';

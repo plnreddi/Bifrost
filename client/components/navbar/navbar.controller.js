@@ -3,8 +3,8 @@
 angular.module('bifrostApp')
   .controller('NavbarCtrl', function($scope) {
     $scope.menu = [{
-      'title': 'Home',
-      'sref': 'main'
+      'title': 'Appointments',
+      'sref': 'appointment'
     }, {
       'title': 'Patients',
       'sref': 'patients'

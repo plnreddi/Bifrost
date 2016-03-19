@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('bifrostApp')
-  .controller('MainCtrl', function($scope, $http, uiCalendarConfig, $popover, $modal, Appointment, $rootScope, $interval, settings, Modal) {
+  .controller('AppointmentCtrl', function($scope, $http, uiCalendarConfig, $popover, $modal, Appointment, $rootScope, $interval, settings, Modal) {
 
     this.eventSources = [];
     this.eventSourcesAll = {};
@@ -122,7 +122,7 @@ angular.module('bifrostApp')
           var calendar = uiCalendarConfig.calendars.myCalendar;
           $modal({
             title: 'New Appointment',
-            templateUrl: 'app/main/appointment.modal.tpl.html',
+            templateUrl: 'app/appointment/appointment.modal.tpl.html',
             controller: 'AppointmentModalCtrl as AppointmentModalCtrl',
             resolve: {
               start: function() {
@@ -152,8 +152,8 @@ angular.module('bifrostApp')
           }
           myPopover = $popover(angular.element(this), {
             title: calEvent.title,
-            templateUrl: 'app/main/popover.tpl.html',
-            contentTemplate: 'app/main/popover-content.tpl.html',
+            templateUrl: 'app/appointment/popover.tpl.html',
+            contentTemplate: 'app/appointment/popover-content.tpl.html',
             trigger: 'manual'
           });
           myPopover.$scope.event = calEvent;

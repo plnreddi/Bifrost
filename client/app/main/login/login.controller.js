@@ -22,7 +22,7 @@ angular.module('bifrostApp')
                 for (var i = 0; i < $rootScope.currentClinic.doctors.length; i++) {
                   $rootScope.clinicDoctorIds.push($rootScope.currentClinic.doctors[i].id);
                 }
-                $state.go('main');
+                $state.go('appointment');
               });
             });
           });

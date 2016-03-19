@@ -13,7 +13,8 @@ angular.module('bifrostApp', [
   'formlyBootstrap',
   'ui.select',
   'ui.checkbox',
-  'agGrid'
+  'agGrid',
+  'gettext'
 ])
 
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, formlyConfigProvider) {
