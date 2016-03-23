@@ -1,16 +1,10 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 <div class="row">
-  <div class="col-md-2">
-    <div class="list-group">
-      <a ui-sref="patients.detail({id:patient.id})" class="list-group-item" ng-repeat="patient in PatientsCtrl.patients">
-        <strong class="list-group-item-heading">{{::patient.username}}</strong>
-        <p class="list-group-item-text">{{::patient.email}}</p>
-      </a>
+  <div class="col-md-1">
     </div>
-  </div>
-  <div class="col-md-10">
-    <div ag-grid="PatientsCtrl.gridOptions" class="ag-fresh"></div>
-
-    <div ui-view="detail"></div>
+  <div class="col-md-10 well">
+    <div ag-grid="PatientsCtrl.gridOptions" class="ag-fresh" style="height: 100px;"></div>
+    <div class="col-md-1">
+      </div>
   </div>
 </div>
