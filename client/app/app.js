@@ -74,6 +74,24 @@ angular.module('bifrostApp', [
         }
     });
 
+    $rootScope.sidebarCollapse = '';
+
+  	$rootScope.toggleSidebar = function() {
+  		if ($(window).width() > (767)) {
+  			if($rootScope.sidebarCollapse == 'sidebar-collapse') {
+  				$rootScope.sidebarCollapse = '';
+  			} else {
+  			$rootScope.sidebarCollapse = 'sidebar-collapse';
+  			}
+  		} else {
+  			if($rootScope.sidebarCollapse == 'sidebar-open') {
+  				$rootScope.sidebarCollapse = '';
+  			} else {
+  			$rootScope.sidebarCollapse = 'sidebar-open';
+  			}
+  		}
+  	};
+  });
 
 
   });
