@@ -1,0 +1,78 @@
+body {
+	background: #d2d6de;
+	font-size: 12px;
+}
+
+.main-header {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+	max-height: 40px;
+}
+
+.main-header .sidebar-toggle {
+	padding: 11px 15px;
+}
+
+@media (min-width: 768px) {
+	.navbar-nav>li>a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+.content-wrapper, .right-side, .main-footer {
+	margin-left: 200px;
+}
+
+.main-header>.navbar {
+	min-height: 40px;
+	margin-left: 200px;
+}
+
+.main-header .logo {
+	height: 40px;
+	width: 200px;
+	line-height: 35px;
+}
+
+.left-side, .main-sidebar {
+	padding-top: 40px;
+	width: 200px;
+}
+
+.angular-google-map-container {
+	height: 100%;
+	width: 100%;
+}
+
+.angular-google-map {
+	height: 100%;
+	width: 100%;
+}
+
+ui-gmap-google-map {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+.map-controls {
+	height: 48px;
+	line-height: 48px;
+	position: absolute;
+	width: 100%;
+	background-color: #fff;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.map-sidebar {
+	width: 360px;
+	right: 0;
+	background: #fff;
+	position: absolute;
+	height: 100%;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.main-footer {
+	padding: 10px;
+}
