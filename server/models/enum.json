@@ -1,0 +1,45 @@
+{
+  "name": "Enum",
+  "base": "PersistedModel",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "apCities": {
+      "type": [
+        "string"
+      ],
+      "id": false,
+      "comments": "ap cities"
+    },
+    "apDistricts": {
+      "type": [
+        "string"
+      ],
+      "id": false,
+      "comments": "ap districts"
+    },
+    "bloodGroups": {
+      "type": [
+        "string"
+      ],
+      "id": false,
+      "comments": "blood groups"
+    },
+    "medicalSpecialties": {
+      "type": [
+        "string"
+      ]
+    },
+    "indianStates": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

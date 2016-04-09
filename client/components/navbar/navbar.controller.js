@@ -11,6 +11,9 @@ angular.module('bifrostApp')
     }, {
       'title': 'Settings',
       'sref': 'main.settings'
+    }, {
+      'title': 'Patient',
+      'sref': 'main.patient'
     }];
 
     $scope.isCollapsed = true;

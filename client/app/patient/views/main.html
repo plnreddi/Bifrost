@@ -1,0 +1,27 @@
+
+<h5>Patient Main Ctrl</h5>
+
+<section admin-header class="content-header"
+         title="{{ 'Patient' | translate }}"
+         sub-title="{{ 'Create and View Patient Data!' | translate }}">
+</section>
+<p translate>Welcome Ladies and Gentle men</p>
+<!--
+<section admin-header class="content-header" title="Patient" sub-title="Throw your sand around here!"></section>
+-->
+
+
+<section class="content">
+  <div class="row">
+    <div class="col-md-2">
+      <ul class="nav nav-pills nav-stacked">
+        <li ng-repeat="item in items | orderBy: 'name'" ui-sref-active="active">
+          <a href="" ui-sref="{{item.sref}}">{{item.name}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-md-10">
+      <div ui-view></div>
+    </div>
+  </div>
+</section>

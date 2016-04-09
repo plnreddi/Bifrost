@@ -1,41 +1,18 @@
 {
-  "name": "Doctor",
-  "plural": "Doctors",
+  "name": "Admin",
+  "plural": "Admins",
   "base": "User",
-  "idInjection": false,
+  "idInjection": true,
 
   "options": {
     "validateUpsert": true
   },
 
-  "properties": {
-    "doctorName": {
-      "type": "string"
-    },
-    "phoneVerified": {
-      "type": "boolean",
-      "default": "false"
-    },
-    "aboutDoctor": {
-      "type": [
-        "List"
-      ]
-    },
-    "yearsExperience": {
-      "type": "string"
-    }
-  },
+  "properties": {},
 
   "validations": [],
-  
-  "relations": {
-    "hospitals": {
-      "type": "hasMany",
-      "model": "Hospital",
-      "foreignKey": "doctorId",
-      "through": "Practice"
-    }
-  },
+
+"relations": {},
 
   "acls": [
   {
@@ -43,19 +20,19 @@
     "principalType": "ROLE",
     "principalId": "admin",
     "permission": "ALLOW"
-  }, 
+  },
   {
     "accessType": "READ",
     "principalType": "ROLE",
     "principalId": "$unauthenticated",
     "permission": "DENY"
-  }, 
+  },
   {
     "accessType": "READ",
     "principalType": "ROLE",
     "principalId": "$authenticated",
     "permission": "ALLOW"
-  }, 
+  },
   {
     "accessType": "*",
     "principalType": "ROLE",
@@ -63,5 +40,5 @@
     "permission": "ALLOW"
   }],
 
-  "methods": []
+  "methods": {}
 }

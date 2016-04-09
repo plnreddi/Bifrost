@@ -17,11 +17,5 @@ angular.module('bifrostApp')
         data: {
           requireLogin: true
         }
-        // views: {
-        //   'detail': {
-        //     templateUrl: 'app/patients/patient.detail.html',
-        //     controller: 'PatientDetailCtrl as PatientDetailCtrl'
-        //   }
-        //},
       });
   });

@@ -31,9 +31,25 @@
     "dataSource": "db",
     "public": true
   },
+  "Hospital": {
+    "dataSource": "db",
+    "public": true
+  },
   "Patient": {
     "dataSource": "db",
     "public": true
+  },
+  "Enum": {
+    "dataSource": "db",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "YesNo": {
+    "dataSource": "db",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
   },
   "Receptionist": {
     "dataSource": "db",
@@ -43,11 +59,26 @@
     "dataSource": "db",
     "public": true
   },
-  "Clinic": {
+
+  "Setting": {
     "dataSource": "db",
     "public": true
   },
-  "Setting": {
+"Address": {
+    "dataSource": "transient",
+    "public": false
+  },
+  "List": {
+    "dataSource": "transient",
+    "public": false
+  },
+"Practice": {
+    "dataSource": "db",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "Admin": {
     "dataSource": "db",
     "public": true
   }

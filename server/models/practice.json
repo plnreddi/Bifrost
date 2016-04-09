@@ -1,0 +1,64 @@
+{
+  "name": "Practice",
+  "plural": "Practices",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": true,
+
+  "options": {
+    "validateUpsert": true
+  },
+
+  "properties": {
+    "practiceTagline": {
+      "type": "string"
+    },
+    "practiceSpecification": {
+      "type": "string"
+    },
+    "practiceName": {
+      "type": "string",
+      "required": false
+    },
+    "practiceWebsite": {
+      "type": "string"
+    }
+  },
+
+  "validations": [],
+
+  "relations": {
+
+    "doctor": {
+      "type": "belongsTo",
+      "model": "Doctor",
+      "foreignKey": "doctorId"
+    },
+    "hospital": {
+      "type": "belongsTo",
+      "model": "Hospital",
+      "foreignKey": "hospitalId"
+    },
+
+    "patients": {
+      "type": "hasMany",
+      "model": "Patient",
+      "foreignKey": "practiceId",
+      "through": "Appointment"
+    },
+
+    "address": {
+      "type": "embedsOne",
+      "model": "Address",
+      "property": "practiceAddress",
+      "options": {
+        "validate": true,
+        "forceId": false
+      }
+    }
+  },
+  
+  "acls": [],
+
+  "methods": {}
+}

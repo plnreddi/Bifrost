@@ -1,20 +1,24 @@
 {
   "name": "Appointment",
+  "plural": "Appointments",
   "base": "PersistedModel",
+  "idInjection": true,
+
+  "options": {
+    "validateUpsert": true
+  },
+
   "properties": {
     "startTime": {
       "type": "date",
-      "required": true
+      "required": false
     },
     "endTime": {
       "type": "date"
     },
-    "patientName": {
-      "type": "string"
-    },
     "appointmentType": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "title": {
       "type": "string"
@@ -25,21 +29,29 @@
     "status": {
       "type": "string",
       "default": "NS"
+    },
+    "appointmentId": {
+      "type": "string",
+      "required": false
     }
   },
+
   "validations": [],
-  "relations": {
-    "doctor": {
-      "type": "belongsTo",
-      "model": "Doctor",
-      "foreignKey": "doctorId"
-    },
+
+   "relations": {
     "patient": {
       "type": "belongsTo",
       "model": "Patient",
       "foreignKey": "patientId"
+    },
+    "practice": {
+      "type": "belongsTo",
+      "model": "Practice",
+      "foreignKey": "practiceId"
     }
   },
+
   "acls": [],
+
   "methods": []
 }

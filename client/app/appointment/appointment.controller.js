@@ -33,7 +33,7 @@ angular.module('bifrostApp')
         labelProp: 'username'
       },
       controller: function($scope, $rootScope) {
-        $scope.to.options = $rootScope.currentClinic.doctors;
+        $scope.to.options = $rootScope.currentHospital.doctors;
       },
       expressionProperties: {
         'eventSources': angular.bind(this, function(selectedDoctorIds) {

@@ -1,31 +1,43 @@
 'use strict';
 
 angular.module('bifrostApp')
-  .controller('LoginCtrl', function(Doctor, $rootScope, $state, Clinic) {
+.controller('LoginCtrl', function(Doctor, $rootScope, $state, Hospital) {  //Clinic
     this.login = function() {
-      if (!$rootScope.currentUser) {
-        this.loginResult = Doctor.login({
-            include: 'user',
-            rememberMe: false
-          }, this.credentials,
-          function(user) {
-            $rootScope.currentUser = user.user;
-            Doctor.clinics({
-              id: $rootScope.currentUser.id
-            }, function(clinic) {
-              $rootScope.currentClinic = clinic;
-              Clinic.doctors({
-                id: clinic.id
-              }, function(doctors) {
-                $rootScope.currentClinic.doctors = doctors;
-                $rootScope.clinicDoctorIds = [];
-                for (var i = 0; i < $rootScope.currentClinic.doctors.length; i++) {
-                  $rootScope.clinicDoctorIds.push($rootScope.currentClinic.doctors[i].id);
-                }
-                $state.go('main.appointment');
-              });
+
+        console.log('Current User: ' + $rootScope.currentUser);
+
+        // if currentUser is not defined
+        if (!$rootScope.currentUser) {
+
+            this.loginResult = Doctor.login( { include: 'user', rememberMe: false }, this.credentials, function(user) {
+
+                console.log('user: ' + JSON.stringify(user) );
+
+                // assign currentUser
+                $rootScope.currentUser = user.user;
+
+                // find by id doctor hospitals
+                Doctor.hospitals({ id: $rootScope.currentUser.id }, function(hospitals) {
+
+                    console.log('Hospitals: ' + JSON.stringify(hospitals) );
+
+                    // assign currentHospital
+                    $rootScope.currentHospital = hospitals[0];
+
+                    Hospital.doctors({ id: hospitals[0].id }, function(doctors) {
+                        console.log('doctors: ' + JSON.stringify(doctors) );
+
+                        $rootScope.currentHospital.doctors = doctors;
+                        $rootScope.hospitalDoctorIds = [];
+
+                        for (var i = 0; i < $rootScope.currentHospital.doctors.length; i++) {
+                            $rootScope.hospitalDoctorIds.push($rootScope.currentHospital.doctors[i].id);
+                        }
+
+                        $state.go('main.appointment');
+                    });
+                });
             });
-          });
-      }
+        }
     };
-  });
+});

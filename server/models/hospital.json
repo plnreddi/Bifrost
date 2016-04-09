@@ -1,0 +1,42 @@
+{
+  "name": "Hospital",
+  "plural": "Hospitals",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": true,
+
+  "options": {
+    "validateUpsert": true
+  },
+
+  "properties": {
+    "hospitalName": {
+      "type": "string"
+    }
+  },
+
+  "validations": [],
+
+  "relations": {
+    "doctors": {
+      "type": "hasMany",
+      "model": "Doctor",
+      "foreignKey": "hospitalId",
+      "through": "Practice"
+    },
+
+    "address": {
+      "type": "embedsOne",
+      "model": "Address",
+      "property": "hospitalAddress",
+      "options": {
+        "validate": true,
+        "forceId": false
+      }
+    }
+  },
+
+  "acls": [],
+  
+  "methods": {}
+}

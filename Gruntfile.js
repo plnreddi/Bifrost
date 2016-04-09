@@ -35,7 +35,26 @@ module.exports = function (grunt) {
     yeoman: {
       // configurable paths
       client: require('./bower.json').appPath || 'client',
-      dist: 'dist'
+      dist: 'dist',
+      app: 'client/app'
+    },
+    nggettext_extract: {
+        pot: {
+            files: {
+                'po/template.pot': [
+                    '<%= yeoman.app %>/patient/*.js',
+                    '<%= yeoman.app %>/patient/**/*.js',
+                    '<%= yeoman.app %>/patient/views/*.html'
+                ]
+            }
+        },
+    },
+    nggettext_compile: {
+        all: {
+            files: {
+                '<%= yeoman.client %>/js/translations.js': ['po/*.po']
+            }
+        },
     },
     express: {
       options: {
@@ -716,10 +735,13 @@ module.exports = function (grunt) {
     'rev',
     'usemin'
   ]);
+  grunt.loadNpmTasks('grunt-angular-gettext');
 
   grunt.registerTask('default', [
     'newer:jshint',
     'test',
-    'build'
+    'build',
+    'nggettext_extract',
+    'nggettext_compile'
   ]);
 };

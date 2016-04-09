@@ -1,0 +1,17 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: \n"
+
+#: client/app/patient/views/main.html:6
+msgid "Create and View Patient Data!"
+msgstr ""
+
+#: client/app/patient/views/main.html:5
+msgid "Patient"
+msgstr ""
+
+#: client/app/patient/views/main.html:8
+msgid "Welcome Ladies and Gentle men"
+msgstr ""

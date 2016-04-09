@@ -41,7 +41,71 @@ angular.module('bifrostApp', [
   })
 
 
-.run(function($rootScope, $state, formlyConfig) {
+.run(function($rootScope, $state, formlyConfig, gettextCatalog) {
+
+    $rootScope.locales = {
+      'de': {
+        lang: 'de',
+        country: 'DE',
+        name: gettextCatalog.getString('German')
+      },
+      'en': {
+        lang: 'en',
+        country: 'US',
+        name: gettextCatalog.getString('English')
+      },
+      'es_MX': {
+        lang: 'es_MX',
+        country: 'MX',
+        name: gettextCatalog.getString('Spanish')
+      },
+      'fr': {
+        lang: 'fr',
+        country: 'FR',
+        name: gettextCatalog.getString('Français')
+      },
+      'nl': {
+        lang: 'nl',
+        country: 'NL',
+        name: gettextCatalog.getString('Dutch')
+      },
+      'pt-BR': {
+        lang: 'pt_BR',
+        country: 'BR',
+        name: gettextCatalog.getString('Portuguese Brazil')
+      },
+      'ru_RU': {
+        lang: 'ru_RU',
+        country: 'RU',
+        name: gettextCatalog.getString('Russian')
+      },
+      'zh_CN': {
+        lang: 'zh_CN',
+        country: 'CN',
+        name: gettextCatalog.getString('Chinese')
+      },
+      'te_IN': {
+        lang: 'te_IN',
+        country: 'IN',
+        name: gettextCatalog.getString('Telugu')
+      }
+    };
+
+    //var lang = $cookies.lang || navigator.language || navigator.userLanguage;
+    var lang = 'te_IN'; // to be removed
+
+    $rootScope.locale = $rootScope.locales[lang];
+
+    if (angular.isUndefined($rootScope.locale)) {
+      $rootScope.locale = $rootScope.locales[lang];
+      if (angular.isUndefined($rootScope.locale)) {
+        $rootScope.locale = $rootScope.locales['en'];
+      }
+    }
+
+    gettextCatalog.setCurrentLanguage($rootScope.locale.lang);
+
+    gettextCatalog.debug = true;
 
     formlyConfig.extras.removeChromeAutoComplete = true;
 

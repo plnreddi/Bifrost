@@ -1,0 +1,23 @@
+{
+  "name": "List",
+  "base": "Model",
+  "idInjection": true,
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "key": {
+      "type": "string"
+    },
+    "value": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
