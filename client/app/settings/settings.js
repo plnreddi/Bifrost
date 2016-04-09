@@ -3,8 +3,8 @@
 angular.module('bifrostApp')
   .config(function($stateProvider) {
     $stateProvider
-      .state('settings', {
-        url: '/settings',
+      .state('main.settings', {
+        url: 'settings',
         templateUrl: 'app/settings/settings.html',
         controller: 'SettingsCtrl as SettingsCtrl',
         data: {

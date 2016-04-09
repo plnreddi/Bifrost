@@ -4,13 +4,13 @@ angular.module('bifrostApp')
   .controller('NavbarCtrl', function($scope) {
     $scope.menu = [{
       'title': 'Appointments',
-      'sref': 'appointment'
+      'sref': 'main.appointment'
     }, {
       'title': 'Patients',
-      'sref': 'patients'
+      'sref': 'main.patients'
     }, {
       'title': 'Settings',
-      'sref': 'settings'
+      'sref': 'main.settings'
     }];
 
     $scope.isCollapsed = true;

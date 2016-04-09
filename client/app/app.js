@@ -14,7 +14,8 @@ angular.module('bifrostApp', [
   'ui.select',
   'ui.checkbox',
   'agGrid',
-  'gettext'
+  'gettext',
+  'ui.gravatar'
 ])
 
 .config(function($stateProvider, $urlRouterProvider, $locationProvider, formlyConfigProvider) {
@@ -91,7 +92,4 @@ angular.module('bifrostApp', [
   			}
   		}
   	};
-  });
-
-
   });
