@@ -8,6 +8,8 @@ module.exports = function (grunt) {
   } catch(e) {
     localConfig = {};
   }
+  
+  grunt.loadNpmTasks('grunt-angular-gettext');
 
   // Load grunt tasks automatically, when needed
   require('jit-grunt')(grunt, {
@@ -659,6 +661,9 @@ module.exports = function (grunt) {
       'concurrent:server',
       'injector',
       'loopback_sdk_angular:development',
+      'loopback_sdk_fetch_factory:development',
+      'nggettext_extract',
+      'nggettext_compile',
       'wiredep',
       'autoprefixer',
       'express:dev',
@@ -735,13 +740,10 @@ module.exports = function (grunt) {
     'rev',
     'usemin'
   ]);
-  grunt.loadNpmTasks('grunt-angular-gettext');
 
   grunt.registerTask('default', [
     'newer:jshint',
     'test',
-    'build',
-    'nggettext_extract',
-    'nggettext_compile'
+    'build'
   ]);
 };

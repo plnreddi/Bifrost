@@ -34,7 +34,7 @@ angular.module('bifrostApp')
                             $rootScope.hospitalDoctorIds.push($rootScope.currentHospital.doctors[i].id);
                         }
 
-                        $state.go('main.appointment');
+                        $state.go('main.dashboard');
                     });
                 });
             });

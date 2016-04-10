@@ -150,7 +150,7 @@
                   <a href="#" ui-sref="app.users.profile" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" ng-click="logout()" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="#" ng-click="MainCtrl.logout()" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -188,10 +188,10 @@
       </form>
       <!-- /.search form -->
       <!-- Sidebar Menu -->
-      <ul class="sidebar-menu" ng-controller="NavbarCtrl">
+      <ul class="sidebar-menu">
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
-        <li ng-repeat="item in menuoptions" ng-class="{active: $state.includes(item.root)}">
+        <li ng-repeat="item in MainCtrl.menuoptions" ng-class="{active: MainCtrl.isActive(item.root)}">
           <a class="" href="" ui-sref="{{item.sref}}">
             <span><i class="fa fa-fw {{item.icon}}"></i> {{item.name}}</span>
             <i ng-if="item.subMenu" class="fa fa-angle-left pull-right"></i>

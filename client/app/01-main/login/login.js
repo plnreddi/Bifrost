@@ -5,7 +5,7 @@ angular.module('bifrostApp')
     $stateProvider
       .state('login', {
         url: '/login',
-        templateUrl: 'app/main/login/login.html',
+        templateUrl: 'app/01-main/login/login.html',
         controller: 'LoginCtrl as LoginCtrl',
         data: {
           requireLogin: false

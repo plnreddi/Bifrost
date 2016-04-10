@@ -4,8 +4,9 @@ angular.module('bifrostApp')
   .config(function($stateProvider) {
     $stateProvider
       .state('main', {
+        abstract: true,
         url: '/',
-        templateUrl: 'app/main/main.html',
+        templateUrl: 'app/01-main/main.html',
         controller: 'MainCtrl as MainCtrl',
         data: {
           requireLogin: true
@@ -15,5 +16,9 @@ angular.module('bifrostApp')
             return settings.promise;
           }
         }
+      })
+      .state('main.dashboard', {
+        url: '',
+        templateUrl: 'app/01-main/dashboard.html'
       });
   });
