@@ -1,0 +1,23 @@
+    
+<div class="col-md-4">
+    <div class="box">
+        
+        <div class="box-header with-border">
+            <h3 class="box-title">Old Patient Information</h3>
+        </div><!-- /.box-header -->
+        
+        <div class="box-body">
+            <table class="table table-bordered table-hover">
+                <tr ng-repeat="fld in PatientDataCtrl.fields1">
+                    <td> <div class="pull-right"> {{fld.templateOptions.label}} </div> </td> 
+                    <td> {{ PatientDataCtrl.model[fld.key] }} </td>
+                </tr>
+            </table>
+        </div><!-- /.box-body -->
+        
+        <div class="box-footer clearfix">
+            Sample text
+        </div>
+        
+    </div><!-- /.box -->
+</div><!-- /.col -->

@@ -2,9 +2,8 @@
 
 angular.module('bifrostApp')
 .controller('LoginCtrl', function(Doctor, $rootScope, $state, Hospital) {  //Clinic
+    
     this.login = function() {
-
-        console.log('Current User: ' + $rootScope.currentUser);
 
         // if currentUser is not defined
         if (!$rootScope.currentUser) {
@@ -12,7 +11,7 @@ angular.module('bifrostApp')
             this.loginResult = Doctor.login( { include: 'user', rememberMe: false }, this.credentials, function(user) {
 
                 console.log('user: ' + JSON.stringify(user) );
-
+                
                 // assign currentUser
                 $rootScope.currentUser = user.user;
 
@@ -34,10 +33,10 @@ angular.module('bifrostApp')
                             $rootScope.hospitalDoctorIds.push($rootScope.currentHospital.doctors[i].id);
                         }
 
-                        $state.go('main.dashboard');
+                        $state.go('main');  //main.dashboard
                     });
                 });
             });
         }
-    };
+    }; // this.login
 });

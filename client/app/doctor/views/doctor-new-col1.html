@@ -1,0 +1,59 @@
+    
+<div class="col-md-4">
+    <div class="box box-solid">
+            
+        <div class="box-header with-border">
+            <h3 class="box-title">Doctor Information</h3>
+        </div><!-- /.box-header -->
+            
+        <form ng-submit="DoctorDataCtrl.onSubmit()" name="DoctorDataCtrl.form" novalidate>
+            <div class="box-body">
+
+                <div class="box-group" ng-init="accordion=1">
+
+                    <div class="box box-primary"  ng-class="{active:accordion==1}"   > <!-- /.removed panel -->
+                    
+                        <div class="box-header with-border">
+                            <h4 class="box-title">
+                                <a href ng-click="accordion = 1">Doctor Data</a>
+                            </h4>
+                        </div>
+                        
+                        <div class="box-body" ng-show="accordion==1">
+                            <formly-form  model="DoctorDataCtrl.model" fields="DoctorDataCtrl.fields1a"></formly-form>
+                            <div translate>Please check all the above data before you press enter.</div>
+                        </div>
+                    
+                    </div>
+                
+                    <div class="box box-primary"  ng-class="{active:accordion==2}"   > <!-- /.removed panel -->
+                    
+                        <div class="box-header with-border">
+                            <h4 class="box-title">
+                                <a href ng-click="accordion = 2">Doctor Address</a> 
+                            </h4>
+                        </div>
+
+                        <div class="box-body" ng-show="accordion==2">
+                            <formly-form  model="DoctorDataCtrl.model" fields="DoctorDataCtrl.fields1b"></formly-form>
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 
+                        </div>
+                    
+                    </div>
+                    
+                </div>
+                
+            </div><!-- /.box-body -->
+            
+            <div class="box-body"> Please check all the above data before you press enter.</div>
+            
+            <div class="box-footer">
+                <button type="submit" class="btn btn-primary submit-button" ng-disabled="DoctorDataCtrl.form.$invalid">Submit</button>
+                <button type="button" class="btn btn-default" ng-click="DoctorDataCtrl.options.resetModel()">Reset</button>
+            </div>
+            
+        </form>    
+        
+    </div><!-- /.box -->
+
+</div> <!-- /.col -->

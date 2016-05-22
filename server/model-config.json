@@ -27,6 +27,7 @@
     "dataSource": "db",
     "public": false
   },
+  
   "Doctor": {
     "dataSource": "db",
     "public": true
@@ -39,32 +40,18 @@
     "dataSource": "db",
     "public": true
   },
-  "Enum": {
+  "Practice": {
     "dataSource": "db",
     "public": true,
     "$promise": {},
     "$resolved": true
   },
-  "YesNo": {
-    "dataSource": "db",
-    "public": false,
-    "$promise": {},
-    "$resolved": true
-  },
-  "Receptionist": {
-    "dataSource": "db",
-    "public": true
-  },
   "Appointment": {
     "dataSource": "db",
     "public": true
   },
-
-  "Setting": {
-    "dataSource": "db",
-    "public": true
-  },
-"Address": {
+  
+  "Address": {
     "dataSource": "transient",
     "public": false
   },
@@ -72,14 +59,31 @@
     "dataSource": "transient",
     "public": false
   },
-"Practice": {
+  "YesNo": {
+    "dataSource": "db",
+    "public": false,
+    "$promise": {},
+    "$resolved": true
+  },
+  
+  "Admin": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Setting": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Enum": {
     "dataSource": "db",
     "public": true,
     "$promise": {},
     "$resolved": true
   },
-  "Admin": {
+  
+  "Receptionist": {
     "dataSource": "db",
     "public": true
   }
+  
 }

@@ -1,16 +1,22 @@
-(function () {
-
-    'use strict';
+(function () { 'use strict';
 
     angular
         .module('bifrostApp')
-        .controller('PatientMainCtrl', function ($scope) {
+        .controller('PatientMainCtrl', function (patientForms) {
 
-            $scope.items = [
-                { name: 'Demographic', sref: '.demographic' },
-                { name: 'Vitals', sref: '.vitals' },
-                { name: 'Medical History', sref: '.medicalHistory' }
+            var vm = this;
+                
+            vm.items = [
+                { name: 'New Patient Demographics', sref: 'main.patient.newdemo' },
+                { name: 'New Patient Medical Info', sref: 'main.patient.newmedi' },
+                { name: 'New Patient Full Info', sref: 'main.patient.new' },
+                { name: 'Old Patient Demographics', sref: 'main.patient.olddemo' },
+                { name: 'Old Patient Medical Info', sref: 'main.patient.oldmedi' },
+                { name: 'Old Patient Full Info', sref: 'main.patient.old' }
             ];
+            
+          
+            
         });
-
+        
 })();

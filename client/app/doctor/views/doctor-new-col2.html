@@ -1,0 +1,62 @@
+    
+<div class="col-md-4">
+    <div class="box box-solid">
+            
+        <div class="box-header with-border">
+            <h3 class="box-title">Health Information</h3>
+        </div><!-- /.box-header -->
+            
+        <div class="box-body">
+            
+            <div class="box-group" ng-init="accordion=1">
+
+                <div class="box box-primary"  ng-class="{active:accordion==1}"   > <!-- /.removed panel -->
+                
+                    <div class="box-header with-border">
+                        <h4 class="box-title">
+                            <a href ng-click="accordion = 1">Medical History</a>
+                        </h4>
+                    </div>
+                    
+                    <div class="box-body" ng-show="accordion==1">
+                        <formly-form  model="DoctorDataCtrl.model" fields="DoctorDataCtrl.fields1b"></formly-form>
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
+                    </div>
+                
+                </div>
+            
+                <div class="box box-primary"  ng-class="{active:accordion==2}"   > <!-- /.removed panel -->
+                
+                    <div class="box-header with-border">
+                        <h4 class="box-title">
+                            <a href ng-click="accordion = 2">Vitals</a> 
+                        </h4>
+                    </div>
+
+                    <div class="box-body" ng-show="accordion==2">
+                        <formly-form  model="DoctorDataCtrl.model" fields="DoctorDataCtrl.fields3"></formly-form>
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 
+                    </div>
+                
+                </div>
+                
+                <div class="box box-primary"  ng-class="{active:accordion==3}"   > <!-- /.removed panel -->
+                    
+                    <div class="box-header with-border">
+                        <h4 class="box-title">
+                            <a href ng-click="accordion = 3">Allergies</a> 
+                        </h4>
+                    </div>
+
+                    <div class="box-body" ng-show="accordion==3">
+                        <formly-form  model="DoctorDataCtrl.model" fields="DoctorDataCtrl.fields4"></formly-form>
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 
+                    </div>
+                
+                </div>
+
+            </div>
+        
+        </div><!-- /.box-body -->
+    </div><!-- /.box -->
+</div><!-- /.col -->

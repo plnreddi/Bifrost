@@ -15,6 +15,7 @@
       <!-- bower:css -->
       <link rel="stylesheet" href="bower_components/fullcalendar/dist/fullcalendar.css" />
       <link rel="stylesheet" href="bower_components/bootstrap-additions/dist/bootstrap-additions.css" />
+      <link rel="stylesheet" href="bower_components/flag-icon-css/css/flag-icon.min.css" />
       <!-- endbower -->
       <link rel="stylesheet" href="bower_components/ui-select/dist/select.css" />
     <!-- endbuild -->
@@ -32,7 +33,7 @@
     <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="app/settings/settings.css">
   </head>
-  <body ng-app="bifrostApp" class="skin-blue" ng-class="$root.sidebarCollapse">
+  <body ng-app="bifrostApp" ng-controller="LayoutCtrl" class="skin-blue" ng-class="$root.sidebarCollapse">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -60,7 +61,6 @@
       <script src="bower_components/jquery/dist/jquery.js"></script>
       <script src="bower_components/angular/angular.js"></script>
       <script src="bower_components/angular-resource/angular-resource.js"></script>
-      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
       <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
       <script src="bower_components/lodash/dist/lodash.compat.js"></script>
       <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
@@ -74,6 +74,7 @@
       <script src="bower_components/angular-bootstrap-checkbox/angular-bootstrap-checkbox.js"></script>
       <script src="bower_components/angular-gettext/dist/angular-gettext.js"></script>
       <script src="bower_components/angular-gravatar/build/angular-gravatar.js"></script>
+      <script src="bower_components/angular-cookies/angular-cookies.js"></script>
       <!-- endbower -->
       <script src="bower_components/ag-grid/dist/ag-grid.js"></script>
       <script src="bower_components/angular-formly-templates-bootstrap/dist/angular-formly-templates-bootstrap.min.js"></script>
@@ -85,16 +86,27 @@
 
         <script src="app/app.js"></script>
           <!-- injector:js -->
+          <script src="app/01-main/controllers/layout.ctrl.js"></script>
+          <script src="app/01-main/controllers/main.controller.js"></script>
+          <script src="app/01-main/directives/admin-header.js"></script>
+          <script src="app/01-main/directives/navbar.js"></script>
           <script src="app/01-main/login/login.controller.js"></script>
           <script src="app/01-main/login/login.js"></script>
           <script src="app/01-main/main.config.js"></script>
-          <script src="app/01-main/main.controller.js"></script>
           <script src="app/01-main/main.js"></script>
+          <script src="app/about/about.config.js"></script>
+          <script src="app/about/about.js"></script>
+          <script src="app/about/controllers/about.ctrl.js"></script>
           <script src="app/appointment/appointment.config.js"></script>
           <script src="app/appointment/appointment.controller.js"></script>
           <script src="app/appointment/appointment.js"></script>
           <script src="app/appointment/appointment.modal.controller.js"></script>
-          <script src="app/lb-fetch-methods.js"></script>
+          <script src="app/doctor/controllers/doctor.data.ctrl.js"></script>
+          <script src="app/doctor/controllers/doctor.main.ctrl.js"></script>
+          <script src="app/doctor/doctor.config.js"></script>
+          <script src="app/doctor/doctor.js"></script>
+          <script src="app/doctor/services/doctor.data.service.js"></script>
+          <script src="app/doctor/services/doctor.forms.service.js"></script>
           <script src="app/lb-services.js"></script>
           <script src="app/patient/controllers/patient.byid.ctrl.js"></script>
           <script src="app/patient/controllers/patient.data.ctrl.js"></script>
@@ -103,11 +115,11 @@
           <script src="app/patient/patient.config.js"></script>
           <script src="app/patient/patient.js"></script>
           <script src="app/patient/services/patient.data.service.js"></script>
+          <script src="app/patient/services/patient.forms.service.js"></script>
           <script src="app/patients/patient.detail.controller.js"></script>
           <script src="app/patients/patients.controller.js"></script>
           <script src="app/patients/patients.js"></script>
           <script src="app/settings/appointmentdata.js"></script>
-          <script src="app/settings/patientdata.js"></script>
           <script src="app/settings/practicedata.js"></script>
           <script src="app/settings/settings.config.js"></script>
           <script src="app/settings/settings.controller.js"></script>
@@ -117,6 +129,7 @@
           <script src="components/navbar/navbar.controller.js"></script>
           <!-- endinjector -->
         <!-- endbuild -->
+        <script src="js/translations.js"></script>
 <script>
   window.intercomSettings = {
     app_id: "k4fa58v3"

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('bifrostApp')
-.run(function($rootScope, $state, formlyConfig, gettextCatalog) {
+.run(function($rootScope, $cookies, $state, formlyConfig, gettextCatalog, Doctor) {
 
   // Left Sidemenu
   $rootScope.menu = [];
@@ -21,6 +21,7 @@ angular.module('bifrostApp')
   $rootScope.addMenu(gettextCatalog.getString('Dashboard'), 'main.dashboard',
     'fa-dashboard', 'main.dashboard');
 
+  // language
   $rootScope.locales = {
     'de': {
       lang: 'de',
@@ -69,8 +70,7 @@ angular.module('bifrostApp')
     }
   };
 
-  //var lang = $cookies.lang || navigator.language || navigator.userLanguage;
-  var lang = 'te_IN'; // to be removed
+  var lang = $cookies.lang || navigator.language || navigator.userLanguage;
 
   $rootScope.locale = $rootScope.locales[lang];
 
@@ -85,6 +85,9 @@ angular.module('bifrostApp')
 
   gettextCatalog.debug = true;
 
+
+
+  // formly
   formlyConfig.extras.removeChromeAutoComplete = true;
 
   formlyConfig.setType({
@@ -107,7 +110,25 @@ angular.module('bifrostApp')
   });
 
 
+  $rootScope.tmpLogin = function() {
+  // temprarily to bypass $rootScope.$on('$stateChangeStart'
+  if (!$rootScope.currentUser) {
 
+    Doctor.login( { include: 'user', rememberMe: false },
+                  {email: "john@doe.com", password: "a"},
+                  function(user) {
+                      //console.log('user: ' + JSON.stringify(user) );
+                      console.log(user);
+                      // assign currentUser
+                      $rootScope.currentUser = user.user;
+                  }
+    )
+  }
+  
+  };
+  $rootScope.tmpLogin();
+  
+  /*
   $rootScope.$on('$stateChangeStart', function(event, toState, toParams) {
       var requireLogin = toState.data.requireLogin;
 
@@ -116,6 +137,9 @@ angular.module('bifrostApp')
           $state.go('login');
       }
   });
+  */
+
+
 
   $rootScope.sidebarCollapse = '';
 
@@ -134,4 +158,7 @@ angular.module('bifrostApp')
 			}
 		}
 	};
+  
+  
+  
 });

@@ -46,7 +46,15 @@ module.exports = function (grunt) {
                 'po/template.pot': [
                     '<%= yeoman.app %>/patient/*.js',
                     '<%= yeoman.app %>/patient/**/*.js',
-                    '<%= yeoman.app %>/patient/views/*.html'
+                    '<%= yeoman.app %>/patient/views/*.html',
+                    
+                    '<%= yeoman.app %>/01-main/*.js',
+                    '<%= yeoman.app %>/01-main/**/*.js',
+                    '<%= yeoman.app %>/01-main/**/*.html',
+                    
+                    '<%= yeoman.app %>/about/*.js',
+                    '<%= yeoman.app %>/about/**/*.js',
+                    '<%= yeoman.app %>/about/**/*.html'
                 ]
             }
         },
@@ -661,7 +669,7 @@ module.exports = function (grunt) {
       'concurrent:server',
       'injector',
       'loopback_sdk_angular:development',
-      'loopback_sdk_fetch_factory:development',
+      //'loopback_sdk_fetch_factory:development',
       'nggettext_extract',
       'nggettext_compile',
       'wiredep',

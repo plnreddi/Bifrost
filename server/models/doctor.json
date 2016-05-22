@@ -12,6 +12,9 @@
     "doctorName": {
       "type": "string"
     },
+    "doctorPhoto": {
+      "type": "string"
+    },
     "phoneVerified": {
       "type": "boolean",
       "default": "false"
@@ -20,6 +23,30 @@
       "type": [
         "List"
       ]
+    },
+    "doctorCredentialOne": {
+      "type": "List"
+    },
+    "doctorCredentialTwo": {
+      "type": "List"
+    },
+    "doctorCredentialThree": {
+      "type": "List"
+    },
+    "doctorCredentialFour": {
+      "type": "List"
+    },
+    "doctorCredentialFive": {
+      "type": "List"
+    },
+    "doctorCredentialSix": {
+      "type": "List"
+    },
+    "doctorCredentialSeven": {
+      "type": "List"
+    },
+    "doctorCredentialEight": {
+      "type": "List"
     },
     "yearsExperience": {
       "type": "string"

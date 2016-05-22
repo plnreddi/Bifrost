@@ -2,17 +2,73 @@ msgid ""
 msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Project-Id-Version: \n"
+"Project-Id-Version: Bifrost ver 3a\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: pln <pln@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"X-Generator: Poedit 1.5.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Language: te_IN\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
-#: client/app/patient/views/main.html:6
-msgid "Create and View Patient Data!"
-msgstr "సృష్టించు మరియు పేషెంట్ డేటా చూడండి!"
+#: client/app/patient/services/patient.forms.service.js:82
+msgid "Aadhaar ID"
+msgstr "ఆధార్ ID"
 
-#: client/app/patient/views/main.html:5
+#: client/app/patient/patient.config.js:7
 msgid "Patient"
-msgstr "రోగి"
+msgstr "పేషెంట్"
 
-#: client/app/patient/views/main.html:8
-msgid "Welcome Ladies and Gentle men"
-msgstr "స్వాగతం లేడీస్ అండ్ జెంటిల్ పురుషులు"
+#: client/app/patient/services/patient.forms.service.js:77
+msgid "Patient ID"
+msgstr "పేషెంట్  ID"
+
+#: client/app/patient/services/patient.forms.service.js:72
+msgid "Patient Name"
+msgstr "పేషెంట్ పేరు"
+
+#: client/app/patient/views/main.html:77
+msgid "Please check all the above data before you press enter."
+msgstr "పైన నమోదు చేసిన వివరములు సరిచూసుకున్న తరువాత ఎంటర్ నొక్కండి"
+
+#: client/app/01-main/main.config.js:55
+msgid "Portuguese Brazil"
+msgstr "português Brasil"
+
+#: client/app/01-main/main.config.js:60
+msgid "Russian"
+msgstr "русский"
+
+#: client/app/01-main/main.config.js:40
+msgid "Spanish"
+msgstr "Español"
+
+#: client/app/01-main/main.config.js:70
+msgid "Telugu"
+msgstr "తెలుగు"
+
+#: client/app/01-main/main.config.js:65
+msgid "Chinese"
+msgstr "中文"
+
+#: client/app/01-main/main.config.js:21
+msgid "Dashboard"
+msgstr ""
+
+#: client/app/01-main/main.config.js:50
+msgid "Dutch"
+msgstr "Nederlands"
+
+#: client/app/01-main/main.config.js:35
+msgid "English"
+msgstr "English"
+
+#: client/app/01-main/main.config.js:45
+msgid "Français"
+msgstr "français"
+
+#: client/app/01-main/main.config.js:30
+msgid "German"
+msgstr "Deutsche"

@@ -4,14 +4,79 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: \n"
 
-#: client/app/patient/views/main.html:6
-msgid "Create and View Patient Data!"
+#: client/app/patient/services/patient.forms.service.js:104
+msgid "Aadhaar ID"
 msgstr ""
 
-#: client/app/patient/views/main.html:5
+#: client/app/about/about.config.js:16
+#: client/app/about/views/about-main.html:3
+msgid "About"
+msgstr ""
+
+#: client/app/about/views/about-main.html:12
+msgid "About <small>All about this application!</small>"
+msgstr ""
+
+#: client/app/about/views/about-main.html:4
+msgid "All about this application!"
+msgstr ""
+
+#: client/app/01-main/main.config.js:64
+msgid "Chinese"
+msgstr ""
+
+#: client/app/01-main/main.config.js:21
+msgid "Dashboard"
+msgstr ""
+
+#: client/app/01-main/main.config.js:49
+msgid "Dutch"
+msgstr ""
+
+#: client/app/01-main/main.config.js:34
+msgid "English"
+msgstr ""
+
+#: client/app/01-main/main.config.js:44
+msgid "Français"
+msgstr ""
+
+#: client/app/01-main/main.config.js:29
+msgid "German"
+msgstr ""
+
+#: client/app/patient/patient.config.js:7
 msgid "Patient"
 msgstr ""
 
-#: client/app/patient/views/main.html:8
-msgid "Welcome Ladies and Gentle men"
+#: client/app/patient/views/patient-main.html:5
+msgid "Patient <small>All about Patient!</small>"
+msgstr ""
+
+#: client/app/patient/services/patient.forms.service.js:99
+msgid "Patient ID"
+msgstr ""
+
+#: client/app/patient/services/patient.forms.service.js:94
+msgid "Patient Name"
+msgstr ""
+
+#: client/app/patient/views/patient-new-demo.html:24
+msgid "Please check all the above data before you press enter."
+msgstr ""
+
+#: client/app/01-main/main.config.js:54
+msgid "Portuguese Brazil"
+msgstr ""
+
+#: client/app/01-main/main.config.js:59
+msgid "Russian"
+msgstr ""
+
+#: client/app/01-main/main.config.js:39
+msgid "Spanish"
+msgstr ""
+
+#: client/app/01-main/main.config.js:69
+msgid "Telugu"
 msgstr ""
