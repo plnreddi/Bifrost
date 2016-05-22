@@ -36,8 +36,7 @@
                     
                     "doctorCredentialOne": {
                         title: 'Intro',
-                        descp: ['Dr Ramesh Raju did MB BS from JJM Medical College, Davangere in 1996. He completed ', 
-                                'Post graduate training (Master of Surgery in Otolaryngology and Head and Neck Surgery) ',
+                        descp: ['Dr Ramesh Raju did MB BS from JJM Medical College, Davangere in 1996. He completed Post graduate training (Master of Surgery in Otolaryngology and Head and Neck Surgery) ',
                                 'from Manipal Academy of Higher Education in the year 2000. After working for one year as ',
                                 'senior resident in ENT in Visakhapatnam he moved to UK for further training. Dr Raju ',
                                 'obtained MRCS degree from Royal College of Physicians and Surgeons of Glasgow and ', 
