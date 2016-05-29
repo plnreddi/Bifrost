@@ -1,0 +1,28 @@
+{
+  "name": "Education",
+  "base": "Model",
+  "idInjection": true,
+  
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    
+    "school": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "degree": {
+      "type": "string"
+    }
+    
+  },
+  
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

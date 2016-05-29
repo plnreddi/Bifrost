@@ -81,9 +81,49 @@
     "$resolved": true
   },
   
+  "DoctorProfile": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Language": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Specialty": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Education": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Registration": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Experience": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Service": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Award": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Membership": {
+    "dataSource": "db",
+    "public": false
+  },
+  
   "Receptionist": {
     "dataSource": "db",
     "public": true
   }
   
 }
+
+
+

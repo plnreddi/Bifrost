@@ -30,8 +30,10 @@
                         var doctorQualification = 'BDS, MDS - Prosthodontics and Oral Implantology' +
                             'BDS, MDS - Prosthodontics and Oral Implantology BDS, MDS - Prosthodontics and Oral Implantology';
                         
-                        var photo = params.data.doctorPhoto;
-                        var name = params.data.doctorName;
+                        //var photo = params.data.doctorPhoto;
+                        //var name = params.data.doctorName;
+                        var photo = params.data.profile.imageUrl;
+                        var name = params.data.profile.name;
                         
                         var specialty = doctorSpecialty;
                         var experience = doctorExperience;
@@ -57,25 +59,26 @@
                               
                 { headerName: "Credential One", field: "credentialOne", width: 200,
                     cellRenderer: function(params) {
-                        var tpl = credentialTpl(params.data.doctorCredentialOne.descp)
+                        var tpl = credentialTpl(params.data.profile.bio)
                         return tpl;
                     }
                 },
 
                 { headerName: "Credential Two", field: "credentialTwo", width: 200,
                     cellRenderer: function(params) {
-                        var tpl = credentialTpl(params.data.doctorCredentialTwo.descp)
-                        return tpl;
+                        
+                    var str = '<p style="font-size: 11px; color: black; white-space: normal;     overflow: auto; box-sizing: border-box;">'
+                    var tpl = '<div style="padding: 10px; display: block;">';
+                    
+                    angular.forEach(params.data.services, function(ser) {
+                        tpl += str + ser.description + '</p>'
+                    });
+                
+                    return tpl + '</div>';
+                        
                     }
                 },
-                
-                { headerName: "Credential Three", field: "credentialThree", width: 200,
-                    cellRenderer: function(params) {
-                        var tpl = credentialTpl(params.data.doctorCredentialThree.descp)
-                        return tpl;
-                    }
-                }, 
-        
+  
             ];
             
     
@@ -118,6 +121,7 @@
             // doctors with hospitals
             vm.loadingData1 = doctorData.doctorsAndHospitals(1).then(function(result) {
                 vm.model= result.doctorsAndHospitals[0];
+                console.log('doctor: ', result.doctorsAndHospitals[0]);
                 if (vm.gridOptions.api) {
                     vm.gridOptions.api.setRowData(result.doctorsAndHospitals);
                     console.log('grid Options: ', vm.gridOptions);

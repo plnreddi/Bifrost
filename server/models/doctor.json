@@ -8,49 +8,64 @@
     "validateUpsert": true
   },
 
+
   "properties": {
-    "doctorName": {
-      "type": "string"
+    
+    
+    "uid": { "type": "string" },
+    
+    "profile": {
+      "type": "DoctorProfile"
     },
-    "doctorPhoto": {
-      "type": "string"
+    
+    "specialties": {
+      "type": [
+        "Specialty"
+      ]
     },
+    
+    "education": {
+      "type": [
+        "Education"
+      ]
+    },
+    
+    "registrations": {
+      "type": [
+        "Registration"
+      ]
+    },
+    
+    "experience": {
+      "type": [
+        "Experience"
+      ]
+    },
+    
+    "services": {
+      "type": [
+        "Service"
+      ]
+    },
+    
+    "awards": {
+      "type": [
+        "Award"
+      ]
+    },
+    
+    "memberships": {
+      "type": [
+        "Membership"
+      ]
+    },
+    
+  
     "phoneVerified": {
       "type": "boolean",
       "default": "false"
-    },
-    "aboutDoctor": {
-      "type": [
-        "List"
-      ]
-    },
-    "doctorCredentialOne": {
-      "type": "List"
-    },
-    "doctorCredentialTwo": {
-      "type": "List"
-    },
-    "doctorCredentialThree": {
-      "type": "List"
-    },
-    "doctorCredentialFour": {
-      "type": "List"
-    },
-    "doctorCredentialFive": {
-      "type": "List"
-    },
-    "doctorCredentialSix": {
-      "type": "List"
-    },
-    "doctorCredentialSeven": {
-      "type": "List"
-    },
-    "doctorCredentialEight": {
-      "type": "List"
-    },
-    "yearsExperience": {
-      "type": "string"
     }
+
   },
 
   "validations": [],

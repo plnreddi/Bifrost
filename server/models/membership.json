@@ -1,0 +1,22 @@
+{
+  "name": "Membership",
+  "base": "Model",
+  "idInjection": true,
+  
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    
+    "description": {
+      "type": "string"
+    }
+    
+  },
+  
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

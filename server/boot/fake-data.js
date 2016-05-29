@@ -159,199 +159,114 @@ var doctorSchema = { type: 'object',
         email: 'john@doe.com', 
         password: 'a',
 
-        doctorName: { type: 'string', faker: 'name.findName' },
-        doctorPhoto: { type: 'string', faker: 'image.avatar' },
+        uid: "abcd1234",
         
-        doctorCredentialOne: { "type": "object",
+        profile: { "type": "object",
             "properties": {
-                title: "Intro",
-                descp: { type: "array",
+                name: { type: 'string', faker: 'name.findName' },
+                title: "MD",
+                imageUrl: { type: 'string', faker: 'image.avatar' },
+                gender: "Male",
+                languages: [
+                    { "name":"English", "code":"en" },
+                    { "name":"Telugu", "code":"te_IN" }
+                ],
+                bio: { type: "array",
                     items:  { type: 'string', faker: 'lorem.paragraph'},
                     minItems: 2, maxItems: 3
-                },
+                }
             },
-            required: ['title', 'descp']
+            required: ['name', 'title', 'imageUrl', 'gender', 'languages', 'bio']
+        },
+  
+        specialties: { type: "array",
+            items : { "type": "object",
+                properties: {
+                    uid: 'general-surgeon',
+                    name: "Surgery",
+                    description:"Specializes in complex surgical operations.",
+                    category:"medical",
+                    actor:"General Surgeon"
+                },
+                required: ['uid', 'name', 'description', 'category', 'actor']
+            },
+            minItems: 2,
         },
 
-        doctorCredentialTwo: { "type": "object",
-            "properties": {
-                title: "Services",
-                descp: { type: "array",
-                    items:  { type: 'string', faker: 'lorem.lines'},
-                    minItems: 2, maxItems: 3
+        education: { type: "array",
+            items : { "type": "object",
+                properties: {
+                    school: "Georgetown University Hospital",
+                    year: '1990',
+                    degree: "Internship"
                 },
+                required: ['school', 'year', 'degree']
             },
-            required: ['title', 'descp']
+            minItems: 3,
         },
 
-        doctorCredentialThree: { "type": "object",
-            "properties": {
-                title: "Specializations",
-                descp: { type: "array",
-                    items:  { type: 'string', faker: 'lorem.sentence'},
-                    minItems: 2, maxItems: 3
+        registrations: { type: "array",
+            items : { "type": "object",
+                properties: {
+                    uid: "A9044",
+                    body: 'Andhra Pradesh Medical Council',
+                    year: "1990"
                 },
+                required: ['uid', 'body', 'year']
             },
-            required: ['title', 'descp']
+            minItems: 2,
         },
 
-        doctorCredentialFour: { "type": "object",
-            "properties": {
-                title: "Education",
-                descp: { type: "array",
-                    items:  { type: 'string', faker: 'lorem.lines'},
-                    minItems: 2, maxItems: 3
+        experience: { type: "array",
+            items : { "type": "object",
+                properties: {
+                    period: "1986 - 2015",
+                    description: 'consultant at Vision Optical Clinic'   
                 },
+                required: ['period', 'description']
             },
-            required: ['title', 'descp']
+            minItems: 2,
         },
 
-        doctorCredentialFive: { "type": "object",
-            "properties": {
-                title: "Awards and Recognitions",
-                descp: { type: "array",
-                    items:  { type: 'string', faker: 'lorem.lines'},
-                    minItems: 2, maxItems: 3
+        services: { type: "array",
+            items : { "type": "object",
+                properties: {
+                    description: 'Corneal Transplant',  
+                    url: 'url for other doctors' 
                 },
+                required: ['url', 'description']
             },
-            required: ['title', 'descp']
-        },
-
-        doctorCredentialSix: { "type": "object",
-            "properties": {
-                title: "Memberships",
-                descp: { type: "array",
-                    items:  { type: 'string', faker: 'lorem.lines'},
-                    minItems: 2, maxItems: 3
-                },
-            },
-            required: ['title', 'descp']
-        },
-
-        doctorCredentialSeven: { "type": "object",
-            "properties": {
-                title: "Registrations",
-                descp: { type: "array",
-                    items:  { type: 'string', faker: 'lorem.lines'},
-                    minItems: 2, maxItems: 3
-                },
-            },
-            required: ['title', 'descp']
+            minItems: 7,
         },
         
-               
+        awards: { type: "array",
+            items : { "type": "object",
+                properties: {
+                    description: 'Best perfomance in implantology handson',  
+                    year: '1985' 
+                },
+                required: ['description', 'year']
+            },
+            minItems: 2,
+        },
+        
+        memberships: { type: "array",
+            items : { "type": "object",
+                properties: {
+                    description: 'Indian Society of Otology'
+                },
+                required: ['description']
+            },
+            minItems: 2,
+        },
+         
     },
     required: [
-        'username', 'email', 'password', 'doctorName', 'doctorPhoto',
-        'doctorCredentialOne','doctorCredentialTwo','doctorCredentialThree','doctorCredentialFour',
-        'doctorCredentialFive','doctorCredentialSix','doctorCredentialSeven'
+        'username', 'email', 'password', 'uid', 
+        'profile', 'specialties', 'education', 'registrations', 'experience', 'services', 'awards', 'memberships'
     ]
 
 }; // end of doctorSchema
-
-
-
-// Doctor fake data (OLD)
-/*
-var doctorSchema = { type: 'object',
-
-    properties: {
-        
-        username: 'John', 
-        email: 'john@doe.com', 
-        password: 'a',
-
-        doctorName: { type: 'string', faker: 'name.findName' },
-        
-        aboutDoctor:{ "type": "array",
-            "items": [
-
-                {   "type": "object",
-                    "properties": {
-                        key: "Intro",
-                        value: { type: "array",
-                            items:  { type: 'string', faker: 'lorem.paragraph'},
-                            minItems: 2, maxItems: 3
-                        },
-                    },
-                    required: ['key', 'value']
-                },
-
-                {   "type": "object",
-                    "properties": {
-                        key: "Services",
-                        value: { type: "array",
-                            items:  { type: 'string', faker: 'lorem.lines'},
-                            minItems: 2, maxItems: 3
-                        },
-                    },
-                    required: ['key', 'value']
-                },
-
-                {   "type": "object",
-                    "properties": {
-                        key: "Specializations",
-                        value: { type: "array",
-                            items:  { type: 'string', faker: 'lorem.sentence'},
-                            minItems: 2, maxItems: 3
-                        },
-                    },
-                    required: ['key', 'value']
-                },
-
-                {   "type": "object",
-                    "properties": {
-                        key: "Education",
-                        value: { type: "array",
-                            items:  { type: 'string', faker: 'lorem.lines'},
-                            minItems: 2, maxItems: 3
-                        },
-                    },
-                    required: ['key', 'value']
-                },
-
-                {   "type": "object",
-                    "properties": {
-                        key: "Awards and Recognitions",
-                        value: { type: "array",
-                            items:  { type: 'string', faker: 'lorem.lines'},
-                            minItems: 2, maxItems: 3
-                        },
-                    },
-                    required: ['key', 'value']
-                },
-
-                {   "type": "object",
-                    "properties": {
-                        key: "Memberships",
-                        value: { type: "array",
-                            items:  { type: 'string', faker: 'lorem.lines'},
-                            minItems: 2, maxItems: 3
-                        },
-                    },
-                    required: ['key', 'value']
-                },
-
-                {   "type": "object",
-                    "properties": {
-                        key: "Registrations",
-                        value: { type: "array",
-                            items:  { type: 'string', faker: 'lorem.lines'},
-                            minItems: 2, maxItems: 3
-                        },
-                    },
-                    required: ['key', 'value']
-                },
-            ]
-        }
-
-    },
-    required: [
-       'username', 'email', 'password', 'doctorName', 'aboutDoctor'
-    ]
-
-}; 
-*/
 
 
 // hospital fake data

@@ -1,0 +1,25 @@
+{
+  "name": "Experience",
+  "base": "Model",
+  "idInjection": true,
+  
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    
+    "period": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+    
+  },
+  
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

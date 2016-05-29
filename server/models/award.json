@@ -1,0 +1,26 @@
+{
+  "name": "Award",
+  "base": "Model",
+  "idInjection": true,
+  
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    
+    "description": {
+      "type": "string"
+    },
+    
+    "year": {
+      "type": "string"
+    }
+    
+  },
+  
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

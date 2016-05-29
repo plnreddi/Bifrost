@@ -1,0 +1,40 @@
+{
+  "name": "DoctorProfile",
+  "base": "Model",
+  "idInjection": true,
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "string"
+    },
+    "gender": {
+      "type": "string"
+    },
+    
+    "languages": {
+      "type": [
+        "Language"
+      ]
+    },
+    
+    "bio": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
+

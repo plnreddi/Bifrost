@@ -1,0 +1,32 @@
+ 
+ {
+  "name": "Registration",
+  "base": "Model",
+  "idInjection": true,
+  
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    
+    "uid": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    }
+    
+  },
+  
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
+ 
+ 
+ 
