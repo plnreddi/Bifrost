@@ -1,0 +1,23 @@
+{
+  "name": "Phone",
+  "base": "Model",
+  "idInjection": true,
+  
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    "number": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

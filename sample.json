@@ -1,0 +1,1907 @@
+{
+  "meta": {
+    "data_type": "array",
+    "item_type": "Doctor",
+    "total": 43365,
+    "count": 10,
+    "skip": 0,
+    "limit": 10
+  },
+  "data": [
+    {
+      "practices": [
+        {
+          "within_search_area": true,
+          "distance": 0.43031773158257114,
+          "lat": 37.77673,
+          "lon": -122.41931,
+          "uid": "5c72e62909117b6a13dd8c475fc6f7cd",
+          "npi": null,
+          "name": "Marilyn Kutzscher, MD",
+          "email": null,
+          "insurance_uids": [
+            "unitedhealthcare-uhcchoicepluspos",
+            "unitedhealthcare-uhcnavigatehmo",
+            "unitedhealthcare-uhcnavigatepos",
+            "unitedhealthcare-uhcoptionsppo"
+          ],
+          "visit_address": {
+            "city": "San Francisco",
+            "lat": 37.77673,
+            "lon": -122.41931,
+            "state": "CA",
+            "state_long": "California",
+            "street": "100 Van Ness Ave",
+            "street2": "Fl 28",
+            "zip": "94102"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "4157765140",
+              "type": "landline"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/5c72e62909117b6a13dd8c475fc6f7cd/doctors"
+        },
+        {
+          "within_search_area": true,
+          "distance": 1.58134046438214,
+          "lat": 37.790068,
+          "lon": -122.43228,
+          "uid": "b9a993f1a9692cd1c9f1b85cb555eb0d",
+          "npi": null,
+          "name": "Marilyn Kutzscher, MD",
+          "email": null,
+          "insurance_uids": [
+            "bluecrosscalifornia-bluecrosscaselectplushmo",
+            "cigna-cignahmo",
+            "aetna-aetnahmodeductibleplancamembersonly",
+            "cigna-cignappo",
+            "bluecrosscalifornia-bluecrosscacaliforniacarehmo",
+            "aetna-aetnahmo",
+            "cigna-cignaopenaccessplus",
+            "gwhcigna-greatwestppo",
+            "unitedhealthcare-uhcchoicepluspos",
+            "unitedhealthcare-uhcnavigatehmo",
+            "unitedhealthcare-uhcnavigatepos",
+            "unitedhealthcare-uhcoptionsppo"
+          ],
+          "visit_address": {
+            "city": "San Francisco",
+            "lat": 37.790068,
+            "lon": -122.43228,
+            "state": "CA",
+            "state_long": "California",
+            "street": "2100 Webster St",
+            "street2": "Ste 506",
+            "zip": "94115"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "4159233560",
+              "type": "landline"
+            },
+            {
+              "number": "4153465019",
+              "type": "fax"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/b9a993f1a9692cd1c9f1b85cb555eb0d/doctors"
+        },
+        {
+          "within_search_area": true,
+          "distance": 1.58134046438214,
+          "lat": 37.790068,
+          "lon": -122.43228,
+          "uid": "3aa1270e225db391ecbe081fcd406b78",
+          "npi": null,
+          "name": "Marilyn Kutzscher, MD",
+          "email": null,
+          "insurance_uids": [
+            "healthnet-healthnetindividualfamilyppohix",
+            "aetna-aetnamdbronzesilverandgoldhmo",
+            "healthnet-hmoexcelcaresilvernetwork",
+            "healthnet-hmoexcelcaresilvernetworkmedicarecob"
+          ],
+          "visit_address": {
+            "city": "San Francisco",
+            "lat": 37.790068,
+            "lon": -122.43228,
+            "state": "CA",
+            "state_long": "California",
+            "street": "2100 Webster St",
+            "street2": "Ste 115",
+            "zip": "94115"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "4158858628",
+              "type": "landline"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/3aa1270e225db391ecbe081fcd406b78/doctors"
+        }
+      ],
+      "educations": [
+        {
+          "school": null,
+          "graduation_year": null,
+          "degree": "MD"
+        },
+        {
+          "school": "Georgetown University Hospital",
+          "graduation_year": null,
+          "degree": "Internship"
+        },
+        {
+          "school": "Georgetown University Hospital",
+          "graduation_year": null,
+          "degree": "Residency"
+        },
+        {
+          "school": "California Pacific Medical Center",
+          "graduation_year": null,
+          "degree": "Residency"
+        }
+      ],
+      "profile": {
+        "first_name": "Marilyn",
+        "middle_name": "M",
+        "last_name": "Kutzscher",
+        "slug": "marilyn-kutzscher-md",
+        "title": "MD",
+        "image_url": "https://asset1.betterdoctor.com/images/51187254d9fd9920d8000263-1_thumbnail.jpg",
+        "gender": "female",
+        "languages": [
+          {
+            "name": "English",
+            "code": "en"
+          }
+        ],
+        "bio": "Dr. Marilyn Kutzscher, a Board Certified, Internal Medicine physician and a Fellow in the American College of Physicians, has been practicing in San Francisco since 1988. Born and raised in western New York State, she attended college and medical school in Washington, D.C.  She completed her first two years of residency program at Georgetown University Hospital, where she met her husband and decided to move with him to San Francisco.  There she finished her third year of residency and was selected Chief Resident in Internal Medicine at California Pacific Medical Center.\n\nFollowing residency, Dr. Kutzscher participated in the Public Health service, working for two years in a Hispanic, family practice clinic in the East Bay.  Soon after starting at Tiburcio Vasquez Health Center, she was promoted to medical director. During a two year departure from the Bay Area to accompany her husband for his fellowship, she served as Medical Director of Employee Health at the hospital in which he worked. She returned to San Francisco to set up in private practice, where she has maintained a practice for over 20 years.\n\nDr. Kutzscher cherishes her long-term relationships with her patients. She enjoys her involvement in women’s health and geriatrics, as well as family health and wellness. Her goals are to provide the most comprehensive preventive care available, to help manage chronic health issues, and to enable patients to succeed in their own personal health care goals. She believes that patient advocacy of care, especially coordination between members of the health care team, and effective communication between patient and physician allow for the highest level of care in a complex medical environment.\n\nDr. Kutzscher lives in San Francisco with her husband and three grown children. She loves spending time with family and friends, bicycling, skiing, rafting, cooking, reading and travel. Dr. Kutzscher and her family are honored to be involved in international medicine; she has travelled to the Highlands of Guatemala numerous times to provide care to an underserved rural community through the Family Club’s Foundation for Hospital de la Familia."
+      },
+      "ratings": [
+        {
+          "active": true,
+          "provider": "yelp",
+          "provider_uid": "marilyn-m-kutzscher-md-san-francisco",
+          "provider_url": "http://www.yelp.com/biz/marilyn-m-kutzscher-md-san-francisco",
+          "rating": 4.5,
+          "review_count": 19
+        },
+        {
+          "active": true,
+          "provider": "betterdoctor",
+          "provider_uid": "marilyn-kutzscher-md",
+          "provider_url": "https://betterdoctor.com/marilyn-kutzscher-md",
+          "rating": 5,
+          "review_count": 0,
+          "image_url_small": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0.png",
+          "image_url_small_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0@2x.png",
+          "image_url_large": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0.png",
+          "image_url_large_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0@2x.png"
+        }
+      ],
+
+      "specialties": [
+        {
+          "uid": "internist",
+          "name": "Internal Medicine",
+          "description": "Specializes in common illnesses and complex medical problems.",
+          "category": "medical",
+          "actor": "Internist",
+          "actors": "Internists"
+        }
+      ],
+      "hospital_affiliations": [],
+      "group_affiliations": [],
+      "uid": "a7211f54dcf986204d6556318d265b60",
+      "npi": "1326150384"
+    },
+    {
+      "practices": [
+        {
+          "within_search_area": true,
+          "distance": 8.598259820202282,
+          "lat": 37.8192,
+          "lon": -122.26677,
+          "uid": "2652ffbe94a8835f6433461d2a0264c8",
+          "npi": null,
+          "name": "Patricia C Wong MD",
+          "email": null,
+          "insurance_uids": [
+            "bluecrosscalifornia-bluecrosscapowerselecthmo",
+            "bluecrosscalifornia-bluecrosscaadvantageppopreferreddirectaccessplus",
+            "multiplan-phcsppo",
+            "healthnet-healthnetcaindividualfamilyppo",
+            "bluecrosscalifornia-bluecrosscaselectplushmo",
+            "healthnet-healthnetcahmoemployergroup",
+            "aetna-aetnasignatureadministratorsppo",
+            "healthnet-healthnetcabluegoldhmo",
+            "multiplan-phcsppokaiser",
+            "aetna-aetnachoiceposii",
+            "multiplan-multiplanppo",
+            "cigna-cignaopenaccessplus",
+            "aetna-aetnamanagedchoiceposopenaccess",
+            "cigna-cignahmo",
+            "healthnet-healthnetcahmowholecarenetwork",
+            "aetna-aetnahmodeductibleplancamembersonly",
+            "cigna-cignappo",
+            "uhcwestformerlypacificare-pacificarehmo",
+            "bluecrosscalifornia-bluecrosscacaliforniacarehmo",
+            "uhcwestformerlypacificare-uhcwestsignaturevalueadvantagehmovaluenetwork",
+            "healthnet-healthnetcacoveredcaliforniapposmallgroup",
+            "bcbsbluecard-bcbsbluecardppo",
+            "aetna-aetnahmo",
+            "healthnet-healthnetcalargegroupppo",
+            "uhcwestformerlypacificare-uhcwestsignaturevaluealliance",
+            "bluecrosscalifornia-bluecrosscappo",
+            "bluecrosscalifornia-bluecrosscapathwayxppodirectaccess",
+            "bluecrosscalifornia-bluecrosscapathwayxtiereddirectaccess",
+            "chinesecommunityhealthplan-chinesecommunityhealthplan",
+            "aetna-aetnabasichmo",
+            "aetna-aetnavitalidadpluscaconaetna",
+            "anthem-blueviewvision",
+            "cigna-vision",
+            "vsp-vsp",
+            "healthnet-healthnetindividualfamilyppohix",
+            "medicare-medicare",
+            "medicaid-medicaid",
+            "aetna-aetnamdbronzesilverandgoldhmo",
+            "healthnet-bluegoldhmo",
+            "healthnet-hmoexcelcaresilvernetwork",
+            "healthnet-hmoexcelcaresilvernetworkmedicarecob",
+            "blueshieldofcalifornia-blueshieldcaaccessplushmo",
+            "blueshieldofcalifornia-blueshieldcabasicepo",
+            "blueshieldofcalifornia-blueshieldcabasicexclusiveppoforsmallbusiness",
+            "blueshieldofcalifornia-blueshieldcabasicppo",
+            "blueshieldofcalifornia-blueshieldcappo",
+            "blueshieldofcalifornia-bscaplatinum90epo",
+            "premerabluecross-premeraheritagesignature",
+            "gwhcigna-greatwestppo",
+            "unitedhealthcare-uhcchoicepluspos",
+            "unitedhealthcare-uhcnavigatehmo",
+            "unitedhealthcare-uhcnavigatepos",
+            "unitedhealthcare-uhcoptionsppo",
+            "firsthealthcoventryhealthcare-firsthealthppo"
+          ],
+          "visit_address": {
+            "city": "Oakland",
+            "lat": 37.8192,
+            "lon": -122.26677,
+            "state": "CA",
+            "state_long": "California",
+            "street": "491 30th St",
+            "street2": "Ste 103",
+            "zip": "94609"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "5107631501",
+              "type": "fax"
+            },
+            {
+              "number": "5108351423",
+              "type": "landline"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/2652ffbe94a8835f6433461d2a0264c8/doctors"
+        },
+        {
+          "within_search_area": true,
+          "distance": 8.600744837450522,
+          "lat": 37.8192,
+          "lon": -122.26677,
+          "uid": "a804c43433bea2213a4210ab15042bf4",
+          "npi": null,
+          "name": "Patricia Wong, MD",
+          "email": null,
+          "insurance_uids": [
+            "cigna-cignaopenaccessplus",
+            "chinesecommunityhealthplan-chinesecommunityhealthplan",
+            "aetna-aetnabasichmo",
+            "healthnet-healthnetcalargegroupppo",
+            "aetna-aetnavitalidadpluscaconaetna",
+            "bluecrosscalifornia-bluecrosscaadvantageppopreferreddirectaccessplus",
+            "uhcwestformerlypacificare-uhcwestsignaturevaluealliance",
+            "aetna-aetnahmo",
+            "bluecrosscalifornia-bluecrosscacaliforniacarehmo",
+            "uhcwestformerlypacificare-uhcwestsignaturevalueadvantagehmovaluenetwork",
+            "aetna-aetnahmodeductibleplancamembersonly",
+            "healthnet-healthnetcahmowholecarenetwork",
+            "multiplan-multiplanppo",
+            "cigna-cignappo",
+            "multiplan-phcsppo",
+            "cigna-cignahmo",
+            "bluecrosscalifornia-bluecrosscaselectplushmo",
+            "uhcwestformerlypacificare-pacificarehmo",
+            "bluecrosscalifornia-bluecrosscapathwayxtiereddirectaccess",
+            "multiplan-phcsppokaiser",
+            "bluecrosscalifornia-bluecrosscappo",
+            "healthnet-healthnetcahmoemployergroup",
+            "bluecrosscalifornia-bluecrosscapowerselecthmo",
+            "healthnet-healthnetcacoveredcaliforniapposmallgroup",
+            "bluecrosscalifornia-bluecrosscapathwayxppodirectaccess",
+            "healthnet-healthnetcaindividualfamilyppo",
+            "healthnet-healthnetcabluegoldhmo",
+            "healthnet-healthnetindividualfamilyppohix",
+            "medicaid-medicaid",
+            "aetna-aetnamdbronzesilverandgoldhmo",
+            "healthnet-bluegoldhmo",
+            "healthnet-hmoexcelcaresilvernetwork",
+            "healthnet-hmoexcelcaresilvernetworkmedicarecob",
+            "blueshieldofcalifornia-blueshieldcaaccessplushmo",
+            "blueshieldofcalifornia-blueshieldcabasicepo",
+            "blueshieldofcalifornia-blueshieldcabasicexclusiveppoforsmallbusiness",
+            "blueshieldofcalifornia-blueshieldcabasicppo",
+            "blueshieldofcalifornia-blueshieldcappo",
+            "blueshieldofcalifornia-bscaplatinum90epo",
+            "premerabluecross-premeraheritagesignature",
+            "unitedhealthcare-uhcchoicepluspos",
+            "unitedhealthcare-uhcnavigatehmo",
+            "unitedhealthcare-uhcnavigatepos",
+            "unitedhealthcare-uhcoptionsppo",
+            "firsthealthcoventryhealthcare-firsthealthppo"
+          ],
+          "visit_address": {
+            "city": "Oakland",
+            "lat": 37.8192,
+            "lon": -122.26677,
+            "state": "CA",
+            "state_long": "California",
+            "street": "491 30th St",
+            "street2": "Ste 103",
+            "zip": "94609"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "5107630881",
+              "type": "landline"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/a804c43433bea2213a4210ab15042bf4/doctors"
+        },
+        {
+          "within_search_area": true,
+          "distance": 1.5707255608831105,
+          "lat": 37.78413,
+          "lon": -122.43807,
+          "uid": "1e7d7220781ac5d5da79c621fb534e41",
+          "npi": null,
+          "name": "H. George Tanaka, M.d., P.c.",
+          "email": null,
+          "insurance_uids": [
+            "bluecrosscalifornia-bluecrosscacaliforniacarehmo",
+            "multiplan-phcsppo",
+            "multiplan-phcsppokaiser",
+            "bluecrosscalifornia-bluecrosscapathwayxppodirectaccess",
+            "healthnet-healthnetcaindividualfamilyppo",
+            "aetna-aetnasignatureadministratorsppo",
+            "healthnet-healthnetcabluegoldhmo",
+            "bluecrosscalifornia-bluecrosscapathwayxtiereddirectaccess",
+            "aetna-aetnahmodeductibleplancamembersonly",
+            "uhcwestformerlypacificare-pacificarehmo",
+            "bluecrosscalifornia-bluecrosscapowerselecthmo",
+            "chinesecommunityhealthplan-chinesecommunityhealthplan",
+            "bluecrosscalifornia-bluecrosscappo",
+            "aetna-aetnamanagedchoiceposopenaccess",
+            "aetna-aetnachoiceposii",
+            "aetna-aetnahmo",
+            "uhcwestformerlypacificare-uhcwestsignaturevaluealliance",
+            "bluecrosscalifornia-bluecrosscaselectplushmo",
+            "healthnet-healthnetcacoveredcaliforniapposmallgroup",
+            "healthnet-healthnetcahmoemployergroup",
+            "multiplan-multiplanppo",
+            "uhcwestformerlypacificare-uhcwestsignaturevalueadvantagehmovaluenetwork",
+            "healthnet-healthnetcahmowholecarenetwork",
+            "bluecrosscalifornia-bluecrosscaadvantageppopreferreddirectaccessplus",
+            "cigna-cignahmo",
+            "bcbsbluecard-bcbsbluecardppo",
+            "healthnet-healthnetcalargegroupppo",
+            "cigna-cignaopenaccessplus",
+            "cigna-cignappo",
+            "healthnet-healthnetindividualfamilyppohix",
+            "medicare-medicare",
+            "medicaid-medicaid",
+            "aetna-aetnamdbronzesilverandgoldhmo",
+            "healthnet-bluegoldhmo",
+            "healthnet-hmoexcelcaresilvernetwork",
+            "healthnet-hmoexcelcaresilvernetworkmedicarecob",
+            "blueshieldofcalifornia-blueshieldcaaccessplushmo",
+            "blueshieldofcalifornia-blueshieldcaaccessplussavenet",
+            "blueshieldofcalifornia-blueshieldcabasicepo",
+            "blueshieldofcalifornia-blueshieldcabasicexclusiveppoforsmallbusiness",
+            "blueshieldofcalifornia-blueshieldcabasicppo",
+            "blueshieldofcalifornia-blueshieldcaenhancedexclusivehmoforsmallbusiness",
+            "blueshieldofcalifornia-blueshieldcalocalaccessplushmo",
+            "blueshieldofcalifornia-blueshieldcappo",
+            "blueshieldofcalifornia-bscaplatinum90epo",
+            "blueshieldofcalifornia-bscatrioacohmo",
+            "premerabluecross-premeraheritagesignature",
+            "gwhcigna-greatwestppo",
+            "unitedhealthcare-uhcchoicepluspos",
+            "unitedhealthcare-uhcnavigatehmo",
+            "unitedhealthcare-uhcnavigatepos",
+            "unitedhealthcare-uhcoptionsppo",
+            "firsthealthcoventryhealthcare-firsthealthppo"
+          ],
+          "visit_address": {
+            "city": "San Francisco",
+            "lat": 37.78413,
+            "lon": -122.43807,
+            "state": "CA",
+            "state_long": "California",
+            "street": "1515 Scott St",
+            "street2": "Ste 2",
+            "zip": "94115"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "4157714095",
+              "type": "fax"
+            },
+            {
+              "number": "4157714020",
+              "type": "landline"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/1e7d7220781ac5d5da79c621fb534e41/doctors"
+        },
+        {
+          "within_search_area": true,
+          "distance": 1.5707255608831105,
+          "lat": 37.78413,
+          "lon": -122.43807,
+          "uid": "6f5728b90f7e8ea2b1717a574bd04b18",
+          "npi": null,
+          "name": "Patricia Wong, MD",
+          "email": null,
+          "insurance_uids": [
+            "healthnet-healthnetindividualfamilyppohix",
+            "medicaid-medicaid",
+            "aetna-aetnamdbronzesilverandgoldhmo",
+            "healthnet-bluegoldhmo",
+            "healthnet-hmoexcelcaresilvernetwork",
+            "healthnet-hmoexcelcaresilvernetworkmedicarecob"
+          ],
+          "visit_address": {
+            "city": "San Francisco",
+            "lat": 37.78413,
+            "lon": -122.43807,
+            "state": "CA",
+            "state_long": "California",
+            "street": "1515 Scott St",
+            "street2": "# 2",
+            "zip": "94115"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "4157714020",
+              "type": "landline"
+            },
+            {
+              "number": "4157714095",
+              "type": "fax"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/6f5728b90f7e8ea2b1717a574bd04b18/doctors"
+        },
+        {
+          "within_search_area": true,
+          "distance": 1.5707255608831105,
+          "lat": 37.78413,
+          "lon": -122.43807,
+          "uid": "d76038ae3a5d35ba073b65b398385cb5",
+          "npi": null,
+          "name": "Patricia Wong, MD",
+          "email": null,
+          "insurance_uids": [
+            "healthnet-healthnetindividualfamilyppohix",
+            "medicaid-medicaid",
+            "aetna-aetnamdbronzesilverandgoldhmo",
+            "healthnet-bluegoldhmo",
+            "healthnet-hmoexcelcaresilvernetwork",
+            "healthnet-hmoexcelcaresilvernetworkmedicarecob"
+          ],
+          "visit_address": {
+            "city": "San Francisco",
+            "lat": 37.78413,
+            "lon": -122.43807,
+            "state": "CA",
+            "state_long": "California",
+            "street": "1515 Scott St",
+            "zip": "94115"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "7075237025",
+              "type": "landline"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/d76038ae3a5d35ba073b65b398385cb5/doctors"
+        }
+      ],
+      "educations": [
+        {
+          "school": "Northwestern University Medical School",
+          "graduation_year": null,
+          "degree": "Internship"
+        },
+        {
+          "school": "Hahnemann University Hospital",
+          "graduation_year": null,
+          "degree": "Residency"
+        },
+        {
+          "school": "Northwestern University Medical School",
+          "graduation_year": null,
+          "degree": "Fellowship"
+        }
+      ],
+      "profile": {
+        "first_name": "Patricia",
+        "middle_name": "Cheoy",
+        "last_name": "Wong",
+        "slug": "patricia-wong-md",
+        "title": "MD",
+        "image_url": "https://asset3.betterdoctor.com/images/51de4848d887932b07000121-1_thumbnail.jpg",
+        "gender": "female",
+        "languages": [
+          {
+            "name": "English",
+            "code": "en"
+          }
+        ],
+        "bio": "Patricia Wong MD holds an optometry degree at University Of Chicago, in 1988. As an optometrist who specializes in ophthalmology, Dr. Wong practices at Glaucoma Consultants Bay Area in 1515 Scott St Ste 2, San Francisco, at Dickens Wong & Tanaka MDS in 491 30th St Ste 103, Oakland, and at Eye Surgery Center of San Fran in 1160 Post St, San Francisco. She is licensed to practice optometry in Illinois and California."
+      },
+      "ratings": [
+        {
+          "active": true,
+          "provider": "yelp",
+          "provider_uid": "patricia-m-wong-dds-san-francisco",
+          "provider_url": "http://www.yelp.com/biz/patricia-m-wong-dds-san-francisco",
+          "rating": 5,
+          "review_count": 39
+        },
+        {
+          "active": true,
+          "provider": "betterdoctor",
+          "provider_uid": "5366ab8ac6d0fb665e3bbd6c4a59ba7e",
+          "provider_url": "https://betterdoctor.com/patricia-wong-md",
+          "rating": 5,
+          "review_count": 0,
+          "image_url_small": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0.png",
+          "image_url_small_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0@2x.png",
+          "image_url_large": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0.png",
+          "image_url_large_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0@2x.png"
+        }
+      ],
+
+      "specialties": [
+        {
+          "uid": "ophthalmologist",
+          "name": "Ophthalmology",
+          "description": "Specializes in vision, eye care, and eye surgery including Lasik.",
+          "category": "vision",
+          "actor": "Ophthalmologist",
+          "actors": "Ophthalmologists"
+        }
+      ],
+      "hospital_affiliations": [],
+      "group_affiliations": [],
+      "uid": "5366ab8ac6d0fb665e3bbd6c4a59ba7e",
+      "npi": "1922166305"
+    },
+    {
+      "practices": [
+        {
+          "within_search_area": true,
+          "distance": 1.0821913883360799,
+          "lat": 37.78675,
+          "lon": -122.42249,
+          "uid": "b722f263f40961b32ab8ea5b0719be69",
+          "npi": null,
+          "name": "James Goldberg, MD",
+          "email": null,
+          "insurance_uids": [
+            "healthnet-healthnetcacoveredcaliforniapposmallgroup",
+            "multiplan-multiplanppo",
+            "multiplan-phcsppo",
+            "aetna-aetnahmodeductibleplancamembersonly",
+            "aetna-aetnachoiceposii",
+            "bluecrosscalifornia-bluecrosscacaliforniacarehmo",
+            "aetna-aetnasignatureadministratorsppo",
+            "multiplan-phcsppokaiser",
+            "bcbsbluecard-bcbsbluecardppo",
+            "bluecrosscalifornia-bluecrosscaselectplushmo",
+            "healthnet-healthnetcahmoemployergroup",
+            "cigna-cignappo",
+            "uhcwestformerlypacificare-pacificarehmo",
+            "aetna-aetnahmo",
+            "healthnet-healthnetcalargegroupppo",
+            "cigna-cignaopenaccessplus",
+            "aetna-aetnamanagedchoiceposopenaccess",
+            "uhcwestformerlypacificare-uhcwestsignaturevaluealliance",
+            "healthnet-healthnetcaindividualfamilyppo",
+            "cigna-cignahmo",
+            "blueshieldofcalifornia-blueshieldcabasicexclusiveppoforsmallbusiness",
+            "premerabluecross-premeraheritagesignature",
+            "gwhcigna-greatwestppo",
+            "firsthealthcoventryhealthcare-firsthealthppo"
+          ],
+          "visit_address": {
+            "city": "San Francisco",
+            "lat": 37.78675,
+            "lon": -122.42249,
+            "state": "CA",
+            "state_long": "California",
+            "street": "1 Daniel Burnham Ct",
+            "street2": "Ste 230C",
+            "zip": "94109"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "4152021200",
+              "type": "landline"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/b722f263f40961b32ab8ea5b0719be69/doctors"
+        }
+      ],
+      "educations": [
+        {
+          "school": "University of Minnesota - Minneapolis",
+          "graduation_year": null,
+          "degree": "MD"
+        },
+        {
+          "school": "UCSF Medical Center",
+          "graduation_year": null,
+          "degree": "Internship"
+        },
+        {
+          "school": "UCSF Medical Center",
+          "graduation_year": null,
+          "degree": "Residency"
+        },
+        {
+          "school": "Mt. Sinai Medical Center",
+          "graduation_year": null,
+          "degree": "Fellowship"
+        }
+      ],
+      "profile": {
+        "first_name": "James",
+        "middle_name": "D",
+        "last_name": "Goldberg",
+        "slug": "james-goldberg-md",
+        "title": "MD",
+        "image_url": "https://asset2.betterdoctor.com/images/52bdc4af4214f83b090002e1-1_thumbnail.jpg",
+        "gender": "male",
+        "languages": [
+          {
+            "name": "English",
+            "code": "en"
+          }
+        ],
+        "bio": "Dr. Goldberg is board certified in Obstetrics and Gynecology, Maternal-Fetal Medicine, and Medical Genetics. Dr. Goldberg is a founding fellow of the American College of Medical Genetics. He was previously the director of the Reproductive Genetics Unit at the University of California, San Francisco and subsequently co-director of the Prenatal Diagnosis Center at California Pacific Medical Center. Dr. Goldberg specializes in prenatal diagnosis, including CVS, amniocentesis, and genetic screening for a variety of indications. Dr. Goldberg has also published extensively in the area of prenatal diagnosis and serves on committees that establish national policy obstetrical care. Dr. Goldberg has been repeatedly listed in “The Best Doctors in America” database. ”"
+      },
+      "ratings": [
+        {
+          "active": true,
+          "provider": "yelp",
+          "provider_uid": "james-d-goldberg-md-san-francisco",
+          "provider_url": "http://m.yelp.com/biz/james-d-goldberg-md-san-francisco",
+          "rating": 5,
+          "review_count": 3
+        },
+        {
+          "active": true,
+          "provider": "betterdoctor",
+          "provider_uid": "b7c8e6b4b525e64a9ffdf1f4dca29ea8",
+          "provider_url": "https://betterdoctor.com/james-goldberg-md",
+          "rating": 5,
+          "review_count": 0,
+          "image_url_small": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0.png",
+          "image_url_small_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0@2x.png",
+          "image_url_large": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0.png",
+          "image_url_large_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0@2x.png"
+        }
+      ],
+  
+      "specialties": [
+        {
+          "uid": "clinical-geneticist",
+          "name": "Clinical Genetics (M.D.)",
+          "description": "Specializes in the diagnoses of and counselling for genetic disorders.",
+          "category": "medical",
+          "actor": "Geneticist",
+          "actors": "Geneticists"
+        },
+        {
+          "uid": "maternal-fetal-medicine-obgyn",
+          "name": "Maternal & Fetal Medicine",
+          "description": "Specializes in high-risk pregnancies and pregnancy complications.",
+          "category": "medical",
+          "actor": "Maternal & Fetal OBGYN",
+          "actors": "Maternal & Fetal OBGYNs"
+        }
+      ],
+      "hospital_affiliations": [],
+      "group_affiliations": [],
+      "uid": "b7c8e6b4b525e64a9ffdf1f4dca29ea8",
+      "npi": "1699796045"
+    },
+    {
+      "practices": [
+        {
+          "within_search_area": true,
+          "distance": 1.5808835669385966,
+          "lat": 37.790068,
+          "lon": -122.43228,
+          "uid": "8c690a168d31c2aaebf403299e505024",
+          "npi": null,
+          "name": "David King-stephens,m.d., Inc",
+          "email": null,
+          "insurance_uids": [
+            "cigna-cignappo",
+            "healthnet-healthnetcacoveredcaliforniapposmallgroup",
+            "bluecrosscalifornia-bluecrosscacaliforniacarehmo",
+            "aetna-aetnahmodeductibleplancamembersonly",
+            "healthnet-healthnetcahmoemployergroup",
+            "aetna-aetnasignatureadministratorsppo",
+            "aetna-aetnahmo",
+            "bcbsbluecard-bcbsbluecardppo",
+            "aetna-aetnachoiceposii",
+            "bluecrosscalifornia-bluecrosscaselectplushmo",
+            "cigna-cignaopenaccessplus",
+            "cigna-cignahmo",
+            "uhcwestformerlypacificare-uhcwestsignaturevaluealliance",
+            "bluecrosscalifornia-bluecrosscappo",
+            "aetna-aetnamanagedchoiceposopenaccess",
+            "healthnet-healthnetcalargegroupppo",
+            "healthnet-healthnetcaindividualfamilyppo",
+            "uhcwestformerlypacificare-pacificarehmo",
+            "blueshieldofcalifornia-blueshieldcaaccessplushmo",
+            "blueshieldofcalifornia-blueshieldcabasicepo",
+            "blueshieldofcalifornia-blueshieldcabasicexclusiveppoforsmallbusiness",
+            "blueshieldofcalifornia-blueshieldcabasicppo",
+            "blueshieldofcalifornia-blueshieldcappo",
+            "blueshieldofcalifornia-bscaplatinum90epo",
+            "premerabluecross-premeraheritagesignature",
+            "gwhcigna-greatwestppo",
+            "unitedhealthcare-uhcchoicepluspos",
+            "unitedhealthcare-uhcoptionsppo",
+            "firsthealthcoventryhealthcare-firsthealthppo"
+          ],
+          "visit_address": {
+            "city": "San Francisco",
+            "lat": 37.790068,
+            "lon": -122.43228,
+            "state": "CA",
+            "state_long": "California",
+            "street": "2100 Webster St",
+            "street2": "Ste 115",
+            "zip": "94115"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "4156007825",
+              "type": "fax"
+            },
+            {
+              "number": "4156007880",
+              "type": "landline"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/8c690a168d31c2aaebf403299e505024/doctors"
+        }
+      ],
+      "educations": [
+        {
+          "school": "University of California, Irvine School of Medicine",
+          "graduation_year": null,
+          "degree": "MD"
+        },
+        {
+          "school": "California Pacific Medical Center",
+          "graduation_year": null,
+          "degree": "Internship"
+        },
+        {
+          "school": "Montreal Neurologic Institute",
+          "graduation_year": null,
+          "degree": "Residency"
+        },
+        {
+          "school": "McGill University Neurology & Neurophysiology",
+          "graduation_year": null,
+          "degree": "Residency"
+        },
+        {
+          "school": "Legacy Good Samaritan Hospital & Medical Center",
+          "graduation_year": null,
+          "degree": "Fellowship"
+        }
+      ],
+      "profile": {
+        "first_name": "Kenneth",
+        "middle_name": "D.",
+        "last_name": "Laxer",
+        "slug": "kenneth-laxer-md",
+        "title": "MD",
+        "image_url": "https://asset4.betterdoctor.com/images/529795134214f837f20003a6-1_thumbnail.jpg",
+        "gender": "male",
+        "languages": [
+          {
+            "name": "English",
+            "code": "en"
+          }
+        ],
+        "bio": "Specializing in neurology, Dr. Kenneth Laxer, MD is one of the country's most highly rated doctors. He currently practices medicine at Sacramento, California and San francisco, California.\n\nDr. Laxer received a medical degree from University Of California, Irvine School Of Medicine and is licensed to practice medicine at California.\n\nDr. Laxer has been rated among the top 20% of doctors in the United States, based on his experience, credentials and network.\n\nDr. Laxer has successfully passed a background check including a medical license verification (active) and screening for malpractice history (none found)."
+      },
+      "ratings": [
+        {
+          "active": true,
+          "provider": "betterdoctor",
+          "provider_uid": "0d825c29fe8ef7fe2b989768d4682dbe",
+          "provider_url": "https://betterdoctor.com/kenneth-laxer-md",
+          "rating": 5,
+          "review_count": 0,
+          "image_url_small": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0.png",
+          "image_url_small_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0@2x.png",
+          "image_url_large": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0.png",
+          "image_url_large_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0@2x.png"
+        }
+      ],
+ 
+      "specialties": [
+        {
+          "uid": "neurologist",
+          "name": "Neurology",
+          "description": "Specializes in the brain and nervous system.",
+          "category": "medical",
+          "actor": "Neurologist",
+          "actors": "Neurologists"
+        }
+      ],
+      "hospital_affiliations": [],
+      "group_affiliations": [],
+      "uid": "0d825c29fe8ef7fe2b989768d4682dbe",
+      "npi": "1861460990"
+    },
+    {
+      "practices": [
+        {
+          "within_search_area": true,
+          "distance": 1.2753660252597057,
+          "lat": 37.75563,
+          "lon": -122.4051,
+          "uid": "ec1e8ddc5b5415c9c012f8e13dc47454",
+          "npi": null,
+          "name": "David Eisele, MD",
+          "email": null,
+          "insurance_uids": [
+            "bluecrosscalifornia-bluecrosscaselectplushmo",
+            "bluecrosscalifornia-bluecrosscacaliforniacarehmo"
+          ],
+          "visit_address": {
+            "city": "San Francisco",
+            "lat": 37.75563,
+            "lon": -122.4051,
+            "state": "CA",
+            "state_long": "California",
+            "street": "1001 Potrero Ave",
+            "zip": "94110"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "4152064585",
+              "type": "landline"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/ec1e8ddc5b5415c9c012f8e13dc47454/doctors"
+        },
+        {
+          "within_search_area": false,
+          "distance": 2452.41669736668,
+          "lat": 39.29716,
+          "lon": -76.59681,
+          "uid": "28631cdfae6f0dc70d566177f16ecd1a",
+          "npi": null,
+          "name": "David Eisele, MD",
+          "email": null,
+          "insurance_uids": [
+            "humana-humanachoicecarenetworkppo",
+            "medicare-medicare",
+            "medicaid-medicaid"
+          ],
+          "visit_address": {
+            "city": "Baltimore",
+            "lat": 39.29716,
+            "lon": -76.59681,
+            "state": "MD",
+            "state_long": "Maryland",
+            "street": "601 N Caroline St",
+            "street2": "Fl 8",
+            "zip": "21287"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "4109556420",
+              "type": "landline"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/28631cdfae6f0dc70d566177f16ecd1a/doctors"
+        },
+        {
+          "within_search_area": false,
+          "distance": 2452.41669736668,
+          "lat": 39.29716,
+          "lon": -76.59681,
+          "uid": "7dbec0ef3f96863900f13eadf80ed792",
+          "npi": null,
+          "name": "David Eisele, MD",
+          "email": null,
+          "insurance_uids": [
+            "cigna-cignappo",
+            "humana-humanachoicecarenetworkppo",
+            "cigna-cignahmo",
+            "geisingerhealthplan-geisingerhealthplan",
+            "bcbsbluecard-bcbsbluecardppo",
+            "cigna-cignaopenaccessplus",
+            "multiplan-multiplanppo",
+            "multiplan-phcsppo",
+            "carefirstbluecrossblueshield-carefirstbluepreferredppo",
+            "gwhcigna-greatwestppo",
+            "unitedhealthcare-uhcchoicepluspos",
+            "unitedhealthcare-uhcoptionsppo"
+          ],
+          "visit_address": {
+            "city": "Baltimore",
+            "lat": 39.29716,
+            "lon": -76.59681,
+            "state": "MD",
+            "state_long": "Maryland",
+            "street": "601 N Caroline St",
+            "zip": "21287"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "4439976467",
+              "type": "landline"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/7dbec0ef3f96863900f13eadf80ed792/doctors"
+        }
+      ],
+      "educations": [
+        {
+          "school": "Weill Cornell Medical College of Cornell University",
+          "graduation_year": null,
+          "degree": "MD"
+        },
+        {
+          "school": "University of Washington  General Surgery",
+          "graduation_year": "1984",
+          "degree": "Residency"
+        },
+        {
+          "school": "University of Washington  Otolaryngology",
+          "graduation_year": "1988",
+          "degree": "Residency"
+        }
+      ],
+      "profile": {
+        "first_name": "David",
+        "middle_name": "W",
+        "last_name": "Eisele",
+        "slug": "david-eisele",
+        "title": "MD",
+        "image_url": "https://asset3.betterdoctor.com/images/547546284214f84aac0005e6-2_thumbnail.jpg",
+        "gender": "male",
+        "languages": [
+          {
+            "name": "English",
+            "code": "en"
+          }
+        ],
+        "bio": "Dr. David Eisele is an ENT-otolaryngologist in Baltimore, Maryland and is affiliated with Johns Hopkins Hospital. He received his medical degree from Weill Cornell Medical College of Cornell University and has been in practice for 32 years."
+      },
+      "ratings": [
+        {
+          "active": true,
+          "provider": "betterdoctor",
+          "provider_uid": "david-eisele",
+          "provider_url": "https://betterdoctor.com/david-eisele",
+          "rating": 5,
+          "review_count": 0,
+          "image_url_small": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0.png",
+          "image_url_small_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0@2x.png",
+          "image_url_large": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0.png",
+          "image_url_large_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0@2x.png"
+        },
+        {
+          "active": true,
+          "provider": "yelp",
+          "provider_uid": "david-w-eisele-md-san-francisco",
+          "provider_url": "http://www.yelp.com/biz/david-w-eisele-md-san-francisco",
+          "rating": 3.5,
+          "review_count": 3
+        }
+      ],
+ 
+      "specialties": [
+        {
+          "uid": "ear-nose-throat-doctor",
+          "name": "Otolaryngology",
+          "description": "Specializes in ear, nose and throat problems.",
+          "category": "medical",
+          "actor": "Ear, Nose and Throat Doctor",
+          "actors": "Ear, Nose and Throat Doctors"
+        }
+      ],
+      "hospital_affiliations": [],
+      "group_affiliations": [],
+      "uid": "2104ba3bcb2c2344dbc3008242d2c747",
+      "npi": "1023073749"
+    },
+    {
+      "practices": [
+        {
+          "within_search_area": true,
+          "distance": 1.8033684997581791,
+          "lat": 37.74756,
+          "lon": -122.42038,
+          "uid": "c6c3232d1a6246bc8f3f9eeaae8b5c6a",
+          "npi": null,
+          "name": "St Lukes Health Care Center",
+          "email": null,
+          "insurance_uids": [
+            "blueshieldofcalifornia-blueshieldcabasicppobronzelevelhix",
+            "healthnet-healthnetindividualfamilyppohix",
+            "anthem-blueviewvision",
+            "medicaid-medicaid",
+            "aetna-aetnamdbronzesilverandgoldhmo",
+            "healthnet-bluegoldhmo",
+            "healthnet-hmoexcelcaresilvernetwork",
+            "healthnet-hmoexcelcaresilvernetworkmedicarecob"
+          ],
+          "visit_address": {
+            "city": "San Francisco",
+            "lat": 37.74756,
+            "lon": -122.42038,
+            "state": "CA",
+            "state_long": "California",
+            "street": "1580 Valencia St",
+            "street2": "Ste 506",
+            "zip": "94110"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "4156412177",
+              "type": "business_landline"
+            },
+            {
+              "number": "4156412190",
+              "type": "business_fax"
+            },
+            {
+              "number": "4156412140",
+              "type": "landline"
+            },
+            {
+              "number": "4156415152",
+              "type": "fax"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/c6c3232d1a6246bc8f3f9eeaae8b5c6a/doctors"
+        },
+        {
+          "within_search_area": true,
+          "distance": 1.8370565763208517,
+          "lat": 37.74716,
+          "lon": -122.42088,
+          "uid": "c33373db37a63feefb99d2d7abe076ca",
+          "npi": null,
+          "name": "Yamilee Bermingham, MD",
+          "email": null,
+          "insurance_uids": [
+            "bluecrosscalifornia-bluecrosscacaliforniacarehmo",
+            "bluecrosscalifornia-bluecrosscaselectplushmo",
+            "cigna-cignahmo",
+            "cigna-cignaopenaccessplus",
+            "cigna-cignappo",
+            "cigna-cignalocalplus",
+            "bcbsbluecard-bcbsbluecardppo",
+            "healthnet-healthnetcacoveredcaliforniapposmallgroup",
+            "healthnet-healthnetcaindividualfamilyppo",
+            "healthnet-healthnetcalargegroupppo",
+            "uhcwestformerlypacificare-pacificarehmo",
+            "aetna-aetnamanagedchoiceposopenaccess",
+            "aetna-aetnachoiceposii",
+            "aetna-aetnasignatureadministratorsppo",
+            "multiplan-multiplanppo",
+            "anthem-blueviewvision",
+            "blueshieldofcalifornia-blueshieldcabasicppobronzelevelhix",
+            "healthnet-healthnetindividualfamilyppohix",
+            "medicare-medicare",
+            "medicaid-medicaid",
+            "aetna-aetnamdbronzesilverandgoldhmo",
+            "healthnet-bluegoldhmo",
+            "healthnet-hmoexcelcaresilvernetwork",
+            "healthnet-hmoexcelcaresilvernetworkmedicarecob",
+            "blueshieldofcalifornia-blueshieldcabasicepo",
+            "blueshieldofcalifornia-blueshieldcabasicexclusiveppoforsmallbusiness",
+            "blueshieldofcalifornia-blueshieldcabasicppo",
+            "blueshieldofcalifornia-blueshieldcappo",
+            "blueshieldofcalifornia-bscaplatinum90epo",
+            "premerabluecross-premeraheritagesignature",
+            "gwhcigna-greatwestppo",
+            "unitedhealthcare-uhcchoicepluspos",
+            "unitedhealthcare-uhcoptionsppo",
+            "firsthealthcoventryhealthcare-firsthealthppo"
+          ],
+          "visit_address": {
+            "city": "San Francisco",
+            "lat": 37.74716,
+            "lon": -122.42088,
+            "state": "CA",
+            "state_long": "California",
+            "street": "3555 Cesar Chavez",
+            "zip": "94110"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "4156478600",
+              "type": "business_landline"
+            },
+            {
+              "number": "4158830877",
+              "type": "business_fax"
+            },
+            {
+              "number": "4156478600",
+              "type": "landline"
+            },
+            {
+              "number": "4156416823",
+              "type": "fax"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/c33373db37a63feefb99d2d7abe076ca/doctors"
+        }
+      ],
+      "educations": [
+        {
+          "school": "West Suburban Hospital Medcal Center",
+          "graduation_year": null,
+          "degree": "Internship"
+        },
+        {
+          "school": "University of Iowa Hospitals & Clinics",
+          "graduation_year": null,
+          "degree": "Residency"
+        },
+        {
+          "school": "Mayo Clinic",
+          "graduation_year": null,
+          "degree": "Fellowship"
+        }
+      ],
+      "profile": {
+        "first_name": "Lisa",
+        "middle_name": null,
+        "last_name": "Everson",
+        "slug": "lisa-everson-md",
+        "title": "MD",
+        "image_url": "https://asset2.betterdoctor.com/images/50d40581d9fd99445e00069e-1_thumbnail.jpg",
+        "gender": "female",
+        "languages": [
+          {
+            "name": "English",
+            "code": "en"
+          }
+        ],
+        "bio": "Lisa Everson MD is an obstetrician & gynecologist licensed to practice medicine in Iowa, California, and Arizona. MD Everson specializes in obstetrics & gynecology and practices medicine at St Luke's Healthcare Center in 1580 Valencia St Ste 508, San Francisco."
+      },
+      "ratings": [
+        {
+          "active": true,
+          "provider": "betterdoctor",
+          "provider_uid": "lisa-everson-md",
+          "provider_url": "https://betterdoctor.com/lisa-everson-md",
+          "rating": 5,
+          "review_count": 0,
+          "image_url_small": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0.png",
+          "image_url_small_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0@2x.png",
+          "image_url_large": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0.png",
+          "image_url_large_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0@2x.png"
+        },
+        {
+          "active": true,
+          "provider": "yelp",
+          "provider_uid": "lisa-k-everson-md-san-francisco",
+          "provider_url": "http://www.yelp.com/biz/lisa-k-everson-md-san-francisco",
+          "rating": 5,
+          "review_count": 12
+        }
+      ],
+
+      "specialties": [
+        {
+          "uid": "obstetrics-gynecologist",
+          "name": "Obstetrics & Gynecology",
+          "description": "Specializes in the care of the female reproductive system.",
+          "category": "medical",
+          "actor": "OBGYN",
+          "actors": "OBGYNs"
+        }
+      ],
+      "hospital_affiliations": [],
+      "group_affiliations": [],
+      "uid": "2b8d2ed4180803679dd960dccff19c76",
+      "npi": "1477630499"
+    },
+    {
+      "practices": [
+        {
+          "within_search_area": true,
+          "distance": 0.43031773158257114,
+          "lat": 37.77673,
+          "lon": -122.41931,
+          "uid": "5c72e62909117b6a13dd8c475fc6f7cd",
+          "npi": null,
+          "name": "Jonathan Levin, MD",
+          "email": null,
+          "insurance_uids": [
+            "unitedhealthcare-uhcchoicepluspos",
+            "unitedhealthcare-uhcnavigatehmo",
+            "unitedhealthcare-uhcnavigatepos",
+            "unitedhealthcare-uhcoptionsppo"
+          ],
+          "visit_address": {
+            "city": "San Francisco",
+            "lat": 37.77673,
+            "lon": -122.41931,
+            "state": "CA",
+            "state_long": "California",
+            "street": "100 Van Ness Ave",
+            "street2": "Fl 28",
+            "zip": "94102"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "4157765140",
+              "type": "landline"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/5c72e62909117b6a13dd8c475fc6f7cd/doctors"
+        },
+        {
+          "within_search_area": true,
+          "distance": 23.890793772427614,
+          "lat": 38.09849,
+          "lon": -122.56058,
+          "uid": "15ca8b7069fe08b48e0c5d6dfb935ff0",
+          "npi": null,
+          "name": "Jonathan M Levin MD",
+          "email": null,
+          "insurance_uids": [
+            "aetna-aetnamanagedchoiceposopenaccess",
+            "multiplan-phcsppokaiser",
+            "healthnet-healthnetcahmoemployergroup",
+            "healthnet-healthnetcabluegoldhmo",
+            "healthnet-healthnetcacoveredcaliforniapposmallgroup",
+            "healthnet-healthnetcaindividualfamilyppo",
+            "bluecrosscalifornia-bluecrosscaselectppo",
+            "aetna-aetnasavingsplusofca",
+            "uhcwestformerlypacificare-pacificarehmo",
+            "bluecrosscalifornia-bluecrosscapathwayxtiereddirectaccess",
+            "healthnet-healthnetcahmowholecarenetwork",
+            "bluecrosscalifornia-bluecrosscacaliforniacarehmo",
+            "bluecrosscalifornia-bluecrosscapathwayxppodirectaccess",
+            "bcbsbluecard-bcbsbluecardppo",
+            "multiplan-multiplanppo",
+            "bluecrosscalifornia-bluecrosscaadvantageppopreferreddirectaccessplus",
+            "westernhealthadvantage-westernhealthadvantage",
+            "bluecrosscalifornia-bluecrosscappo",
+            "healthnet-healthnetcalargegroupppo",
+            "aetna-aetnachoiceposii",
+            "bluecrosscalifornia-bluecrosscaselectplushmo",
+            "multiplan-phcsppo",
+            "cigna-cignaopenaccessplus",
+            "cigna-cignahmo",
+            "cigna-cignappo",
+            "aetna-aetnasignatureadministratorsppo",
+            "blueshieldofcalifornia-blueshieldcaaccessplushmo",
+            "blueshieldofcalifornia-blueshieldcabasicppo",
+            "blueshieldofcalifornia-blueshieldcaenhancedexclusivehmoforsmallbusiness",
+            "blueshieldofcalifornia-blueshieldcalocalaccessplushmo",
+            "blueshieldofcalifornia-blueshieldcappo",
+            "premerabluecross-premeraheritagesignature",
+            "gwhcigna-greatwestppo",
+            "unitedhealthcare-uhcchoicepluspos",
+            "unitedhealthcare-uhcnavigatehmo",
+            "unitedhealthcare-uhcnavigatepos",
+            "unitedhealthcare-uhcoptionsppo",
+            "firsthealthcoventryhealthcare-firsthealthppo"
+          ],
+          "visit_address": {
+            "city": "Novato",
+            "lat": 38.09849,
+            "lon": -122.56058,
+            "state": "CA",
+            "state_long": "California",
+            "street": "165 Rowland Way",
+            "street2": "Ste 312",
+            "zip": "94945"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "4158981586",
+              "type": "fax"
+            },
+            {
+              "number": "4158986190",
+              "type": "landline"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/15ca8b7069fe08b48e0c5d6dfb935ff0/doctors"
+        }
+      ],
+      "educations": [
+        {
+          "school": "Harvard Medical School",
+          "graduation_year": null,
+          "degree": "MD"
+        },
+        {
+          "school": "New England Deaconess",
+          "graduation_year": null,
+          "degree": "Internship"
+        },
+        {
+          "school": "Kaiser San Francisco",
+          "graduation_year": null,
+          "degree": "Residency"
+        },
+        {
+          "school": "Long Beach Surgical Associates",
+          "graduation_year": null,
+          "degree": "Fellowship"
+        }
+      ],
+      "profile": {
+        "first_name": "Jonathan",
+        "middle_name": "Michael",
+        "last_name": "Levin",
+        "slug": "jonathan-levin-md-2",
+        "title": "MD",
+        "image_url": "https://asset1.betterdoctor.com/assets/general_doctor_male.png",
+        "gender": "male",
+        "languages": [
+          {
+            "name": "English",
+            "code": "en"
+          }
+        ],
+        "bio": "Dr. Jonathan Levin, MD is one of the top rated doctors in the United States. He specializes in surgery and vascular surgery and currently sees patients in Novato, California and Greenbrae, California.\n\nDr. Levin completed medical school at Harvard Medical School and is licensed to practice medicine at Texas and California.\n\nBased on an in-depth analysis of Dr. Levin's credentials, experience and network, he has been found to be among the 20% of doctors nationwide.\n\nDr. Levin has been found to hold one or more active medical licenses, and successfully passed a malpractice history screening."
+      },
+      "ratings": [
+        {
+          "active": true,
+          "provider": "betterdoctor",
+          "provider_uid": "jonathan-levin-md-2",
+          "provider_url": "https://betterdoctor.com/jonathan-levin-md-2",
+          "rating": 5,
+          "review_count": 0,
+          "image_url_small": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0.png",
+          "image_url_small_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0@2x.png",
+          "image_url_large": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0.png",
+          "image_url_large_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0@2x.png"
+        }
+      ],
+
+      "specialties": [
+        {
+          "uid": "general-surgeon",
+          "name": "Surgery",
+          "description": "Specializes in complex surgical operations.",
+          "category": "medical",
+          "actor": "General Surgeon",
+          "actors": "General Surgeons"
+        },
+        {
+          "uid": "vascular-surgeon",
+          "name": "Vascular Surgery",
+          "description": "Specializes in blood vessel surgery excluding the heart.",
+          "category": "medical",
+          "actor": "Vascular Surgeon",
+          "actors": "Vascular Surgeons"
+        }
+      ],
+      "hospital_affiliations": [],
+      "group_affiliations": [],
+      "uid": "1bd0d450019e905a0c6e68907101cbc8",
+      "npi": "1467529826"
+    },
+    {
+      "practices": [
+        {
+          "within_search_area": true,
+          "distance": 1.1935341996776718,
+          "lat": 37.78861,
+          "lon": -122.42236,
+          "uid": "a8d75e2f2f72d85feb8e0c0141dc790c",
+          "npi": null,
+          "name": "David T. Ho, Dds, Inc. Or Van Ness Dental Care",
+          "email": null,
+          "insurance_uids": [
+            "cignadental-cignatotaldppo",
+            "assurant-assurantdhapremier",
+            "assurant-assurantdha",
+            "deltadental-deltadentalpremier",
+            "aetna-aetnadppo",
+            "bluecrosscalifornia-bccadentalblue100200300"
+          ],
+          "visit_address": {
+            "city": "San Francisco",
+            "lat": 37.78861,
+            "lon": -122.42236,
+            "state": "CA",
+            "state_long": "California",
+            "street": "1500 Bush St",
+            "zip": "94109"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "4155632705",
+              "type": "fax"
+            },
+            {
+              "number": "4155632700",
+              "type": "landline"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/a8d75e2f2f72d85feb8e0c0141dc790c/doctors"
+        }
+      ],
+      "educations": [
+        {
+          "school": "University of California at Berkley",
+          "graduation_year": null,
+          "degree": "BS"
+        },
+        {
+          "school": "University of California at Los Angeles",
+          "graduation_year": null,
+          "degree": "DDS"
+        },
+        {
+          "school": "University of California- Los Angeles",
+          "graduation_year": null,
+          "degree": "Residency"
+        }
+      ],
+      "profile": {
+        "first_name": "David",
+        "middle_name": "Thomas",
+        "last_name": "Ho",
+        "slug": "david-ho",
+        "title": "DDS",
+        "image_url": "https://asset3.betterdoctor.com/images/527f8c6f4214f8496c000044-1_thumbnail.jpg",
+        "gender": "male",
+        "languages": [
+          {
+            "name": "English",
+            "code": "en"
+          }
+        ],
+        "bio": "Dr. David Ho of Van Ness Dental Care is a graduate of the University of California at Berkley where he obtained a B.S. in Microbiology and Immunology, then went on to earn his DDS at the University of California at Los Angeles; he completed an Advanced Education in General Dentistry Residency at the University of California- Los Angeles after earning his DDS. He is an active member of several dental organizations, including: the American Dental Association, California Dental Association, and the San Francisco Dental Society. In the past, Dr. Ho acted as Former Assistant Director of UCSF Buchanan Dental Center and Co-Director of UC’s International Dental Student Program. He was also past Coordinator of UCSF Dental Home Care Services Program."
+      },
+      "ratings": [
+        {
+          "active": true,
+          "provider": "yelp",
+          "provider_uid": "david-t-ho-dds-san-francisco-2",
+          "provider_url": "http://www.yelp.com/biz/david-t-ho-dds-san-francisco-2",
+          "rating": 5,
+          "review_count": 78
+        },
+        {
+          "active": true,
+          "provider": "betterdoctor",
+          "provider_uid": "20ed6b192aff5bd46fbdab3bab73ed03",
+          "provider_url": "https://betterdoctor.com/david-ho",
+          "rating": 5,
+          "review_count": 0,
+          "image_url_small": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0.png",
+          "image_url_small_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0@2x.png",
+          "image_url_large": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0.png",
+          "image_url_large_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0@2x.png"
+        }
+      ],
+
+      "specialties": [
+        {
+          "uid": "dentist",
+          "name": "Dentistry",
+          "description": "Specializes in teeth and oral health.",
+          "category": "dental",
+          "actor": "Dentist",
+          "actors": "Dentists"
+        }
+      ],
+      "hospital_affiliations": [],
+      "group_affiliations": [],
+      "uid": "20ed6b192aff5bd46fbdab3bab73ed03",
+      "npi": "1982788683"
+    },
+    {
+      "practices": [
+        {
+          "within_search_area": true,
+          "distance": 1.2755661839548984,
+          "lat": 37.76838,
+          "lon": -122.435612,
+          "uid": "70fb2ee25cccfeeaa091851a504b5235",
+          "npi": null,
+          "name": "San Francisco Knee Clinic",
+          "email": null,
+          "insurance_uids": [
+            "bcbsbluecard-bcbsbluecardppo",
+            "cigna-cignappo",
+            "cigna-cignahmo",
+            "cigna-cignaopenaccessplus",
+            "bluecrosscalifornia-bluecrosscaadvantageppopreferreddirectaccessplus",
+            "bluecrosscalifornia-bluecrosscappo",
+            "blueshieldofcalifornia-blueshieldcabasicepo",
+            "blueshieldofcalifornia-blueshieldcabasicexclusiveppoforsmallbusiness",
+            "blueshieldofcalifornia-blueshieldcabasicppo",
+            "blueshieldofcalifornia-blueshieldcappo",
+            "blueshieldofcalifornia-bscaplatinum90epo",
+            "premerabluecross-premeraheritagesignature",
+            "gwhcigna-greatwestppo"
+          ],
+          "visit_address": {
+            "city": "San Francisco",
+            "lat": 37.76838,
+            "lon": -122.435612,
+            "state": "CA",
+            "state_long": "California",
+            "street": "45 Castro St",
+            "street2": "Ste 337",
+            "zip": "94114"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "4158619966",
+              "type": "landline"
+            },
+            {
+              "number": "4158610174",
+              "type": "fax"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/70fb2ee25cccfeeaa091851a504b5235/doctors"
+        }
+      ],
+      "educations": [
+        {
+          "school": "McGill University Faculty of Medicine",
+          "graduation_year": null,
+          "degree": "MD"
+        },
+        {
+          "school": "University Calif San Diego",
+          "graduation_year": "1983",
+          "degree": "Internship"
+        },
+        {
+          "school": "University Calif San Diego",
+          "graduation_year": "1988",
+          "degree": "Residency"
+        },
+        {
+          "school": "Aossm Austral-Asian Traveling Fellowship",
+          "graduation_year": "1999",
+          "degree": "Fellowship"
+        }
+      ],
+      "profile": {
+        "first_name": "Christian",
+        "middle_name": "A",
+        "last_name": "Guier",
+        "slug": "christian-guier-md",
+        "title": "MD",
+        "image_url": "https://asset2.betterdoctor.com/images/54d15ff54214f82c9e0002c3-2_thumbnail.jpg",
+        "gender": "male",
+        "languages": [
+          {
+            "name": "English",
+            "code": "en"
+          }
+        ],
+        "bio": "Dr. Christian Guier, MD practices medicine at San francisco, California, specializing in orthopedic surgery.\n\nDr. Guier graduated from Mcgill University Faculty Of Medicine and is licensed to treat patients in Idaho, California, Montana, Georgia, and Wyoming.\n\nDr. Guier has passed an automated background check which looked at elements including medical license status and malpractice screening (no history found)."
+      },
+      "ratings": [],
+
+      "specialties": [
+        {
+          "uid": "orthopedic-surgeon",
+          "name": "Orthopedic Surgery",
+          "description": "Specializes in surgery and treatment of musculoskeletal problems, including knees and spine.",
+          "category": "medical",
+          "actor": "Orthopedist",
+          "actors": "Orthopedists"
+        }
+      ],
+      "hospital_affiliations": [],
+      "group_affiliations": [],
+      "uid": "e2a0f8888d7b44e0575b80ab48eb8556",
+      "npi": "1679676530"
+    },
+    {
+      "practices": [
+        {
+          "within_search_area": true,
+          "distance": 2.59924336839008,
+          "lat": 37.785969,
+          "lon": -122.457679,
+          "uid": "e0bb55774163ff1100ac1a1bf653cd37",
+          "npi": null,
+          "name": "California Pacific Medical Center",
+          "email": null,
+          "insurance_uids": [
+            "bluecrosscalifornia-bluecrosscacaliforniacarehmo",
+            "bluecrosscalifornia-bluecrosscaselectplushmo",
+            "aetna-aetnahmodeductibleplancamembersonly",
+            "healthnet-healthnetcahmoemployergroup",
+            "uhcwestformerlypacificare-pacificarehmo",
+            "uhcwestformerlypacificare-uhcwestsignaturevaluealliance",
+            "cigna-cignahmo",
+            "aetna-aetnahmo",
+            "blueshieldofcalifornia-blueshieldcaaccessplushmo"
+          ],
+          "visit_address": {
+            "city": "San Francisco",
+            "lat": 37.785969,
+            "lon": -122.457679,
+            "state": "CA",
+            "state_long": "California",
+            "street": "3838 California St",
+            "street2": "Rm 608",
+            "zip": "94118"
+          },
+          "office_hours": [],
+          "phones": [
+            {
+              "number": "4156682851",
+              "type": "landline"
+            },
+            {
+              "number": "4153876533",
+              "type": "fax"
+            }
+          ],
+          "languages": [
+            {
+              "name": "English",
+              "code": "en"
+            }
+          ],
+          "doctors_pagination_url": "https://api.betterdoctor.com/2016-03-01/practices/e0bb55774163ff1100ac1a1bf653cd37/doctors"
+        }
+      ],
+      "educations": [
+        {
+          "school": "Stanford University School of Medicine",
+          "graduation_year": null,
+          "degree": "MD"
+        },
+        {
+          "school": "Georgetown University Hospital",
+          "graduation_year": null,
+          "degree": "Internship"
+        },
+        {
+          "school": "Georgetown University Hospital",
+          "graduation_year": null,
+          "degree": "Residency"
+        },
+        {
+          "school": "California Pacific Medical Center",
+          "graduation_year": null,
+          "degree": "Fellowship"
+        }
+      ],
+      "profile": {
+        "first_name": "Randolph",
+        "middle_name": "Hugh",
+        "last_name": "Chase",
+        "slug": "randolph-chase-md",
+        "title": "MD",
+        "image_url": "https://asset2.betterdoctor.com/images/502402c8176ddcdcaa000101-1_thumbnail.jpg",
+        "gender": "male",
+        "languages": [
+          {
+            "name": "English",
+            "code": "en"
+          }
+        ],
+        "bio": "Specializing in internal medicine, Dr. Randolph Chase, MD is one of the country's best ranked doctors. He currently treats patients in Coppell, Texas, San francisco, California, Hickory creek, Texas, Fort worth, Texas, Flower mound, Texas, North richland hills, Texas, and Trophy club, Texas.\n\nDr. Chase is licensed to practice medicine at California.\n\nBased on his credentials, network and experience, Dr. Chase is rated among the top 20% of all doctors in the United States.\n\nIn addition, Dr. Chase has passed an automated background check which looked at elements including medical license status and malpractice screening (no history found)."
+      },
+      "ratings": [
+        {
+          "active": true,
+          "provider": "betterdoctor",
+          "provider_uid": "randolph-chase-md",
+          "provider_url": "https://betterdoctor.com/randolph-chase-md",
+          "rating": 5,
+          "review_count": 0,
+          "image_url_small": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0.png",
+          "image_url_small_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-small-5.0@2x.png",
+          "image_url_large": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0.png",
+          "image_url_large_2x": "https://asset1.betterdoctor.com/assets/consumer/stars/stars-large-5.0@2x.png"
+        },
+        {
+          "active": true,
+          "provider": "yelp",
+          "provider_uid": "randolph-h-chase-md-san-francisco",
+          "provider_url": "http://www.yelp.com/biz/randolph-h-chase-md-san-francisco",
+          "rating": 5,
+          "review_count": 13
+        }
+      ],
+
+      "specialties": [
+        {
+          "uid": "internist",
+          "name": "Internal Medicine",
+          "description": "Specializes in common illnesses and complex medical problems.",
+          "category": "medical",
+          "actor": "Internist",
+          "actors": "Internists"
+        }
+      ],
+      "hospital_affiliations": [],
+      "group_affiliations": [],
+      "uid": "f3440732510f29e40da9214a390014d5",
+      "npi": "1063428225"
+    }
+  ]
+}

@@ -24,7 +24,7 @@ module.exports = function(Doctor) {
                                 docHospitals.push(hospitals[i]);
                             };
                           
-                            _.merge(doctor, {'doctorHospitals': docHospitals});
+                            _.merge(doctor, {'hospitalAffiliations': docHospitals});
                             doctorsPlus.push(doctor);
                             callback();
                         }
@@ -48,14 +48,13 @@ module.exports = function(Doctor) {
 
     Doctor.remoteMethod ( 'doctorsAndHospitals',
         {
-            http: {path: '/:id/doctors-and-hospitals', verb: 'get'},
+            http: {path: '/:id/hospital-affiliations', verb: 'get'},
             accepts: {arg: 'specialtyId', type: 'number', http: { source: 'query' } },
             returns: {arg: 'doctorsAndHospitals', type: 'string'}
         }
     );
 
 }; // end module
-
 
 //  {"email": "adi@doe.com", "password": "a"}
 

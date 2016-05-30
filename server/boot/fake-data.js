@@ -89,10 +89,12 @@ var patientSchema = { type: 'object',
                 street: { type: 'string', faker: 'address.streetAddress' },
                 city: { type: 'string', faker: 'address.city' },
                 state: { type: 'string', faker: 'address.state' },
-                zipCode: { type: 'string', faker: 'custom.pinCodeIndia' }
-                //zipCode: { type: 'string', faker: 'address.zipCode' }
+                zipCode: { type: 'string', faker: 'custom.pinCodeIndia' },
+                street2: 'street second line',
+                stateLong: 'Andhra Pradesh',
+                latlng: { "lat": 37.365759, "lng": -121.9233569 }
             },
-            required: ['street', 'city', 'state', 'zipCode']
+            required: ['street', 'city', 'state', 'zipCode', 'street2', 'stateLong', 'latlng']
         },
 
         patientVitals: { type: "array",
@@ -273,21 +275,43 @@ var doctorSchema = { type: 'object',
 var hospitalSchema = { type: 'object',
 
     properties: {
-        hospitalName: { type: 'string', faker: 'company.companyName' },  
-    
+        
+        uid: 'SUPER123',
+        
+        hospitalName: { type: 'string', faker: 'company.companyName' },
+        
+        hospitalType: { type: 'string', 
+            enum: [ 'General',  'Super Specialty', 'Specific Service' ]
+        },
+
         hospitalAddress: { type: 'object',
             properties: {
                 street: { type: 'string', faker: 'address.streetAddress' },
                 city: { type: 'string', faker: 'address.city' },
                 state: { type: 'string', faker: 'address.state' },
-                zipCode: { type: 'string', faker: 'custom.pinCodeIndia' }
+                zipCode: { type: 'string', faker: 'custom.pinCodeIndia' },
+                street2: 'street second line',
+                stateLong: 'Andhra Pradesh',
+                latlng: { "lat": 37.365759, "lng": -121.9233569 }
             },
-            required: ['street', 'city', 'state', 'zipCode']
+            required: ['street', 'city', 'state', 'zipCode', 'street2', 'stateLong', 'latlng']
         },
 
+        hospitalPhones: { type: "array",
+            items : { "type": "object",
+                properties: {
+                    number: { type: "string", faker: "custom.mobNumberIndia" },
+                    description: { type: 'string', enum: ['mobile', 'landline', 'fax'] },
+                },
+                required: ['number', 'description']
+            },
+            minItems: 1,
+            maxItems: 2,
+        }
+ 
     },
     required: [
-        'hospitalName', 'hospitalAddress'
+        'uid', 'hospitalName', 'hospitalType', 'hospitalAddress', 'hospitalPhones'
     ]
 
 }; // end of hospitalSchema
@@ -416,144 +440,5 @@ exports.SampleHospitals = SampleHospitals;
 exports.SamplePractices = SamplePractices;
 exports.SamplePatients = SamplePatients;
 exports.SampleAppointments = SampleAppointments;
-
-
-
-
-
-
-/*
-var fakePatients = [];
-for (i = 0; i < 3; i++) {
-    fakePatients[i] = jsf(patientSchema);
-}
-
-for (i = 0; i < 3; i++) {
-    console.log(fakePatients[i].patient);
-}
-
-
-var fakeDoctors = [];
-for (i = 0; i < 3; i++) {
-    fakeDoctors[i] = jsf(doctorSchema);
-}
-
-for (i = 0; i < 3; i++) {
-    console.log(fakeDoctors[i].doctor);
-}
-
-
-var fakeHospitals = [];
-for (i = 0; i < 3; i++) {
-    fakeHospitals[i] = jsf(hospitalSchema);
-}
-
-for (i = 0; i < 3; i++) {
-    console.log(fakeHospitals[i].hospital);
-}
-
-var fakePractice = [];
-for (i = 0; i < 3; i++) {
-    fakePractice[i] = jsf(practiceSchema);
-}
-
-for (i = 0; i < 3; i++) {
-    console.log(fakePractice[i].practice);
-}
-*/
-
-
-/*
-
-// Doctor fake data
-var doctorSchema = { type: 'object',
-
-    properties: {
-        doctor: { type: 'object',
-
-            properties: {
-                
-                username: 'John', 
-                email: 'john@doe.com', 
-                password: 'a',
-
-                doctorName: { type: 'string', faker: 'name.findName' },
-                
-                aboutDoctor:{ "type": "array",
-                    "items": [
-                        {   "type": "object",
-                            "properties": {
-                                key: "Intro",
-                                value: { type: 'string', faker: 'lorem.paragraph' },
-                            },
-                            required: ['key', 'value']
-                        },
-
-                        {   "type": "object",
-                            "properties": {
-                                key: "Services",
-                                value: { type: 'string', faker: 'lorem.lines' },
-                            },
-                            required: ['key', 'value']
-                        },
-
-                        {   "type": "object",
-                            "properties": {
-                                key: "Specializations",
-                                value: { type: 'string', faker: 'lorem.sentence' },
-                            },
-                            required: ['key', 'value']
-                        },
-
-                        {   "type": "object",
-                            "properties": {
-                                key: "Education",
-                                value: { type: 'string', faker: 'lorem.lines' },
-                            },
-                            required: ['key', 'value']
-                        },
-
-                        {   "type": "object",
-                            "properties": {
-                                key: "Awards and Recognitions",
-                                value: { type: 'string', faker: 'lorem.lines' },
-                            },
-                            required: ['key', 'value']
-                        },
-
-                        {   "type": "object",
-                            "properties": {
-                                key: "Memberships",
-                                value: { type: 'string', faker: 'lorem.lines' },
-                            },
-                            required: ['key', 'value']
-                        },
-
-                        {   "type": "object",
-                            "properties": {
-                                key: "Registrations",
-                                value: { type: 'string', faker: 'lorem.lines' },
-                            },
-                            required: ['key', 'value']
-                        }
-                    ]
-                }
-
-            },
-            required: [
-               'username', 'email', 'password', 'doctorName', 'aboutDoctor'
-            ]
-         
-        }
-    },
-
-    required: ['doctor']
-
-}; // end of doctorSchema
-
-
-
-*/
-
 
 

@@ -1008,7 +1008,7 @@ module.factory(
          *  - `doctorsAndHospitals` – `{string=}` - 
          */
         "doctorsAndHospitals": {
-          url: urlBase + "/Doctors/:id/doctors-and-hospitals",
+          url: urlBase + "/Doctors/:id/hospital-affiliations",
           method: "GET"
         },
 

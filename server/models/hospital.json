@@ -10,9 +10,29 @@
   },
 
   "properties": {
+    
+    "uid": {
+      "type": "string"
+    },
+    
     "hospitalName": {
       "type": "string"
+    },
+    
+    "hospitalType": {
+      "type": "string"
+    },
+    
+    "hospitalAddress": {
+      "type": "Address"
+    },
+    
+    "hospitalPhones": {
+      "type": [
+        "Phone"
+      ]
     }
+    
   },
 
   "validations": [],
@@ -40,3 +60,4 @@
   
   "methods": {}
 }
+
