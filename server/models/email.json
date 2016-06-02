@@ -1,0 +1,20 @@
+{
+  "name": "Email",
+  "base": "Model",
+  "idInjection": false,
+  "properties": {
+    
+    "use": {
+      "type": "string"
+    },
+   
+    "address": {
+      "type": "string"
+    }
+    
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

@@ -4,6 +4,10 @@
   "idInjection": false,
   "properties": {
     
+    "use": {
+      "type": "string"
+    },
+    
     "street": {
       "type": "string"
     },

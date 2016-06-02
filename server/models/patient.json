@@ -9,32 +9,15 @@
   },
 
   "properties": {
-    "bloodGroup": {
-      "type": "string"
+    
+    "faceSheet": {
+      "type": "FaceSheet"
     },
-    "phoneNumber": {
-      "type": "string",
-      "required": false
+    
+    "demographics": {
+      "type": "Demographics"
     },
-    "aadhaarId": {
-      "type": "string",
-      "comments": "Aadhaar Number"
-    },
-    "age": {
-      "type": "number",
-      "required": false
-    },
-    "gender": {
-      "type": "string",
-      "required": false
-    },
-    "patientName": {
-      "type": "string",
-      "required": false
-    },
-    "dateofBirth": {
-      "type": "date"
-    },
+
     "medicalHistory": {
       "type": [
         "YesNo"
@@ -51,24 +34,7 @@
       "foreignKey": "patientId",
       "through": "Appointment"
     },
-    "address": {
-      "type": "embedsOne",
-      "model": "Address",
-      "property": "patientAddress",
-      "options": {
-        "validate": true,
-        "forceId": false
-      }
-    },
-    "emails": {
-      "type": "embedsMany",
-      "model": "EmailAddress",
-      "property": "emailList",
-      "options": {
-        "validate": true,
-        "forceId": false
-      }
-    },
+    
     "vitals": {
       "type": "embedsMany",
       "model": "Vitals",

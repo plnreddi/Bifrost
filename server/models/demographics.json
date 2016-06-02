@@ -1,0 +1,48 @@
+{
+  "name": "Demographics",
+  "base": "Model",
+  "idInjection": true,
+  
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    
+    "aadhaarNo": {
+      "type": "string",
+      "comments": "Aadhaar Number"
+    },
+    
+    "birthDate ": {
+      "type": "string"
+    },
+    
+    "gender ": {
+      "type": "string"
+    },
+    "race ": {
+      "type": "string"
+    },
+    "ethnicity ": {
+      "type": "string"
+    },
+    "preferredLanguage": {
+      "type": "Language"
+    },
+    "address": {
+      "type": "Address"
+    },
+    
+    "maritalStatus": {
+      "type": "string"
+    }
+
+  },
+  
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
+

@@ -1,0 +1,63 @@
+{
+  "name": "FaceSheet",
+  "base": "Model",
+  "idInjection": true,
+  
+  "properties": {
+    "id": {
+      "type": "number",
+      "id": true
+    },
+    
+    "title": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+
+    "imageUrl": {
+      "type": "string"
+    },
+   
+    "phones": {
+      "type": [
+        "Phone"
+      ]
+    },
+    
+     "emails": {
+      "type": [
+        "Email"
+      ]
+    },
+    
+    "preferredCommunication": {
+      "type": "string"
+    },
+    
+    "reminderLanguage": {
+      "type": "Language"
+    },
+    
+    "followUpDate?": {
+      "type": "string"
+    },
+    
+    "followUpReason?": {
+      "type": "string"
+    },
+    
+    "lastAppointment?": {
+      "type": "string"
+    }
+    
+   
+
+  },
+  
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

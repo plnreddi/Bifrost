@@ -74,29 +74,104 @@ var patientSchema = { type: 'object',
         email: 'ramana@doe.com', 
         password: 'a',
 
-        patientName: { type: 'string', faker: 'name.findName' },
-        //dateofBirth: { type: "string", faker: "custom.dateofBirth" },
-        age: { type: "string", faker: "custom.personAge" },
-        gender: { type: "string", enum: ["Male", "Female"] },
-        aadhaarId: { type: "string", faker: "custom.aadhaarId" },
-        phoneNumber: { type: "string", faker: "custom.mobNumberIndia" },
-        bloodGroup: { type: "string", enum: ['O+','O-','A+','A-','B+','B-','AB+','AB-'] },
-        
-        //email: { type: 'string', format: 'email', faker: 'internet.email'},
-        
-        patientAddress: { type: 'object',
-            properties: {
-                street: { type: 'string', faker: 'address.streetAddress' },
-                city: { type: 'string', faker: 'address.city' },
-                state: { type: 'string', faker: 'address.state' },
-                zipCode: { type: 'string', faker: 'custom.pinCodeIndia' },
-                street2: 'street second line',
-                stateLong: 'Andhra Pradesh',
-                latlng: { "lat": 37.365759, "lng": -121.9233569 }
+        faceSheet: { "type": "object",
+            "properties": {
+                title: "Mr.",
+                name: { type: 'string', faker: 'name.findName' },
+                imageUrl: { type: 'string', faker: 'image.avatar' },
+                
+                phones: { type: "array",
+                    items: { type: 'object',
+                        properties: { 
+                            number: { type: 'string', faker: "custom.mobNumberIndia" },
+                            description: "Landline", 
+                        },
+                        required: ['number', 'description'] 
+                    },
+                    minItems: 1, maxItems: 2
+                },
+                
+                emails: { type: "array",
+                    items: { type: 'object',
+                        properties: { 
+                            address: { type: 'string', faker: 'internet.email' },
+                            use: "Business"
+                        },
+                        required: ['address', 'use'] 
+                    },
+                    minItems: 1, maxItems: 2
+                },
+                preferredCommunication: { type: "string", 
+                    enum: [ 
+                        "Phone",
+                        "Work",
+                        "Cell",
+                        "Snail Mail" ,
+                        "Email", 
+                        "Text Message", 
+                        "Declined"
+                    ] 
+                },
+                reminderLanguage: { "name":"English", "code":"en" }
             },
-            required: ['street', 'city', 'state', 'zipCode', 'street2', 'stateLong', 'latlng']
+            required: ['title', 'name', 'imageUrl', 'phones', 'emails', 
+                'reminderLanguage', 'preferredCommunication'
+            ]
         },
 
+        demographics: { "type": "object",
+            "properties": {
+                aadhaarNo: { type: "string", faker: "custom.aadhaarId" },
+                birthDate: { type: "string", faker: "custom.dateofBirth" },
+                gender: { type: "string", enum: ["Male", "Female"] },
+                race: { type: "string", 
+                    enum: [ 
+                        "American Indian or Alaska Native",
+                        "Asian",
+                        "Black or African American",
+                        "Native Hawaiian or Other Pacific Islander",
+                        "White",
+                        "Declined to specify"
+                    ] 
+                }, 
+                ethnicity: { type: "string", 
+                    enum: [ 
+                        "Hispanic or",
+                        "Not Hispanic or Latino",
+                        "Declined to specify"
+                    ] 
+                }, 
+                preferredLanguage: { "name":"English", "code":"en" },
+                  
+                address: { type: 'object',
+                    properties: {
+                        use: "Home",
+                        street: { type: 'string', faker: 'address.streetAddress' },
+                        city: { type: 'string', faker: 'address.city' },
+                        state: { type: 'string', faker: 'address.state' },
+                        zipCode: { type: 'string', faker: 'custom.pinCodeIndia' },
+                        street2: 'street second line',
+                        stateLong: 'Andhra Pradesh',
+                        latlng: { "lat": 37.365759, "lng": -121.9233569 }
+                    },
+                    required: ['use', 'street', 'city', 'state', 'zipCode', 'street2', 'stateLong', 'latlng']
+                },
+
+                maritalStatus: { type: "string", 
+                    enum: [ 
+                        "Single",
+                        "Married",
+                        "Widowed",
+                        "Divorce",
+                        "Other"
+                    ] 
+                }
+            },    
+            required: ['aadhaarNo', 'birthDate', 'gender', 'race', 'ethnicity', 
+                'preferredLanguage', 'address', 'maritalStatus'
+            ]                       
+        },
+        
         patientVitals: { type: "array",
 
             items:  { type: 'object',
@@ -144,8 +219,8 @@ var patientSchema = { type: 'object',
 
     required: [
         'username', 'email', 'password',
-        'patientName', 'dateofBirth', 'age', 'gender', 'aadhaarId', 'phoneNumber', 'bloodGroup',
-        'email', 'patientAddress', 'patientVitals', 'medicalHistory',     
+        'faceSheet', 'demographics', 
+        'patientVitals', 'medicalHistory'    
     ]
 
 }; // end of patientSchema

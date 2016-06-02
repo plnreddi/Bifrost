@@ -23,7 +23,7 @@
                         console.log('Practices: ' + JSON.stringify(practices) );
                     
                         Practice.patients( { id: practices[0].id }, function(patients) {
-                            //console.log('Patients: ' + JSON.stringify(patients[0]) );
+                            console.log('Patients: ' + JSON.stringify(patients[0]) );
                             cb(patients); 
                         })
                     })

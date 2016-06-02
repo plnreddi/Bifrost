@@ -122,6 +122,19 @@
     "public": false
   },
   
+  "FaceSheet": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Demographics": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Email": {
+    "dataSource": "db",
+    "public": false
+  },
+  
   "Receptionist": {
     "dataSource": "db",
     "public": true
