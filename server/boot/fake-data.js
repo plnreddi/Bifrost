@@ -64,6 +64,119 @@ jsf.extend('faker', function(faker) {
     return faker;
 });
 
+// Patient Vitals fake data
+/*
+var vitalSchema = { type: 'object',
+   
+    properties: {
+        uid: 'vital1234', 
+        patientId: '1234', 
+        providerId: '4567', 
+        organizationId: 'hos123',
+        dateTime: 'some date',
+        vitals: 'to be created',
+        notes: 'some notes'
+    },
+    required: ['uid', 'patientId', 'providerId', 'organizationId', 'dateTime', 'vitals', 'notes']
+};
+*/    
+
+var vitalSchema = { type: 'object',
+    properties: {
+        uid: 'vital1234', 
+        patientId: '1234', 
+        providerId: '4567', 
+        organizationId: 'hos123',
+        dateTime: 'some date',
+        vitals: { type: "array",
+            items: { type: 'object',
+                properties: {
+                    name: 'vital1234', 
+                    value: '4567', 
+                    unit: 'hos123'
+                },
+                required: ['name', 'value', 'unit']
+            },
+            minItems: 3, maxItems: 4
+        },
+        notes: 'some notes'
+    },
+    required: ['uid', 'patientId', 'providerId', 'organizationId', 'dateTime', 'vitals', 'notes']
+};
+    
+/*
+var vitalSchema = { type: 'object',
+    properties: {
+        patientId: '1234', 
+        vitalRecords: { type: "array",
+       
+            items: { type: 'object',
+                properties: {
+                    uid: 'vital1234', 
+                    providerId: '4567', 
+                    organizationId: 'hos123',
+                    dateTime: 'some date',
+                    vitals: { type: "array",
+                        items: { type: 'object',
+                            properties: {
+                                name: 'vital1234', 
+                                value: '4567', 
+                                unit: 'hos123'
+                            },
+                            required: ['name', 'value', 'unit']
+                        },
+                        minItems: 3, maxItems: 4
+                    },
+                    notes: 'some notes'
+                },
+                required: ['uid', 'providerId', 'organizationId', 'dateTime', 'vitals', 'notes']
+            },
+            minItems: 1, maxItems: 2
+        },
+        required: ['patientId', 'records']
+    }
+},
+*/
+
+
+/*
+ {
+    'patientId': '1234', 
+    'records': [
+        {
+            'uid': 'vital1234', 
+            'providerId': '4567', 
+            'organizationId': 'hos123',
+            'dateTime': 'some date',
+            'vitals': [
+                {
+                    'name': 'vital1234', 
+                    'value': '4567', 
+                    'unit': 'hos123'
+                }
+            ],
+            'notes': 'some notes'
+        }
+    ]
+}
+*/
+
+
+/*
+        vitals: { type: "array",
+            items: { type: 'object',
+                properties: {
+                    name: 'vital1234', 
+                    value: '4567', 
+                    unit: 'hos123'
+                },
+                required: ['name', 'value', 'unit']
+            },
+            minItems: 1, maxItems: 2
+        },
+*/
+
+
 
 // Patient fake data
 var patientSchema = { type: 'object',
@@ -172,7 +285,10 @@ var patientSchema = { type: 'object',
             ]                       
         },
         
-        patientVitals: { type: "array",
+    
+        
+       /* 
+        vitalSigns: { type: "array",
 
             items:  { type: 'object',
                 properties: {
@@ -189,6 +305,24 @@ var patientSchema = { type: 'object',
             }
         },
 
+        patientVitals: { type: "array",
+
+            items:  { type: 'object',
+                properties: {
+                    height: { type: "string", faker: "custom.personHeight" }, 
+                    weight: { type: "string", faker: "custom.personWeight" }, 
+                    bp: { type: "string", faker: "custom.personBP" }, 
+                    temp: { type: "string", faker: "custom.personTemp" },
+                    pulse: { type: "string", faker: "custom.personPulse" },
+                    rr: { type: "string", faker: "custom.personRR" },
+                    o2sat: { type: "string", faker: "custom.personO2sat" },
+                    pain: { type: "string", enum: ["Pain", "NoPain"] }
+                },
+                required: ['height', 'weight', 'bp', 'temp', 'pulse', 'rr', 'o2sat', 'pain']
+            }
+        },
+        */
+        
         medicalHistory: { type: "array",
 
             items: { type: 'object',
@@ -499,6 +633,17 @@ function SamplePatients(count) {
     return fakePatients;
 }
 
+function SampleVitals(count) {
+
+    var fakeVitals = [];
+
+    for (i = 0; i < count; i++) {
+        fakeVitals[i] = jsf(vitalSchema);
+    }
+
+    return fakeVitals;
+}
+
 function SampleAppointments(count) {
 
     var fakeAppointments = [];
@@ -513,7 +658,10 @@ function SampleAppointments(count) {
 exports.SampleDoctors = SampleDoctors;
 exports.SampleHospitals = SampleHospitals;
 exports.SamplePractices = SamplePractices;
+
 exports.SamplePatients = SamplePatients;
+exports.SampleVitals = SampleVitals;
+
 exports.SampleAppointments = SampleAppointments;
 
 

@@ -1,4 +1,6 @@
 var fake = require('./fake-data.js');
+var async = require('async');
+
 
 module.exports = function(app) {
 
@@ -17,6 +19,8 @@ module.exports = function(app) {
     var Doctor = app.models.Doctor;
     var Hospital = app.models.Hospital;
 
+    var Vital = app.models.Vital;
+ 
     ds.autoupdate('ACL');
     ds.autoupdate('Role');
     ds.autoupdate('RoleMapping');
@@ -50,8 +54,150 @@ module.exports = function(app) {
             });
         });
     });
+    
+    
+    ds.automigrate('Doctor', function(err) {
+        if (err) throw err
+            
+        async.waterfall(
+            [
+                function doctorCreate(callback) {
+                    var samDoctors = fake.SampleDoctors(8);
+                   
+                    Doctor.create(samDoctors, function(err, doctors){
+                        if (err) return console.error(err);
+                        console.log('Doctors created: ', doctors.length);
+                        callback(null, doctors);
+                    });
+                },
+                
+                function hospitalCreate(doctors, callback) {  
+                    var samHospitals = fake.SampleHospitals(4);  
+                    
+                    Hospital.create(samHospitals, function(err, hospitals){
+                        if (err) callback(err); 
+                        
+                        console.log('Hospitals created: ', hospitals.length);
+                        callback(null, doctors, hospitals);
+                    }); 
+                },
+        
+                function mapDoctorHospitals(doctors, hospitals, callback) {    
+                    var samPractices = fake.SamplePractices(10);
+                    
+                    // mapping hospitals and doctors to create practices
+                    var mat = [
+                        [0, 0], [0, 1],
+                        [1, 1], [1, 2], [1, 3], 
+                        [2, 4], [2, 5], [2, 6], [2, 7], 
+                        [3, 7]
+                    ];
+                    for (var p in mat) {
+                        var h = mat[p][0];
+                        var d = mat[p][1]; 
+                        //console.log(hospitals[h].id, doctors[d].id);
+                        samPractices[p].hospitalId = hospitals[h].id;
+                        samPractices[p].doctorId = doctors[d].id; 
+                    }
+                    callback(null, samPractices);
+                }, 
 
+                function practiceCreate(samPractices, callback) {  
+                    
+                    Practice.create(samPractices, function(err, practices){
+                        if (err) callback(err); 
+                        
+                        console.log('Practices created: ', practices.length);
+                        callback(null, practices);
+                    }); 
+                },
+                
+                function patientCreate(practices, callback) {
+                    var samPatients = fake.SamplePatients(16);  
+                    
+                    Patient.create(samPatients, function(err, patients){
+                        if (err) callback(err); 
+                        
+                        console.log('Patients created: ', patients.length);
+                        callback(null, practices, patients);
+                    }); 
+                },
+                
+                function mapPracticePatients(practices, patients, callback) {    
+                    var samAppointments = fake.SampleAppointments(18);
+                    
+                    // mapping practices and patients to create appointments
+                    var mat = [
+                        [0,  0], [0,  1],
+                        [1,  1], [1,  2], 
+                        [2,  3], [2,  4], 
+                        [3,  5], [3,  6], 
+                        [4,  7], [4,  8],
+                        [5,  9], [5, 10],
+                        [6, 11], [6, 12],
+                        [7, 13], [7, 14],
+                        [8, 15],
+                        [9, 15]
+                    ];
+                    for (var ap in mat) {
+                        var pr = mat[ap][0];
+                        var pa = mat[ap][1];
+                        //console.log(practices[pr].id, patients[pa].id);
+                        samAppointments[ap].practiceId = practices[pr].id;
+                        samAppointments[ap].patientId = patients[pa].id; 
+                    }
+                    callback(null, samAppointments);
+                },
 
+                function appointmentCreate(samAppointments, callback) {  
+                    
+                    Appointment.create(samAppointments, function(err, appointments){
+                        if (err) callback(err); 
+                        
+                        console.log('Appointments created: ', appointments.length);
+                        callback(null);
+                    }); 
+                },
+                
+                function patientFind(callback) {
+                     
+                    Patient.find({}, function(err, patients){
+                        if (err) callback(err); 
+                        
+                        console.log('Patients find: ', patients.length);
+                        
+                        var samVitals = fake.SampleVitals(patients.length);
+                        for (var i = 0; i < patients.length; i++) { 
+                            samVitals[i].patientId = patients[i].id;
+                        }
+                        console.log('Vitals sample: ', samVitals);
+                             
+                        Vital.create(samVitals, function(err, vitals){
+                            if (err) callback(err); 
+                            
+                            console.log('Vitals created: ', vitals);
+                            callback(null);
+                        }); 
+                         
+                    }); 
+                },
+                
+            ],
+            function (err, caption) {
+                if (err) { alert('Something is wrong!'); }
+                console.log('caption: ',caption);
+            }
+        );
+    })
+
+}; // end
+   
+   
+   
+   
+  
+
+    /*
     ds.automigrate('Doctor', function(err) {
         if (err) throw err
         
@@ -135,3 +281,5 @@ module.exports = function(app) {
     });  // end automigrate
 
 }; // end
+*/
+

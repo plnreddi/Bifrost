@@ -1,0 +1,25 @@
+{
+    "name": "VitalSign",
+    "base": "Model",
+    "idInjection": true,
+
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "The name of the test component (e.g. ‘HEIGHT’, 'WEIGHT’, 'BODY TEMPERATURE’)"
+        },
+        "value": {
+            "type": "string",
+            "description": "The test result value"
+        },
+        "unit": {
+            "type": "string",
+            "description": "The unit of the value - if provided (e.g. 'kg’, ’%’, 'Cel’)"
+        }
+    },
+
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {}
+}  

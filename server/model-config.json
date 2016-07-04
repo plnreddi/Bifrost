@@ -134,6 +134,14 @@
     "dataSource": "db",
     "public": false
   },
+  "Vital": {
+    "dataSource": "db",
+    "public": true
+  },
+  "VitalSign": {
+    "dataSource": "db",
+    "public": false
+  },
   
   "Receptionist": {
     "dataSource": "db",

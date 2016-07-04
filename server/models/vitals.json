@@ -1,0 +1,60 @@
+
+{
+    "name": "Vital",
+    "plural": "Vitals",
+    "base": "PersistedModel",
+    "strict": false,
+    "idInjection": true,
+
+    "options": {
+        "validateUpsert": true
+    },
+    
+    "properties":{  
+        
+        "uid":{  
+            "type":"string"
+        },
+        
+        "patientId":{  
+            "type":"string",
+            "description": "ID of the patient for which the lab/test was performed."
+        },
+        
+        "providerId":{  
+            "type":"string",
+            "description": "ID of the provider that performed the lab/test."
+        },
+        
+        "organizationId":{ 
+            "type":"object",
+            "description": "ID of Hospital information"
+        },
+        
+        "dateTime":{  
+            "type":"string",
+            "description": "The date of the vitals reading"
+        },
+        
+        "vitals": {
+            "type": [ "VitalSign" ],
+            "description": "A list of all test results"
+        },
+        
+        "notes":{  
+            "type":"string",
+            "description": "Miscellaneous notes attached to the lab/test."
+        }
+    },     
+        
+    "validations": [],
+    "relations": {
+        "patient": {
+            "type": "belongsTo",
+            "model": "Patient",
+            "foreignKey": "patientId"
+        }
+    },
+    "acls": [],
+    "methods": {}
+}   

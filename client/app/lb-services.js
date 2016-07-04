@@ -3130,6 +3130,33 @@ module.factory(
           method: "HEAD"
         },
 
+        // INTERNAL. Use Patient.vitals.findById() instead.
+        "prototype$__findById__vitals": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/vitals/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Patient.vitals.destroyById() instead.
+        "prototype$__destroyById__vitals": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/vitals/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Patient.vitals.updateById() instead.
+        "prototype$__updateById__vitals": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/vitals/:fk",
+          method: "PUT"
+        },
+
         /**
          * @ngdoc method
          * @name lbServices.Patient#prototype$__findById__accessTokens
@@ -3267,6 +3294,31 @@ module.factory(
         // INTERNAL. Use Patient.practices.count() instead.
         "prototype$__count__practices": {
           url: urlBase + "/Patients/:id/practices/count",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Patient.vitals() instead.
+        "prototype$__get__vitals": {
+          isArray: true,
+          url: urlBase + "/Patients/:id/vitals",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Patient.vitals.create() instead.
+        "prototype$__create__vitals": {
+          url: urlBase + "/Patients/:id/vitals",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Patient.vitals.destroyAll() instead.
+        "prototype$__delete__vitals": {
+          url: urlBase + "/Patients/:id/vitals",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Patient.vitals.count() instead.
+        "prototype$__count__vitals": {
+          url: urlBase + "/Patients/:id/vitals/count",
           method: "GET"
         },
 
@@ -4088,6 +4140,12 @@ module.factory(
           method: "GET"
         },
 
+        // INTERNAL. Use Vital.patient() instead.
+        "::get::Vital::patient": {
+          url: urlBase + "/Vitals/:id/patient",
+          method: "GET"
+        },
+
         /**
          * @ngdoc method
          * @name lbServices.Patient#getCurrent
@@ -4717,6 +4775,307 @@ module.factory(
         R.practices.updateById = function() {
           var TargetResource = $injector.get("Practice");
           var action = TargetResource["::updateById::Patient::practices"];
+          return action.apply(R, arguments);
+        };
+    /**
+     * @ngdoc object
+     * @name lbServices.Patient.vitals
+     * @header lbServices.Patient.vitals
+     * @object
+     * @description
+     *
+     * The object `Patient.vitals` groups methods
+     * manipulating `Vital` instances related to `Patient`.
+     *
+     * Call {@link lbServices.Patient#vitals Patient.vitals()}
+     * to query all related instances.
+     */
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Patient#vitals
+         * @methodOf lbServices.Patient
+         *
+         * @description
+         *
+         * Queries vitals of Patient.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `filter` – `{object=}` - 
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Vital` object.)
+         * </em>
+         */
+        R.vitals = function() {
+          var TargetResource = $injector.get("Vital");
+          var action = TargetResource["::get::Patient::vitals"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Patient.vitals#count
+         * @methodOf lbServices.Patient.vitals
+         *
+         * @description
+         *
+         * Counts vitals of Patient.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        R.vitals.count = function() {
+          var TargetResource = $injector.get("Vital");
+          var action = TargetResource["::count::Patient::vitals"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Patient.vitals#create
+         * @methodOf lbServices.Patient.vitals
+         *
+         * @description
+         *
+         * Creates a new instance in vitals of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Vital` object.)
+         * </em>
+         */
+        R.vitals.create = function() {
+          var TargetResource = $injector.get("Vital");
+          var action = TargetResource["::create::Patient::vitals"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Patient.vitals#createMany
+         * @methodOf lbServices.Patient.vitals
+         *
+         * @description
+         *
+         * Creates a new instance in vitals of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Vital` object.)
+         * </em>
+         */
+        R.vitals.createMany = function() {
+          var TargetResource = $injector.get("Vital");
+          var action = TargetResource["::createMany::Patient::vitals"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Patient.vitals#destroyAll
+         * @methodOf lbServices.Patient.vitals
+         *
+         * @description
+         *
+         * Deletes all vitals of this model.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.vitals.destroyAll = function() {
+          var TargetResource = $injector.get("Vital");
+          var action = TargetResource["::delete::Patient::vitals"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Patient.vitals#destroyById
+         * @methodOf lbServices.Patient.vitals
+         *
+         * @description
+         *
+         * Delete a related item by id for vitals.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `fk` – `{*}` - Foreign key for vitals
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * This method returns no data.
+         */
+        R.vitals.destroyById = function() {
+          var TargetResource = $injector.get("Vital");
+          var action = TargetResource["::destroyById::Patient::vitals"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Patient.vitals#findById
+         * @methodOf lbServices.Patient.vitals
+         *
+         * @description
+         *
+         * Find a related item by id for vitals.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `fk` – `{*}` - Foreign key for vitals
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Vital` object.)
+         * </em>
+         */
+        R.vitals.findById = function() {
+          var TargetResource = $injector.get("Vital");
+          var action = TargetResource["::findById::Patient::vitals"];
+          return action.apply(R, arguments);
+        };
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Patient.vitals#updateById
+         * @methodOf lbServices.Patient.vitals
+         *
+         * @description
+         *
+         * Update a related item by id for vitals.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - User id
+         *
+         *  - `fk` – `{*}` - Foreign key for vitals
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Vital` object.)
+         * </em>
+         */
+        R.vitals.updateById = function() {
+          var TargetResource = $injector.get("Vital");
+          var action = TargetResource["::updateById::Patient::vitals"];
           return action.apply(R, arguments);
         };
 
@@ -9066,6 +9425,699 @@ module.factory(
     */
     R.modelName = "Enum";
 
+
+    return R;
+  }]);
+
+/**
+ * @ngdoc object
+ * @name lbServices.Vital
+ * @header lbServices.Vital
+ * @object
+ *
+ * @description
+ *
+ * A $resource object for interacting with the `Vital` model.
+ *
+ * ## Example
+ *
+ * See
+ * {@link http://docs.angularjs.org/api/ngResource.$resource#example $resource}
+ * for an example of using this object.
+ *
+ */
+module.factory(
+  "Vital",
+  ['LoopBackResource', 'LoopBackAuth', '$injector', function(Resource, LoopBackAuth, $injector) {
+    var R = Resource(
+      urlBase + "/Vitals/:id",
+      { 'id': '@id' },
+      {
+
+        // INTERNAL. Use Vital.patient() instead.
+        "prototype$__get__patient": {
+          url: urlBase + "/Vitals/:id/patient",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Vital#create
+         * @methodOf lbServices.Vital
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Vital` object.)
+         * </em>
+         */
+        "create": {
+          url: urlBase + "/Vitals",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Vital#createMany
+         * @methodOf lbServices.Vital
+         *
+         * @description
+         *
+         * Create a new instance of the model and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Vital` object.)
+         * </em>
+         */
+        "createMany": {
+          isArray: true,
+          url: urlBase + "/Vitals",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Vital#upsert
+         * @methodOf lbServices.Vital
+         *
+         * @description
+         *
+         * Update an existing model instance or insert a new one into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Vital` object.)
+         * </em>
+         */
+        "upsert": {
+          url: urlBase + "/Vitals",
+          method: "PUT"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Vital#exists
+         * @methodOf lbServices.Vital
+         *
+         * @description
+         *
+         * Check whether a model instance exists in the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `exists` – `{boolean=}` - 
+         */
+        "exists": {
+          url: urlBase + "/Vitals/:id/exists",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Vital#findById
+         * @methodOf lbServices.Vital
+         *
+         * @description
+         *
+         * Find a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         *  - `filter` – `{object=}` - Filter defining fields and include
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Vital` object.)
+         * </em>
+         */
+        "findById": {
+          url: urlBase + "/Vitals/:id",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Vital#find
+         * @methodOf lbServices.Vital
+         *
+         * @description
+         *
+         * Find all instances of the model matched by filter from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+         *
+         * @param {function(Array.<Object>,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Array.<Object>} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Vital` object.)
+         * </em>
+         */
+        "find": {
+          isArray: true,
+          url: urlBase + "/Vitals",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Vital#findOne
+         * @methodOf lbServices.Vital
+         *
+         * @description
+         *
+         * Find first instance of the model matched by filter from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `filter` – `{object=}` - Filter defining fields, where, include, order, offset, and limit
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Vital` object.)
+         * </em>
+         */
+        "findOne": {
+          url: urlBase + "/Vitals/findOne",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Vital#updateAll
+         * @methodOf lbServices.Vital
+         *
+         * @description
+         *
+         * Update instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * The number of instances updated
+         */
+        "updateAll": {
+          url: urlBase + "/Vitals/update",
+          method: "POST"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Vital#deleteById
+         * @methodOf lbServices.Vital
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Vital` object.)
+         * </em>
+         */
+        "deleteById": {
+          url: urlBase + "/Vitals/:id",
+          method: "DELETE"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Vital#count
+         * @methodOf lbServices.Vital
+         *
+         * @description
+         *
+         * Count instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `count` – `{number=}` - 
+         */
+        "count": {
+          url: urlBase + "/Vitals/count",
+          method: "GET"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Vital#prototype$updateAttributes
+         * @methodOf lbServices.Vital
+         *
+         * @description
+         *
+         * Update attributes for a model instance and persist it into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Vital` object.)
+         * </em>
+         */
+        "prototype$updateAttributes": {
+          url: urlBase + "/Vitals/:id",
+          method: "PUT"
+        },
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Vital#createChangeStream
+         * @methodOf lbServices.Vital
+         *
+         * @description
+         *
+         * Create a change stream.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         *  - `options` – `{object=}` - 
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * Data properties:
+         *
+         *  - `changes` – `{ReadableStream=}` - 
+         */
+        "createChangeStream": {
+          url: urlBase + "/Vitals/change-stream",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Patient.vitals.findById() instead.
+        "::findById::Patient::vitals": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/vitals/:fk",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Patient.vitals.destroyById() instead.
+        "::destroyById::Patient::vitals": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/vitals/:fk",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Patient.vitals.updateById() instead.
+        "::updateById::Patient::vitals": {
+          params: {
+          'fk': '@fk'
+          },
+          url: urlBase + "/Patients/:id/vitals/:fk",
+          method: "PUT"
+        },
+
+        // INTERNAL. Use Patient.vitals() instead.
+        "::get::Patient::vitals": {
+          isArray: true,
+          url: urlBase + "/Patients/:id/vitals",
+          method: "GET"
+        },
+
+        // INTERNAL. Use Patient.vitals.create() instead.
+        "::create::Patient::vitals": {
+          url: urlBase + "/Patients/:id/vitals",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Patient.vitals.createMany() instead.
+        "::createMany::Patient::vitals": {
+          isArray: true,
+          url: urlBase + "/Patients/:id/vitals",
+          method: "POST"
+        },
+
+        // INTERNAL. Use Patient.vitals.destroyAll() instead.
+        "::delete::Patient::vitals": {
+          url: urlBase + "/Patients/:id/vitals",
+          method: "DELETE"
+        },
+
+        // INTERNAL. Use Patient.vitals.count() instead.
+        "::count::Patient::vitals": {
+          url: urlBase + "/Patients/:id/vitals/count",
+          method: "GET"
+        },
+      }
+    );
+
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Vital#updateOrCreate
+         * @methodOf lbServices.Vital
+         *
+         * @description
+         *
+         * Update an existing model instance or insert a new one into the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *   This method does not accept any parameters.
+         *   Supply an empty object or omit this argument altogether.
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Vital` object.)
+         * </em>
+         */
+        R["updateOrCreate"] = R["upsert"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Vital#update
+         * @methodOf lbServices.Vital
+         *
+         * @description
+         *
+         * Update instances of the model matched by where from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `where` – `{object=}` - Criteria to match model instances
+         *
+         * @param {Object} postData Request data.
+         *
+         * This method expects a subset of model properties as request parameters.
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * The number of instances updated
+         */
+        R["update"] = R["updateAll"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Vital#destroyById
+         * @methodOf lbServices.Vital
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Vital` object.)
+         * </em>
+         */
+        R["destroyById"] = R["deleteById"];
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Vital#removeById
+         * @methodOf lbServices.Vital
+         *
+         * @description
+         *
+         * Delete a model instance by id from the data source.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - Model id
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Vital` object.)
+         * </em>
+         */
+        R["removeById"] = R["deleteById"];
+
+
+    /**
+    * @ngdoc property
+    * @name lbServices.Vital#modelName
+    * @propertyOf lbServices.Vital
+    * @description
+    * The name of the model represented by this $resource,
+    * i.e. `Vital`.
+    */
+    R.modelName = "Vital";
+
+
+        /**
+         * @ngdoc method
+         * @name lbServices.Vital#patient
+         * @methodOf lbServices.Vital
+         *
+         * @description
+         *
+         * Fetches belongsTo relation patient.
+         *
+         * @param {Object=} parameters Request parameters.
+         *
+         *  - `id` – `{*}` - PersistedModel id
+         *
+         *  - `refresh` – `{boolean=}` - 
+         *
+         * @param {function(Object,Object)=} successCb
+         *   Success callback with two arguments: `value`, `responseHeaders`.
+         *
+         * @param {function(Object)=} errorCb Error callback with one argument:
+         *   `httpResponse`.
+         *
+         * @returns {Object} An empty reference that will be
+         *   populated with the actual data once the response is returned
+         *   from the server.
+         *
+         * <em>
+         * (The remote method definition does not provide any description.
+         * This usually means the response is a `Patient` object.)
+         * </em>
+         */
+        R.patient = function() {
+          var TargetResource = $injector.get("Patient");
+          var action = TargetResource["::get::Vital::patient"];
+          return action.apply(R, arguments);
+        };
 
     return R;
   }]);

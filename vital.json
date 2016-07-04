@@ -1,0 +1,93 @@
+{  
+    "author":"Maxwell Forrest",
+    "createdAt":"2014-09-02T05:50:22.654Z",
+    "dateTime":"2014-08-18T16:04:00.000Z",
+    "id":"55e6914a0c7deefb7cfe90f6",
+    "organization":{  
+        "href":"/medical/organizations/53c050ac51c69003200aa998",
+        "id":"53c050ac51c69003200aa998",
+        "name":"Cleveland Clinic"
+    },
+    "results":[  
+        {  
+            "codes":[  
+                {  
+                    "code":"8480-6",
+                    "codeSystem":"2.16.840.1.113883.6.1",
+                    "codeSystemName":"LOINC",
+                    "name":"SYSTOLIC BLOOD PRESSURE"
+                }
+            ],
+            "name":"SYSTOLIC BLOOD PRESSURE",
+            "unit":"mm[Hg]",
+            "value":"102"
+        },
+        {  
+            "codes":[  
+                {  
+                    "code":"8462-4",
+                    "codeSystem":"2.16.840.1.113883.6.1",
+                    "codeSystemName":"LOINC",
+                    "name":"DIASTOLIC BLOOD PRESSURE"
+                }
+            ],
+            "name":"DIASTOLIC BLOOD PRESSURE",
+            "unit":"mm[Hg]",
+            "value":"70"
+        },
+        {  
+            "codes":[  
+                {  
+                    "code":"8867-4",
+                    "codeSystem":"2.16.840.1.113883.6.1",
+                    "codeSystemName":"LOINC",
+                    "name":"HEART RATE"
+                }
+            ],
+            "name":"HEART RATE",
+            "unit":"/min",
+            "value":"80"
+        },
+        {  
+            "codes":[  
+                {  
+                    "code":"8302-2",
+                    "codeSystem":"2.16.840.1.113883.6.1",
+                    "codeSystemName":"LOINC",
+                    "name":"HEIGHT"
+                }
+            ],
+            "name":"HEIGHT",
+            "unit":"cm",
+            "value":"157.5"
+        },
+        {  
+            "codes":[  
+                {  
+                    "code":"3141-9",
+                    "codeSystem":"2.16.840.1.113883.6.1",
+                    "codeSystemName":"LOINC",
+                    "name":"WEIGHT"
+                }
+            ],
+            "name":"WEIGHT",
+            "unit":"kg",
+            "value":"61.871"
+        },
+        {  
+            "codes":[  
+                {  
+                    "code":"39156-5",
+                    "codeSystem":"2.16.840.1.113883.6.1",
+                    "codeSystemName":"LOINC",
+                    "name":"BODY MASS INDEX"
+                }
+            ],
+            "name":"BODY MASS INDEX",
+            "unit":"kg/m2",
+            "value":"24.94"
+        }
+    ],
+    "source":"emr-1-320",
+    "updatedAt":"2014-09-02T05:50:22.654Z"
+}

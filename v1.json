@@ -1,0 +1,211 @@
+
+{
+    "name": "Vital",
+    "plural": "Vitals",
+    "base": "PersistedModel",
+    "strict": false,
+    "idInjection": true,
+
+    "options": {
+        "validateUpsert": true
+    },
+    
+    "properties":{  
+        
+        "uid":{  
+            "type":"string"
+        },
+        
+        "patientId":{  
+            "type":"string",
+            "description": "ID of the patient for which the lab/test was performed."
+        },
+        
+        "providerId":{  
+            "type":"string",
+            "description": "ID of the provider that performed the lab/test."
+        },
+        
+        "organizationId":{ 
+            "type":"object",
+            "description": "ID of Hospital information"
+        },
+        
+        "dateTime":{  
+            "type":"string",
+            "description": "The date of the vitals reading"
+        },
+        
+        "vitals": {
+            "type": [ "VitalSign" ],
+            "description": "A list of all test results"
+        },
+        
+        "notes":{  
+            "type":"string",
+            "description": "Miscellaneous notes attached to the lab/test."
+        }
+    },     
+        
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {}
+}    
+        
+        
+{
+    "name": "VitalSign",
+    "base": "Model",
+    "idInjection": true,
+
+    "properties": {
+        "name": {
+            "type": "string",
+            "description": "The name of the test component (e.g. ‘HEIGHT’, 'WEIGHT’, 'BODY TEMPERATURE’)"
+        },
+        "value": {
+            "type": "string",
+            "description": "The test result value"
+        },
+        "unit": {
+            "type": "string",
+            "description": "The unit of the value - if provided (e.g. 'kg’, ’%’, 'Cel’)"
+        }
+    },
+
+    "validations": [],
+    "relations": {},
+    "acls": [],
+    "methods": {}
+}        
+        
+  /*
+  to be added in patient.json
+     
+     "vitalSigns": {
+      "type": "hasOne",
+      "model": "Vital",
+      "foreignKey": "patientId"
+    }
+    
+    
+        
+    "vitals": {
+      "type": "embedsMany",
+      "model": "Vitals",
+      "property": "patientVitals",
+      "options": {
+        "validate": true,
+        "forceId": false
+      }
+    },
+    
+    
+  */      
+        
+        
+        
+ 
+        
+     /*   
+     
+     https://resources.catalyze.io/baas/guides/clinical-data-models/#results
+     
+     
+     
+     
+        "source?":{  
+            "type":"string",
+            "description": "The name of the originating service"
+        },
+        "updatedAt?":{  
+            "type":"string",
+            "description": "The time the record was updated on the Human API server"
+        },
+       
+        
+        "createdAt?":{  
+            "type":"string",
+            "description": "The time the record was created on the Human API server"
+        },
+     
+     
+        "organization":{  
+            "type":"object",
+            "description": "Hospital information",
+            "properties":{  
+                "href":{  
+                    "type":"string"
+                },
+                "id":{  
+                    "type":"string"
+                },
+                "name":{  
+                    "type":"string"
+                }
+            },
+            "required":[  
+                "href",
+                "id",
+                "name"
+            ]
+        },
+        
+        
+        
+        "results":{  
+            "type":"array",
+            "items":{  
+                "type":"object",
+                "properties":{  
+                    "codes":{  
+                        "type":"array",
+                        "items":{  
+                            "type":"object",
+                            "properties":{  
+                                "code":{  
+                                    "type":"string"
+                                },
+                                "codeSystem":{  
+                                    "type":"string"
+                                },
+                                "codeSystemName":{  
+                                    "type":"string"
+                                },
+                                "name":{  
+                                    "type":"string"
+                                }
+                                
+                            },
+                            "required":[  
+                                "code",
+                                "codeSystem",
+                                "codeSystemName",
+                                "name"
+                            ]
+                        }
+                    },
+                    "name":{  
+                        "type":"string"
+                    },
+                    "unit":{  
+                        "type":"string"
+                    },
+                    "value":{  
+                        "type":"string"
+                    }
+                },
+                "required":[  
+                    "codes",
+                    "name",
+                    "unit",
+                    "value"
+                ]
+            }
+        },
+        
+    },
+    
+    
+  */  

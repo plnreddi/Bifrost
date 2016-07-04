@@ -34,16 +34,13 @@
       "foreignKey": "patientId",
       "through": "Appointment"
     },
-    
+
     "vitals": {
-      "type": "embedsMany",
-      "model": "Vitals",
-      "property": "patientVitals",
-      "options": {
-        "validate": true,
-        "forceId": false
-      }
+      "type": "hasMany",
+      "model": "Vital",
+      "foreignKey": "patientId"
     }
+    
   },
 
   "acls": [
